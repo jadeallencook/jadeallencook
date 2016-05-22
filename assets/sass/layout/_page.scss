@@ -1,0 +1,213 @@
+// Page Style
+
+/*
+=========================================================
+Page Style
+=========================================================
+ */
+
+.page {
+	#welcome {
+		background-image: url("../img/page-head-bg.jpg");
+		background-attachment: local;
+	}
+	.overlay {
+		background-color: rgba(255, 255, 255, 0.7);
+	}
+}
+
+
+.page-heading {
+	text-transform: uppercase;
+
+	.page-title {
+		color: #757577;
+		font-size: $default-font-size + 14;
+		font-weight: bold;
+		@include padding-top-bottom(150px, 90px);
+	}
+	.breadcrumb {
+		background-color: transparent;
+		@include margin-bottom(30px);
+
+		li {
+			&:before {
+				color: #636466;
+			}
+			a {
+				color: #636466;
+			}
+		}
+	}
+}
+
+
+/*
+=========================================================
+Post Style
+=========================================================
+ */
+
+.post-box {
+	display: block;
+	@include margin-bottom(40px);
+
+	.blog-media img {
+		max-width: 100%;
+		min-width: 100%;
+	}
+
+	.blog-content {
+		@include padding-top(25px);
+		@include padding-left(40px);
+
+		@include MQ(640px, $maxw) {
+			@include padding-top-bottom(10px, 20px);
+			@include padding-left(10px);
+			width: 100%;
+		}
+
+		article {
+			font-size: 14px;
+			line-height: 25px;
+		}
+		.blog-meta {
+			@include margin-top-bottom(40px, 10px);
+			p {
+				display: inline-block;
+				@include margin-right(40px);
+
+				&:last-child {
+					@include margin-right(0);
+				}
+			}
+			.fa {
+				font-size: 14px;
+				@include margin-right(5px);
+			}
+		}
+	}
+
+	/* Embed Video */
+	.embed-responsive-padding {
+	    padding-bottom: 67%;
+	}
+}
+
+/*
+=========================================================
+Sidebar Style
+=========================================================
+ */
+
+.sidebar-widget {
+	@include margin-bottom(45px);
+
+	h2 {
+		color: $section-header-color;
+		font-size: $default-font-size + 6;
+		font-weight: bold;
+		text-transform: uppercase;
+		@include margin-top(0);
+
+		&::after {
+			@include line();
+			background-color: $title-border-color;
+			display: block;
+			@include margin-top-bottom(20px, 30px);
+		}
+	}
+	ul {
+		list-style: none;
+		@include padding-left(0);
+	}
+}
+
+
+/* Latest-post-widget */
+
+.latest-post-list {
+	.lp-block {
+	    position: relative;
+	    border-bottom: 1px solid #959595;
+	    @include padding-bottom(20px);
+	    @include margin-bottom(40px);
+
+	    .lp-image {
+		    position: absolute;
+		    top: 8px;
+		    left: 0;
+		}
+
+		.lp-text {
+		    padding-left: 115px;
+
+		    > p:first-child {
+		    	@include padding-top(5px);
+		    }
+		    .recent-post-date {
+		    	@include padding-top(10px);
+
+		    	@include MQM(992px, $L) {
+		    		@include padding-top(0);
+		    	}
+		    }
+		}
+	}
+}
+
+.tag-list {
+    display: table;
+    padding-left: 0;
+
+     li {
+	    float: left;
+	    @include margin-right(10px);
+	    @include margin-bottom(20px);
+
+	    a {
+		    background-color: transparent;
+		    border: 2px solid #959595;
+		    color: $section-header-color;
+		    font-size: $default-font-size + 1;
+		    font-weight: 600;
+		    letter-spacing: 4px;
+		    line-height: 12px;
+		    text-transform: uppercase;
+		    padding: 3px 10px;
+
+		    &:hover {
+			    background-color: $section-header-color;
+			    color: #fff;
+			}
+		}
+	}
+
+}
+
+
+
+/*
+=========================================================
+Pagination Style
+=========================================================
+ */
+.pagination {
+	@include horcenter;
+	@include margin-top-bottom(80px, 50px);
+
+	 > li > a,
+	 li > span {
+	 	color: $default-color;
+	 }
+
+	.active > a,
+	.active > a:focus,
+	.active > a:hover,
+	.active > span,
+	.active > span:focus,
+	.active > span:hover {
+		background-color: $default-color;
+		border-color: $default-color;
+	}
+}

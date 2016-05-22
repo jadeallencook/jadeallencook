@@ -1,0 +1,48 @@
+/*
+-----------------------------------------------
+	Footer
+-----------------------------------------------
+ */
+
+#footer {
+	background-color: #282828;
+	color: #fff;
+
+	.section-padding {
+		@include padding-top-bottom(30px, 30px);
+	}
+
+	.copyright {
+		@include MQ($M, $maxw) {
+			@include horcenter;
+			@include margin-bottom(15px);
+		}
+	}
+
+	.footer-nav {
+		a {
+			color: $white-color;
+			position: relative;
+			text-decoration: none;
+			@include margin-right(18px);
+			@include overflow();
+
+			&::after {
+				@extend %nav-after;
+				bottom: -12px;
+			}
+			&:hover::after {
+				@extend %nav-hover-after;
+			}
+
+			@include MQ($S + 120, $maxw) {
+				@include margin-bottom(20px);
+				display: inline-table;
+			}
+		}
+
+		@include MQ($M, $maxw) {
+			@include horcenter;
+		}
+	}
+}

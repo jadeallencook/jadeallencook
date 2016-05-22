@@ -1,0 +1,13 @@
+//==========================================
+//	Icon Style
+//==========================================
+
+@mixin icon($width: 108px, $height: 108px) {
+	text-align: center;
+	width: $width;
+	height: $height;
+	line-height: $height;
+	font-size: 45px;
+	border-radius: 50%;
+	@extend %transition;
+}

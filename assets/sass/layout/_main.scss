@@ -1,0 +1,1191 @@
+/*
+-----------------------------------------------
+	About Style
+-----------------------------------------------
+ */
+
+#about {
+	@include padding-top(60px);
+}
+
+.about-content {
+	.about-header h2 {
+		@extend %section-title;
+
+		&::after {
+			display: block;
+			@include line();
+			background-color: $sectitle-after-color;
+			@include margin-top-bottom(25px, 30px);
+		}
+	}
+
+	@include MQ($M, $maxw) {
+		@include margin-bottom(50px);
+	}
+
+}
+
+
+.about-text {
+	@include line-height(28px);
+	letter-spacing: 1px;
+}
+
+.about-img .block-center img {
+	@include MQ($S, $maxw) {
+		width: 100%;
+	}
+}
+
+.block-center {
+	@include horcenter;
+}
+
+
+/*
+-----------------------------------------------
+	What We Do
+-----------------------------------------------
+ */
+
+.box {
+
+	@include margin-bottom(30px);
+
+	> .fa {
+		@include icon();
+		color: $white-color;
+		background-color: $default-color;
+	}
+}
+
+.box-wide {
+	position: relative;
+	border: 2px solid #ebebeb;
+	@include padding(20px, 20px, 20px, 168px);
+	@extend %transition;
+
+	@include MQ($S, $maxw) {
+		@include padding(135px, 15px, 15px, 15px);
+	}
+
+	> .fa {
+		position: absolute;
+		top: 30px;
+		left: 30px;
+		@include MQ($S, $maxw) {
+			left: 15px;
+		}
+	}
+
+	.box-wide-inner {
+
+		> h3 {
+			text-transform: uppercase;
+			font-weight: bold;
+			font-size: $default-font-size + 2;
+			@include padding-top(5px);
+			@extend %transition;
+
+			
+			// &::after {
+			// 	@include line();
+			// 	width: 32px;
+			// 	height: 2px;
+			// 	display: block;
+			// 	background-color: #d7d7d7;
+			// 	@include margin-top-bottom(20px, 25px);
+			// 	@extend %transition;
+			// }
+			
+		}
+
+		.uline {
+			@extend %uline;
+			@include uline(32px, #d7d7d7);
+			@include margin-top-bottom(20px, 25px);
+
+			&::after {
+				@extend %uline-after;
+				@include uline-after(32px);
+			}
+		}
+
+		p {
+			letter-spacing: 1px;
+		}
+	}
+
+	&:hover {
+
+		@extend %box-shadow;
+		border-color: #fff;
+
+		.box-wide-inner > h3 {
+			color: $title-border-color;
+			&::after {
+				background-color: $title-border-color;
+			}
+		}
+
+		.uline::after {
+			margin-left: 0;
+		}
+	}
+
+}
+
+
+/*
+-----------------------------------------------
+	Counter Section
+-----------------------------------------------
+ */
+
+#counter {
+	background-image: url("../img/bg-image/counter-bg.jpg");
+	@extend %background-attr;
+
+	.overlay {
+		background-color: $overlay-color;
+		@include padding-top-bottom(90px, 60px);
+	}
+
+	.section-padding {
+		@include padding-top(30px);
+	}
+}
+
+.counter-box {
+	color: $white-color;
+	@include horcenter;
+
+	.icon-counter {
+		font-size: $default-font-size + 16;
+		letter-spacing: 2px;
+		@extend %transition;
+
+		> .fa {
+			font-size: 35px;
+			vertical-align: middle;
+		}
+	}
+
+	.counter-text {
+		font-family: $roboto-font;
+		font-size: $default-font-size + 2;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		@include margin-top(30px);
+
+		
+		// &::after {
+		// 	@include line();
+		// 	display: block;
+		// 	width: 49px;
+		// 	height: 2px;
+		// 	background-color: $white-color;
+		// 	@include margin-top(25px);
+		// 	@extend %transition;
+		// }
+
+	}
+
+	.uline {
+		@include margin-top(25px);
+		@extend %uline;
+		@include uline(49px, $white-color);
+
+		&::after {
+			@extend %uline-after;
+			@include uline-after(49px)
+		}
+	}
+
+	&:hover {
+		.icon-counter {
+			color: $default-color;
+		}
+		.counter-text::after {
+			background-color: $default-color;
+		}
+
+		.uline::after {
+			@extend %uline-hover;
+		}
+	}
+
+	@include MQ($M, $maxw) {
+		@include margin-top-bottom(30px);
+	}
+}
+
+
+/*
+-----------------------------------------------
+	Three Simple Step
+-----------------------------------------------
+ */
+
+.step-box {
+	position: relative;
+
+	@include MQ($T, $maxw) {
+		@include margin-bottom(50px);
+	}
+
+	&:last-child {
+		@include MQ($T, $maxw) {
+			@include margin-bottom(0);
+		}
+	}
+
+	&::before,
+	&::after {
+		display: inline-block;
+		position: absolute;
+		content: "";
+		width: 37%;
+		height: 1px;
+		background-color: #c2c2c2;
+		top: 42.5px;
+
+		@include MQ($L, $maxw) {
+			width: 34%;
+		}
+
+		@include MQ($M, $maxw) {
+			width: 30%;
+		}
+
+		@include MQ($T, $maxw) {
+			display: none;
+		}
+	}
+	&::before {
+		left: 0;
+	}
+	&::after {
+		right: 0;
+	}
+	&:first-child::before,
+	&:last-child::after {
+		background-color: transparent;
+	}
+
+	> .fa {
+		@include icon(83px, 83px);
+		background-color: #f7f5f5;
+		color: $default-color;
+		position: relative;
+		@extend %transition;
+
+		&::after {
+			content: "";
+			position: absolute;
+			width: 102px;
+			height: 102px;
+			top: -9.5px;
+			left: -9.5px;
+			border: 1px solid #d7d7d7;
+			border-radius: 50%;
+			@extend %transition;
+		}
+	}
+
+	> h3 {
+		font-size: $default-font-size + 2;
+		letter-spacing: 1.3px;
+		color: $section-header-color;
+		font-weight: 400;
+		@include margin-top-bottom(40px, 20px);
+	}
+
+	&:hover {
+		.fa {
+			background-color: $default-color;
+			color: $white-color;
+		}
+		.fa::after {
+			border-color: $default-color;
+		}
+	}
+}
+
+
+/*
+-----------------------------------------------
+	Featured Work
+-----------------------------------------------
+ */
+
+.featured-item {
+	position: relative;
+	@include overflow;
+
+	> .project-link {
+		img {
+			max-width: 100%;
+			min-width: 100%;
+		}
+	}
+
+	.hover-bg {
+		@extend %item-hover;
+	}
+
+	@extend %item-hover-bg;
+
+	.item-info {
+		@extend %item-info;
+
+		> h3 {
+			@extend %item-title-h3;
+		}
+
+		> h4 {
+			@extend %item-title-h4;
+		}
+
+		.uline {
+			@include margin-top(25px);
+			@extend %uline;
+			@include uline(49px, $white-color);
+
+			&::after {
+				@extend %uline-after;
+				background-color: darken($default-color, 5%);
+				@include uline-after(49px);
+			}
+		}
+
+		&:hover .uline::after {
+			margin-left: 0;
+		}
+
+	}
+
+	&:hover .item-info {
+		left: 15%;
+	}
+
+}
+
+
+
+/*
+-----------------------------------------------
+	Services Section
+-----------------------------------------------
+ */
+
+.service-box {
+
+	padding: 30px;
+	border: 1px solid #ccc;
+	@extend %transition;
+
+	h3 {
+		font-size: $default-font-size + 2;
+		letter-spacing: 2.2px;
+		@include margin-bottom(20px);
+	}
+
+	&:hover {
+		@extend %box-shadow;
+		border-color: $white-color;
+	}
+}
+
+
+/*
+-----------------------------------------------
+	Keep Exploring
+-----------------------------------------------
+ */
+
+#exploring {
+	background-image: url("../img/bg-image/explorer-bg.jpg");
+	color: $white-color;
+	@extend %background-attr;
+
+	.overlay {
+		background-color: $overlay-color;
+		@include padding-bottom(60px);
+	}
+
+	h2,
+	h3 {
+		font-weight: 300;
+	}
+
+	h2 {
+		font-size: $default-font-size + 16;
+		letter-spacing: 3px;
+
+	}
+
+	h3 {
+		font-size: $default-font-size + 6;
+	}
+
+	.btn-xplore {
+		color: $white-color;
+		font-weight: 600;
+		letter-spacing: 1px;
+		@include padding-left-right(20px, 20px);
+	}
+}
+
+
+
+/*
+-----------------------------------------------
+	Portfolio Section
+-----------------------------------------------
+ */
+
+/* Portfolio Filtering Category */
+#filter {
+	list-style: none;
+	padding: 0;
+	@include horcenter;
+
+	li {
+		font-size: $default-font-size + 2;
+		float: left;
+		position: relative;
+
+		&:first-child a {
+			@include margin-left(0);
+		}
+
+		&:first-child a::before {
+			display: none;
+		}
+
+		a {
+			color: #383737;
+			text-decoration: none;
+			@include padding-right(5px);
+
+			&::before {
+				content: "/";
+				@include margin-left-right(20px, 20px);
+
+				@include MQ(600px, $maxw) {
+					display: none;
+				}
+			}
+		}
+
+		&:first-child a.active::after {
+			@include margin-left(0);
+		}
+
+		.active {
+			position: relative;
+
+			&::after {
+				@include line();
+				position: absolute;
+				left: 0;
+				bottom: -20px;
+				background-color: $default-color;
+				width: 34px;
+				@include margin-left(48px);
+				@extend %transition;
+
+				@include MQ(600px, $maxw) {
+					@include margin-top(5px);
+					@include margin-left(0);
+				}
+			}
+		}
+
+		@include MQ(600px, $maxw) {
+			float: none;
+			display: list-item;
+			height: 50px;
+		}
+	}
+}
+
+/* Portfolio Item */
+
+#pfolio-content {
+    clear: both;
+    position: relative;
+    @include margin-top(50px);
+    @include margin-left(15px);
+
+    @include MQ(600px, $maxw) {
+		@include margin-left(0);
+	}
+    .item {
+		width: 24.4%;
+	    float: left;
+	   	@include margin-right(10px);
+	   	@include margin-bottom(10px);
+
+		// &:nth-child(4),
+	 	// &:nth-child(8) {
+	 	// margin-right: 0;
+	 	// }
+
+	    @include MQM(1441px, 1561px) {
+	    	width: 24.3%;
+	    }
+
+	    @include MQ(1440px, $maxw) {
+	    	width: 32.40%;
+	    }
+
+	    @include MQ($M, $maxw) {
+	    	width: 48%;
+	    }
+
+	    @include MQ($T, $maxw) {
+	    	width: 100%;
+	    	@include margin-bottom(30px);
+	    }
+
+	}
+}
+
+/* Portfolio Hover */
+.item-inner {
+	position: relative;
+	@include overflow;
+
+	.hover-bg {
+		@extend %item-hover;
+	}
+
+	> .project-link {
+		img {
+			max-width: 100%;
+			min-width: 100%;
+		}
+	}
+
+	.item-info {
+		@extend %item-info;
+
+		> h3 {
+			@extend %item-title-h3;
+		}
+
+		> h4 {
+			@extend %item-title-h4;
+		}
+
+		&:hover .uline::after {
+			margin-left: 0;
+		}
+	}
+
+	.uline {
+		@include margin-top(25px);
+		@extend %uline;
+		@include uline(49px, $white-color);
+
+		&::after {
+			@extend %uline-after;
+			background-color: darken($default-color, 5%);
+			@include uline-after(49px);
+		}
+	}
+
+	@extend %item-hover-bg;
+
+	&:hover .item-info {
+		left: 15%;
+	}
+
+	@include MQ($T, $maxw) {
+		@include horcenter;
+	}
+}
+
+/* Portfolio Popup Project View */
+
+.project-main img {
+	min-width: 100%;
+	max-width: 100%;
+}
+
+.project-sb-widget {
+	color: $section-header-color;
+	text-transform: uppercase;
+	@include margin-bottom(40px);
+
+	h2 {
+		font-size: $default-font-size + 6;
+		font-weight: 600;
+	}
+
+	p {
+		border-bottom: 1px solid #b5b5b5;
+		font-size: $default-font-size + 2;
+		@include padding-bottom(10px);
+	}
+}
+
+/*
+-----------------------------------------------
+	Subscribe Section
+-----------------------------------------------
+ */
+
+#subscribe {
+	background-image: url("../img/bg-image/subscribe-bg.jpg");
+	@extend %background-attr;
+	color: $white-color;
+
+	.overlay {
+		background-color: $overlay-color;
+		@include padding-top-bottom(30px, 20px);
+	}
+
+	.section-padding {
+		@include padding-top(50px);
+	}
+}
+
+
+/* Subscribe Header */
+.subscribe-header {
+	@extend .about-header;
+
+	> h2::after {
+		display: block;
+		@include line();
+		@include margin-top-bottom(20px, 20px);
+		background-color: $white-color;
+		width: 57px;
+		height: 1px;
+	}
+
+	h2 {
+		font-size: $default-font-size + 4;
+		color: $white-color;
+		letter-spacing: 2.2px;
+		font-weight: 600;
+	}
+	@include MQ($T, $maxw) {
+		text-align: center;
+	}
+}
+
+/* Subscribe Form */
+#mc-form  {
+	@include horcenter();
+	@include margin-top(60px);
+
+	> .form-control {
+		@extend %bg-border;
+		color: $white-color;
+	 	width: 280px;
+	 	border-color: $white-color;
+	 	border-right: 0;
+
+	 	@include MQ($T, $maxw) {
+			@include margin-bottom(20px);
+			@include margin-left(-6px);
+		}
+
+		&::placeholder {
+			color: #fff;
+		    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+		    filter: alpha(opacity=50);
+		    opacity: 0.5;
+		    padding-left: 0;
+		}
+  	}
+  	> label {
+  		display: block;
+  		@include margin-top(10px);
+  	}
+  	> .btn {
+  		@extend %bg-border;
+  		width: 130px;
+  		border: 1px solid #fff;
+  		@include margin-left(-6px);
+  		@extend %transition;
+
+  		&:hover,
+  		&:focus {
+  			@extend %btn-hover;
+  			border-color: $default-color;
+  		}
+  		@include MQ($T, $maxw) {
+			@include horcenter;
+		}
+  	}
+  	@include MQ($T, $maxw) {
+		@include margin-top(30px);
+	}
+}
+
+
+/*
+-----------------------------------------------
+	Crew Section
+-----------------------------------------------
+ */
+
+.member {
+	border: 1px solid #d7d7d7;
+
+	.member-thumb {
+		position: relative;
+		@include overflow();
+
+		> img {
+			width: 100%;
+		}
+		.overlay {
+			background-color: $overlay-color;
+			height: 100%;
+			position: absolute;
+			width: 100%;
+			left: 0;
+			top: -100%;
+			@extend %transition;
+		}
+	}
+
+	.member-social {
+		position: absolute;
+		left: 50%;
+		bottom: -50px;
+		width: 125px;
+		margin-left: -62.5px;
+		@extend %transition;
+		transition-delay: .3s;
+
+		a {
+			@include icon(35px, 35px);
+			background-color: $default-color;
+			color: $white-color;
+			font-size: $default-font-size + 2;
+			border-radius: 0;
+			display: inline-block;
+			@include margin-right(5px);
+
+			&:last-child {
+				@include margin-right(0);
+			}
+
+			&:hover {
+				background-color: #fff;
+				color: $default-color;
+			}
+		}
+	}
+
+	.member-info {
+		color: $section-header-color;
+		letter-spacing: 2px;
+
+		> h3 {
+			font-size: $default-font-size + 3;
+			font-weight: 600;
+			@include margin-top-bottom(12px, 0);
+		}
+		> p {
+			font-size: $default-font-size - 2;
+			@include margin-bottom(5px);
+		}
+	}
+
+	&:hover {
+		.member-thumb .overlay {
+			top: 0;
+		}
+		.member-thumb .member-social {
+			bottom: 21px;
+		}
+	}
+
+	@include MQ($M, $maxw) {
+		@include margin-bottom(50px);
+	}
+
+	@include MQ($T, $maxw) {
+		@include horcenter;
+	}
+}
+
+
+
+/*
+-----------------------------------------------
+	Testimonial Section
+-----------------------------------------------
+ */
+
+#testimonial {
+	background-image: url("../img/bg-image/testimonial-bg.jpg");
+	color: $white-color;
+	@extend %background-attr;
+
+	.overlay {
+		background-color: $overlay-color;
+	}
+
+	.section-header {
+		@include padding-top-bottom(20px, 40px);
+		> h2 {
+			color: $white-color;
+
+			&::after {
+				background-color: $white-color;
+			}
+		}
+
+		> h3 {
+			font-size: $default-font-size + 4;
+			letter-spacing: 7.2px;
+			font-weight: 400;
+		}
+	}
+}
+
+#owl-tm {
+	@include margin-bottom(15px);
+
+	.oc-item {
+		font-style: italic;
+		letter-spacing: 2.2px;
+
+		.client-comment > blockquote {
+			font-size: $default-font-size + 2;
+			border: medium none;
+			@include margin-top-bottom(20px, 25px);
+		}
+		.client-info h3 {
+			color: $default-color;
+			font-size: $default-font-size + 6;
+		}
+
+		.client-image > img {
+			border: 6px solid $default-color;
+			border-radius: 50%;
+		}
+	}
+
+	.owl-controls {
+		.owl-page > span {
+		  background-color: transparent;
+		  border: 1px solid $default-color;
+		  opacity: 1;
+		}
+		.owl-page.active > span {
+			background-color: $default-color;
+		}
+	}
+}
+
+
+/*
+-----------------------------------------------
+	Blog Section
+-----------------------------------------------
+ */
+
+.blog-post {
+	display: flex;
+	color: $title-border-color;
+	letter-spacing: 2px;
+
+	@include MQ($M, $maxw) {
+		@include margin-bottom(30px);
+	}
+
+	@include MQM(992px, $L) {
+		@include horcenter;
+	}
+	@include MQ(640px, $maxw) {
+		@include horcenter;
+	}
+
+	.blog-media img {
+		@include MQM(992px, $L) {
+			width: 100%;
+		}
+	}
+	.blog-content {
+		background-color: #f7f5f5;
+		@include padding-top(100px);
+		@include padding-left-right(25px, 25px);
+
+		> .post-excerpt,
+		.blog-meta > p {
+			font-size: $default-font-size - 2;
+			line-height: 20px;
+			@include margin-bottom(15px);
+		}
+
+		.blog-meta {
+			@include margin-bottom(35px);
+		}
+
+		@include MQM(992px, $L) {
+			@include padding-top-bottom(10px, 20px);
+		}
+		@include MQ(640px, $maxw) {
+			@include padding-top-bottom(10px, 20px);
+			width: 286px;
+		}
+	}
+
+	.uline {
+		@include margin-top-bottom(12px, 25px);
+		@extend %uline;
+		@include uline(34px, $default-color);
+
+		&::after {
+			@extend %uline-after;
+			background-color: #ddd;
+			@include uline-after(34px);
+		}
+	}
+
+	&:hover .uline::after {
+		@include margin-left(0);
+	}
+
+	.blog-title {
+		.blog-permalink h2,
+		.blog-author {
+			color: $primary-color;
+		}
+
+		> .blog-permalink h2 {
+			font-size: $default-font-size + 2;
+			font-weight: 600;
+			@include margin-bottom(5px);
+		}
+
+		> .blog-author {
+			font-family: Roboto light;
+		}
+
+		// &::after {
+		// 	display: block;
+		// 	@include line(34px, 3px);
+		// 	background-color: $default-color;
+		// 	@include margin-bottom(20px);
+		// }
+	}
+
+}
+
+#blog .btn-more:hover {
+	background-color: transparent;
+}
+
+
+/*
+-----------------------------------------------
+	Pricing Section
+-----------------------------------------------
+ */
+
+.plan-features {
+	border: 1px solid #cccccc;
+	list-style: none;
+	padding: 0;
+	width: 320px;
+	@include horcenter();
+	@extend %transition;
+
+	.plan-name {
+		font-size: $default-font-size + 6;
+		font-weight: 600;
+		text-transform: uppercase;
+		@include padding-top-bottom(35px, 35px);
+	}
+
+	li {
+		border-bottom: 1px solid #e1e1e1;
+		@include padding-top-bottom(10px, 10px);
+
+		&:last-child {
+			border: medium none;
+		}
+	}
+
+	.plan-signup {
+		@include padding-top-bottom(25px, 25px);
+
+		.btn-signup {
+			border: 1px solid #707070;
+			@include padding-left-right(18px, 18px);
+		}
+	}
+
+	&.popular-plan,
+	&:hover {
+		border-color: $white-color;
+		@extend %box-shadow;
+
+		.btn-signup {
+			border-color: $default-color;
+		}
+	}
+
+	@include MQ($M, $maxw) {
+		@include margin-bottom(30px);
+	}
+
+	@include MQ($XS, $maxw) {
+		width: 280px;
+	}
+}
+
+
+/*
+-----------------------------------------------
+	Call to action Section
+-----------------------------------------------
+ */
+
+#call-to-action {
+	background-color: $default-color;
+	color: $white-color;
+	.section-padding {
+		@include padding-top-bottom(70px, 70px);
+	}
+	.action-text {
+		font-size: $default-font-size + 4;
+		@include margin-top(15px);
+
+		@include MQ($T, $maxw) {
+			@include horcenter;
+		}
+	}
+
+	.btn-buy {
+		@include margin-top(0);
+		border-color: #fff;
+		color: $white-color;
+
+		&:hover {
+			background-color: $white-color;
+			color: $default-color;
+		}
+
+		@include MQ($T, $maxw) {
+			@include horcenter;
+			@include margin-top(30px);
+		}
+	}
+}
+
+
+
+
+/*
+-----------------------------------------------
+	Get in Touch
+-----------------------------------------------
+ */
+
+#contact .section-header h2 {
+	color: $white-color;
+}
+
+/* Footer Logo and Social links */
+#contact {
+	color: $white-color;
+	background-color: $dark-color;
+
+	.footer-logo {
+		@include margin-bottom(12px);
+	}
+
+	.footer-about-text {
+		letter-spacing: 1.2px;
+		@include margin-bottom(15px);
+	}
+
+	.follow-us {
+		> h4 {
+			font-size: $default-font-size + 6;
+		}
+		a {
+			@include icon(35px, 35px);
+			color: $white-color;
+			display: inline-block;
+			font-size: $default-font-size + 6;
+			background-color: transparent;
+			border-radius: 0;
+			@include margin-top(10px);
+			@include margin-right(5px);
+
+			&:last-child {
+				@include margin-right(0);
+			}
+
+			&:hover {
+				background-color: $default-color;
+				color: $white-color;
+			}
+
+		}
+	}
+}
+
+/* Contact Form */
+#contact-form {
+
+	label {
+		display: none;
+	}
+	.form-control {
+		@extend %form-control;
+
+		&:focus {
+			box-shadow: none;
+			border-color: $default-color;
+		}
+
+		&::placeholder {
+			color: #fff;
+		    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+		    filter: alpha(opacity=80);
+		    opacity: 0.8;
+		    padding-left: 0;
+		}
+	}
+
+	#message {
+		background-image: url("../img/line3.png");
+		background-position: bottom;
+		background-repeat:repeat;
+		border: medium none;
+		height: 100px;
+		line-height:25px;
+		overflow:hidden;
+		resize: none;
+		@include padding-top(20px);
+		@include margin-bottom(25px);
+	}
+
+	.btn-contact {
+		@include button;
+
+		background-color: transparent;
+		border-radius: 0;
+		border-width: 1px;
+		color: $white-color;
+	}
+
+	@include MQ($T, $maxw) {
+		@include margin-top(50px);
+	}
+}

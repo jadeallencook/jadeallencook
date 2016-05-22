@@ -1,0 +1,38 @@
+// Line Style
+
+%uline {
+	display: block;
+	height: 2px;
+	@include overflow();
+	@extend %transition;
+}
+
+%uline-after {
+	content: "";
+	display: block;
+	height: 2px;
+	background-color: $default-color;
+	@extend %transition;
+}
+
+%uline-hover {
+	@include margin-left(0);
+}
+
+
+@mixin uline($width: 25px, $bg-color:  #d7d7d7) {
+	width: $width;
+	background-color: $bg-color;
+}
+
+@mixin uline-after($width: 25px) {
+	width: $width;
+	margin-left: -$width;
+}
+
+@mixin line($width: 46px, $height: 3px) {
+	content: "";
+	width: $width;
+	height: $height;
+}
+

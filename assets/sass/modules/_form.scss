@@ -1,0 +1,19 @@
+//==========================================
+//	Form Style
+//==========================================
+
+%bg-border {
+	background-color: transparent;
+	border-radius: 0;
+}
+
+
+
+%form-control {
+  	background-color: transparent;
+  	border-radius: 0;
+  	border: medium none;
+  	border-bottom: 1px solid $white-color;
+  	color: $default-color;
+  	@include padding-left(0);
+}

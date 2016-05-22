@@ -1,0 +1,98 @@
+/*
+-----------------------------------------------
+	Color
+-----------------------------------------------
+ */
+
+#toTop:hover,
+.btn-more:hover,
+#contact-form .form-control,
+.welcome-inner .welcome-heading .welcome-title > span,
+#welcome .scroll-down,
+.counter-box:hover .icon-counter,
+.step-box > .fa,
+.member .member-social a:hover,
+#owl-tm .oc-item .client-info h3,
+#call-to-action .btn-buy:hover,
+.pagination > li > a,
+.pagination li > span {
+    color: #0394d5;
+}
+
+
+/*
+-----------------------------------------------
+	Background Color
+-----------------------------------------------
+ */
+
+.box-wide .box-wide-inner .uline::after,
+.counter-box .uline::after,
+.featured-item .item-info .uline::after,
+.item-inner .uline::after,
+#toTop,
+.btn-rect:hover,
+#mc-form > .btn:hover,
+#contact-form .btn-contact:hover,
+.btn-more,
+.box > .fa,
+.counter-box:hover .counter-text::after,
+.step-box:hover .fa,
+.featured-item .item-info .uline::after,
+#filter li .active::after,
+.item-inner .uline::after,
+.member .member-social a,
+#owl-tm .owl-controls .owl-page.active > span,
+.blog-post .uline,
+#call-to-action,
+#contact .follow-us a:hover,
+.pagination .active > a,
+.pagination .active > a:focus,
+.pagination .active > a:hover,
+.pagination .active > span,
+.pagination .active > span:focus,
+.pagination .active > span:hover {
+    background-color: #0394d5;
+}
+
+
+/*
+-----------------------------------------------
+	Border Color
+-----------------------------------------------
+ */
+
+.navbar-default .okayNav li a::after, #footer .footer-nav a::after,
+#toTop,
+.btn-rect,
+.step-box:hover .fa::after,
+#mc-form > .btn:hover,
+#owl-tm .oc-item .client-image > img,
+#owl-tm .owl-controls .owl-page > span,
+.plan-features.popular-plan .btn-signup,
+.plan-features:hover .btn-signup,
+#contact-form .form-control:focus,
+#contact-form .btn-contact,
+.pagination .active > a,
+.pagination .active > a:focus,
+.pagination .active > a:hover,
+.pagination .active > span,
+.pagination .active > span:focus,
+.pagination .active > span:hover {
+    border-color: #0394d5;
+}
+
+.featured-item .hover-bg,
+.item-inner .hover-bg {
+    background-color: rgba(3, 148, 213, 0.9);
+}
+
+/*
+#counter .overlay,
+#exploring .overlay,
+#subscribe .overlay,
+.member .member-thumb .overlay,
+#testimonial .overlay {
+    background-color: rgba(24, 24, 28, 0.9);
+}
+*/

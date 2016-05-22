@@ -1,0 +1,142 @@
+//==============================================
+//	All common snippet (Mixins)
+//==============================================
+
+
+// Typography
+@mixin line-height($height: 25px) {
+	line-height: $height;
+}
+
+
+@mixin text-decoration($value: none) {
+	text-decoration: $value;
+}
+
+@mixin overflow($value: hidden) {
+	overflow: $value;
+}
+
+// Some Padding Mixins
+
+@mixin padding($top: 15px, $right: 15px, $bottom: 15px, $left: 15px) {
+	padding: $top $right $bottom $left;
+}
+
+@mixin padding-top($value: 50px) {
+	padding-top: $value;
+}
+
+@mixin padding-bottom($value: 50px) {
+	padding-bottom: $value;
+}
+
+@mixin padding-top-bottom($top: 50px, $bottom: 50px) {
+	padding-top: $top;
+	padding-bottom: $bottom;
+}
+
+@mixin padding-left($value: 15px) {
+	padding-left: $value;
+}
+
+@mixin padding-right($value: 15px) {
+	padding-right: $value;
+}
+
+@mixin padding-left-right($left: 15px, $right: 15px) {
+	padding-left: $left;
+	padding-right: $right;
+}
+
+
+// Some Margin Mixins
+
+@mixin margin($top: 15px, $right: 15px, $bottom: 15px, $left: 15px) {
+	margin: $top $right $bottom $left;
+}
+
+@mixin margin-top($value: 50px) {
+	margin-top: $value;
+}
+
+@mixin margin-bottom($value: 50px) {
+	margin-bottom: $value;
+}
+
+@mixin margin-top-bottom($top: 50px, $bottom: 50px) {
+	margin-top: $top;
+	margin-bottom: $bottom;
+}
+
+@mixin margin-left($value: 15px) {
+	margin-left: $value;
+}
+
+@mixin margin-right($value: 15px) {
+	margin-right: $value;
+}
+
+@mixin margin-left-right($left: 15px, $right: 15px) {
+	margin-left: $left;
+	margin-right: $right;
+}
+
+
+// Vertical and Horizontal Center
+@mixin vercenter($height: 300px) {
+	display: table;
+	height: $height;
+}
+
+@mixin vercenter-inner {
+	display: table-cell;
+    vertical-align: middle;
+}
+
+@mixin horcenter {
+	display: table;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@mixin center-position($position: fixed) {
+	position: $position;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+
+// Template Common Mixin
+
+
+// Media Queries
+
+// @mixin MQ($screen, $mw: 'min-width') {
+//   @if $screen == XS {
+//    @media only screen and ($mw: $XS) { @content; } 
+//   }
+//   @else if $screen == S {
+//    @media only screen and ($mw: $S) { @content; } 
+//   }
+//   @else if $screen == T {
+//    @media only screen and ($mw: $T) { @content; } 
+//   }
+//   @else if $screen == M {
+//    @media only screen and ($mw: $M) { @content; } 
+//   }
+//   @else if $screen == L {
+//    @media only screen and ($mw: $L) { @content; } 
+//   }
+// }
+
+@mixin MQ($screen, $mw: $minw) {
+	@media only screen and ($mw: $screen) { @content; }
+}
+
+// Media Query with both min and max width
+@mixin MQM($min, $max) {
+	@media only screen and (min-width: $min) and (max-width: $max) { @content; }
+}
