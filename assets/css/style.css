@@ -627,7 +627,7 @@ img.mfp-img {
 
 .navbar-default .navbar-brand,
 .navbar-default .okayNav li a {
-    padding-top: 50px;
+    padding-top: 20px;
     padding-bottom: 10px;
     padding-left: 0;
     padding-right: 0;
@@ -2433,6 +2433,28 @@ Pagination Style
         background-size: cover;
         background-position: center;
     }
+    #navbar-logo {
+        margin-top: -15px;
+    }
+    a.btn-rect {
+        padding: 5px 15px;
+        font-size: 1em;
+    }
+    nav.footer-nav a {
+        font-size: .75em;
+    }
+    .subscribe-header > h2::after {
+        display: none;   
+    }
+    form#mc-form {
+        width: 100%;
+        padding-left: 22%;
+    }
+    button#subscribe-button.btn {
+        margin-top: -54px;
+        margin-left: 274px;
+        margin-bottom: -10px;
+    }
 }
 
 div.item-inner a.project-link img {
@@ -2451,6 +2473,19 @@ div.item-inner {
 @media only screen and (max-width: 400px) {
     .okayNav__menu-toggle {
         margin-top: -10px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    form#mc-form {
+        width: 100%;
+        padding-left: 12%;
+    }
+    input#mc-email {
+        width: 175px!important;
+    }
+    button#subscribe-button.btn {
+        margin-left: 150px;
     }
 }
 

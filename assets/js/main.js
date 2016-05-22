@@ -143,7 +143,7 @@ jQuery(function ($) {
 
     (function () {
         $(window).on('scroll', function () {
-            if ($(window).scrollTop() > 80) {
+            if ($(window).scrollTop() > 25) {
                 $(".okayNav li a, .navbar-brand").css({
                     'padding-top': '20px'
                 });
@@ -163,7 +163,7 @@ jQuery(function ($) {
                 $('div.navbar img').attr('src', 'assets/img/ui/logo.png');
             } else {
                 $(".okayNav li a, .navbar-brand").css({
-                    'padding-top': '50px'
+                    'padding-top': '20px'
                 });
                 $(".navbar-default .okayNav li a").css({
                     color: '#fff'
