@@ -690,7 +690,6 @@ div.navbar img {
  */
 
 #welcome {
-    background-image: url("../img/etc/train.jpg");
     background-size: cover;
     position: relative;
 }
@@ -2429,7 +2428,6 @@ Pagination Style
         background-image: none!important;
     }
     #phone-banner {
-        background-image: url("../img/etc/train.jpg");
         background-size: cover;
         background-position: center;
     }

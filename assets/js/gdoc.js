@@ -15,6 +15,10 @@ $(function () {
         $('span#banner-title').empty().append(banner.title);
         $('p#banner-desc').empty().append(banner.description);
         $('a#banner-call').empty().append(banner.call).attr('href', banner.callLink);
+        $('#welcome, #phone-banner').css({
+            backgroundImage: 'url(' + banner.image + ')',
+            backgroundSize: 'cover'
+        });
         // about section 
         var about = data.about.elements[0];
         $('h2#work-title').empty().append(about.title);
