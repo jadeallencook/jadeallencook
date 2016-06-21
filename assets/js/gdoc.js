@@ -113,6 +113,7 @@ $(function () {
         $('#footer-about').empty().append(footer.description);
         $('#footer-message').empty().append(footer.message);
         $('#footer-btn').empty().append(footer.mailBtn);
+        console.log(JSON.stringify(footer));
     }
     // calling and appending gDoc info
     tabletop('1s4gh4wHXZ3BufiETuOnro_wvq6qNwtH6vm8_0w6mSNg');
