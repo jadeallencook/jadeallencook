@@ -51,6 +51,9 @@ $(function () {
         $('#call-title').empty().append(call.title);
         $('#call-desc').empty().append(call.description);
         $('#call-btn').empty().append(call.call).attr('href', call.link);
+        $('section#exploring').css({
+            backgroundImage: 'url(' + call.image + ')'
+        });
         // portfolio section
         var portfolio = data.portfolio.elements[0];
         $('h2#portfolio-title').empty().append(portfolio.title);
@@ -83,6 +86,9 @@ $(function () {
         $('h2#subscribe-title').empty().append(subscribe.title);
         $('p#subscribe-description').empty().append(subscribe.description);
         $('button#subscribe-button').empty().append(subscribe.button);
+        $('section#subscribe').css({
+            backgroundImage: 'url(' + subscribe.image + ')'
+        });
         // blog section 
         var blog = data.blog.elements[0];
         var blog2 = data.blog.elements[1];
