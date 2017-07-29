@@ -28,7 +28,7 @@
                 <div class="row">
                     <!-- Welcome Text -->
                     <div class="col-sm-12 welcome-heading">
-                        <h1 class="welcome-title wow fadeInDown" data-wow-delay="1.0s" data-wow-duration="3.0s" id="banner-location"><span id="banner-title">DIGITAL ARTIST,</span><br />CURRENTLY IN MICHIGAN</h1>
+                        <h1 class="welcome-title wow fadeInDown" data-wow-delay="1.0s" data-wow-duration="3.0s" id="banner-location"><span id="banner-title">DIGITAL ARTIST,</span><br />CURRENTLY IN SALT LAKE CITY</h1>
                         <p class="welcome-text wow fadeInUp" data-wow-delay="1.0s" data-wow-duration="3.0s" id="banner-desc">I've been fortunate enough to help many businesses and international clients to produce professional marketing materials and webpages. I am consistently learning and expanding my skills so that I can provide the best value
                             to my clients. </p>
                         <a href="start" class="btn-rect btn-xplore wow fadeInUp" data-wow-delay="1.0s" data-wow-duration="3.0s" style="color:#fff;" id="banner-call">START A PROJECT</a>
