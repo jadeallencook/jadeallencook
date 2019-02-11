@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/Jade-Allen-Cook/build/precache-manifest.499ad8ff12b5f46d2342c55c334cfa0f.js"
+  "/Jade-Allen-Cook/build/precache-manifest.aa0b77bbbbe98367968f14023d32959e.js"
 );
 
 workbox.clientsClaim();

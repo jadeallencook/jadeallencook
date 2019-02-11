@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.scss';
-import sfx from './key.mp3';
 import environment from './environments/environment.json';
 
 import Header from './components/Header.js';
@@ -18,7 +17,6 @@ class App extends Component {
         videos: {}
       }
     };
-    new Audio(sfx).play();
     String.prototype.replaceAll = function(search, replacement) {
       const target = this;
       return target.replace(new RegExp(search, 'g'), replacement);
