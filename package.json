@@ -2,10 +2,12 @@
   "name": "jade-allen-cook",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://jadeallencook.github.io/Jade-Allen-Cook/build/",
   "dependencies": {
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3",
-    "react-scripts": "2.1.1"
+    "node-sass": "^4.11.0",
+    "react": "^16.8.1",
+    "react-dom": "^16.8.1",
+    "react-scripts": "2.1.3"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -1,0 +1,22 @@
+@import 'colors.scss';
+
+body {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  background-color: $darkgrey;
+  color: $white;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1em;
+}
+
+input {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1em;
+  outline: none;
+}
+
+a:link,
+a:visited {
+  color: $blue;
+}
