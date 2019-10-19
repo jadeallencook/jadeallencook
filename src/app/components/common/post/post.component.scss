@@ -1,0 +1,50 @@
+@import '../../../../color.scss';
+
+div.post {
+  padding: 15px 15px 0px 15px;
+  width: 100%;
+  max-width: 345px;
+  display: inline-block;
+  margin: 0px auto;
+
+  >div.poster {
+      margin-bottom: 10px;
+      font-weight: bold;
+      >span {
+          font-size: 0.8em;
+          display: block;
+          color: $light;
+      }
+  }
+
+  >div.video {
+    >iframe {
+      background-color: $light;
+    }
+  }
+
+  >div.photo {
+    >img {
+      width: 100%;
+      background-color: $light;
+    }
+  }
+
+  >div.comments {
+    padding: 0px 0px;
+    >div.comment {
+      font-size: 0.75em;
+      >span:first-child {
+        font-weight: bold;
+      }
+    }
+  }
+
+  >div.share {
+    font-size: 1.5em;
+    margin: 10px 0px;
+    >i {
+      margin-right: 10px;
+    }
+  }
+}

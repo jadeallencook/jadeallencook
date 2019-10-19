@@ -1,0 +1,11 @@
+<div class="feedback">
+  <div *ngIf="!feedback.length">
+    Loading...
+  </div>
+  <div *ngIf="feedback.length">
+    <div *ngFor="let testimonal of feedback">
+      <div [ngStyle]="{'background-image': 'url(assets/feedback/'+ testimonal.image +')'}"></div>
+      <span>{{testimonal.name}}</span>
+    </div>
+  </div>
+</div>

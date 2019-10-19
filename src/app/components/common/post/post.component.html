@@ -1,0 +1,17 @@
+<div class="post">
+  <!-- details -->
+  <div class="poster">
+    {{this.post.title}}
+    <span>{{this.post.date}}</span>
+  </div>
+  <!-- video -->
+  <div class="video" *ngIf="this.type === 'videos'">
+    <iframe width="100%" height="200"
+      [src]='sanitizer.bypassSecurityTrustResourceUrl("https://www.youtube.com/embed/" + this.post.url)' frameborder="0"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <!-- photo -->
+  <div class="photo" *ngIf="this.type === 'photos'">
+    <img src="../../../assets/images/{{this.post.url}}" alt="">
+  </div>
+</div>
