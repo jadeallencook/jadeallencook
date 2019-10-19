@@ -1,7 +1,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-   "baseUrl": "https://jadeallencook.github.io/Jade-Allen-Cook/dist/jade-allen-cook/",
+   "baseUrl": "https://jadeallencook.github.io/Jade-Allen-Cook/dist/",
    "outDir": "./dist/",
    "sourceMap": true,
    "declaration": false,

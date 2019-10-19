@@ -4,7 +4,7 @@
   "newProjectRoot": "projects",
   "projects": {
     "jade-allen-cook": {
-      "root": "",
+      "root": "http://jadeallencook.github.io/Jade-Allen-Cook/dist/",
       "sourceRoot": "src",
       "projectType": "application",
       "prefix": "app",
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/jade-allen-cook",
+            "outputPath": "dist/",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
