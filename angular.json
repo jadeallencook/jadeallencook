@@ -4,7 +4,7 @@
   "newProjectRoot": "projects",
   "projects": {
     "jade-allen-cook": {
-      "root": "http://jadeallencook.github.io/Jade-Allen-Cook/dist/",
+      "root": "https://jadeallencook.github.io/Jade-Allen-Cook/dist/",
       "sourceRoot": "src",
       "projectType": "application",
       "prefix": "app",
