@@ -1,42 +1,25 @@
 {
   "files": {
-    "main.css": "/Jade-Allen-Cook/build/static/css/main.17b6efaf.chunk.css",
-    "main.js": "/Jade-Allen-Cook/build/static/js/main.773f96df.chunk.js",
-    "main.js.map": "/Jade-Allen-Cook/build/static/js/main.773f96df.chunk.js.map",
+    "main.css": "/Jade-Allen-Cook/build/static/css/main.1b25c152.chunk.css",
+    "main.js": "/Jade-Allen-Cook/build/static/js/main.b2a74361.chunk.js",
+    "main.js.map": "/Jade-Allen-Cook/build/static/js/main.b2a74361.chunk.js.map",
     "runtime-main.js": "/Jade-Allen-Cook/build/static/js/runtime-main.b890f5f5.js",
     "runtime-main.js.map": "/Jade-Allen-Cook/build/static/js/runtime-main.b890f5f5.js.map",
     "static/js/2.5befff00.chunk.js": "/Jade-Allen-Cook/build/static/js/2.5befff00.chunk.js",
     "static/js/2.5befff00.chunk.js.map": "/Jade-Allen-Cook/build/static/js/2.5befff00.chunk.js.map",
     "index.html": "/Jade-Allen-Cook/build/index.html",
-    "precache-manifest.46ca73bf25d7ecd59e057b25bb8fd947.js": "/Jade-Allen-Cook/build/precache-manifest.46ca73bf25d7ecd59e057b25bb8fd947.js",
+    "precache-manifest.0aac02252be86ea5f9b6676db090080b.js": "/Jade-Allen-Cook/build/precache-manifest.0aac02252be86ea5f9b6676db090080b.js",
     "service-worker.js": "/Jade-Allen-Cook/build/service-worker.js",
-    "static/css/main.17b6efaf.chunk.css.map": "/Jade-Allen-Cook/build/static/css/main.17b6efaf.chunk.css.map",
+    "static/css/main.1b25c152.chunk.css.map": "/Jade-Allen-Cook/build/static/css/main.1b25c152.chunk.css.map",
     "static/js/2.5befff00.chunk.js.LICENSE.txt": "/Jade-Allen-Cook/build/static/js/2.5befff00.chunk.js.LICENSE.txt",
-    "static/media/ashes-bardole.png": "/Jade-Allen-Cook/build/static/media/ashes-bardole.1163bae7.png",
-    "static/media/Home.scss": "/Jade-Allen-Cook/build/static/media/california.9c020e76.jpg",
-    "static/media/cereals.png": "/Jade-Allen-Cook/build/static/media/cereals.cd0e866e.png",
-    "static/media/dental.png": "/Jade-Allen-Cook/build/static/media/dental.ffc09c6c.png",
-    "static/media/dinr.png": "/Jade-Allen-Cook/build/static/media/dinr.fcecf6d2.png",
-    "static/media/facebook.png": "/Jade-Allen-Cook/build/static/media/facebook.ef4fbd38.png",
-    "static/media/fake-news.png": "/Jade-Allen-Cook/build/static/media/fake-news.8e04568d.png",
-    "static/media/fedbook.png": "/Jade-Allen-Cook/build/static/media/fedbook.f3080150.png",
+    "static/media/Home.scss": "/Jade-Allen-Cook/build/static/media/california.676d8520.jpg",
     "static/media/font-awesome.min.css": "/Jade-Allen-Cook/build/static/media/fontawesome-webfont.fee66e71.woff",
-    "static/media/instagram.png": "/Jade-Allen-Cook/build/static/media/instagram.d7015623.png",
-    "static/media/logo.png": "/Jade-Allen-Cook/build/static/media/logo.97b7f553.png",
-    "static/media/miracles.png": "/Jade-Allen-Cook/build/static/media/miracles.569b06f2.png",
-    "static/media/moroni-jason.png": "/Jade-Allen-Cook/build/static/media/moroni-jason.6d71fa35.png",
-    "static/media/newsroom.png": "/Jade-Allen-Cook/build/static/media/newsroom.d31ba3c2.png",
-    "static/media/perfect-landing.png": "/Jade-Allen-Cook/build/static/media/perfect-landing.69c7605b.png",
-    "static/media/pxart.png": "/Jade-Allen-Cook/build/static/media/pxart.f26c18b7.png",
-    "static/media/second-chance.png": "/Jade-Allen-Cook/build/static/media/second-chance.1afce959.png",
-    "static/media/twitter.png": "/Jade-Allen-Cook/build/static/media/twitter.8d7222ab.png",
-    "static/media/yogifm.png": "/Jade-Allen-Cook/build/static/media/yogifm.41547048.png",
-    "static/media/youtube.png": "/Jade-Allen-Cook/build/static/media/youtube.5527714a.png"
+    "static/media/yogifm.png": "/Jade-Allen-Cook/build/static/media/yogifm.63ec0c8b.png"
   },
   "entrypoints": [
     "static/js/runtime-main.b890f5f5.js",
     "static/js/2.5befff00.chunk.js",
-    "static/css/main.17b6efaf.chunk.css",
-    "static/js/main.773f96df.chunk.js"
+    "static/css/main.1b25c152.chunk.css",
+    "static/js/main.b2a74361.chunk.js"
   ]
 }
