@@ -1,0 +1,36 @@
+section.Loading {
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  text-align: center;
+  animation: fadeOut 1s forwards;
+  animation-delay: 2s;
+  > img {
+    width: 250px;
+    margin-top: 75%;
+    animation: fadeIn 1s forwards;
+  }
+  > div {
+    margin: 25px auto;
+    width: 250px;
+    border: solid #fff 1px;
+    height: 4px;
+    border-radius: 2px;
+    animation: fadeIn 1s forwards;
+    > div {
+      background-color: #fff;
+      height: 100%;
+      width: 0%;
+      animation: load 2s forwards;
+    }
+  }
+}
+
+@keyframes load {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}

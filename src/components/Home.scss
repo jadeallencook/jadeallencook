@@ -1,0 +1,70 @@
+$iconSize: 65px;
+
+section.Home {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #000000;
+  background-image: url("../assets/backgrounds/california.jpg");
+  background-size: cover;
+  background-position: center center;
+  display: grid;
+  grid-template-rows: 30px 1fr 100px;
+  ul.status {
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    font-size: 0.75em;
+    box-sizing: border-box;
+    padding: 7px 10px 0px 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    > li:nth-child(2) {
+      > span {
+        margin-right: 10px;
+        display: block;
+        float: right;
+      }
+      > i {
+        display: block;
+        margin-top: 1px;
+        float: right;
+      }
+      text-align: right;
+    }
+  }
+  ul.screen {
+    color: #fff;
+    font-size: 0.75em;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+  }
+  ul.dock {
+    background-color: rgba(255, 255, 255, 0.4);
+    color: #fff;
+    font-size: 0.75em;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    > li > a > div {
+      margin: 10px auto 5px auto;
+    }
+  }
+  li.application {
+    text-align: center;
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+    div {
+      box-shadow: 5px 10px 15px 5px rgba(59, 59, 59, 0.35);
+      background-size: cover;
+      background-color: #ccc;
+      margin: 15px auto 5px auto;
+      height: 65px;
+      width: 65px;
+      border-radius: 15px;
+    }
+  }
+}

@@ -1,6 +1,0 @@
-<div class="feed">
-  <app-post *ngFor="let post of posts" [post]="post"></app-post>
-  <button class="load-more" (click)="load()" *ngIf="posts.length < max">
-    Load More
-  </button>
-</div>
