@@ -1,0 +1,27 @@
+@import '../config.scss';
+
+section.Projects {
+  background-color: $color3;
+  padding: $em4;
+  > ul::-webkit-scrollbar {
+    display: none;
+}
+  > ul {
+    list-style: none;
+    white-space: nowrap;
+    overflow-x: scroll;
+    > li {
+      display: inline-block;
+      margin-right: $em4;
+      > a > img {
+        width: 75px;
+        border-radius: 15px;
+      }
+      > span {
+        display: block;
+        font-size: $em3;
+        text-align: center;
+      }
+    }
+  }
+}

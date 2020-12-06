@@ -1,0 +1,25 @@
+@import '../config.scss';
+
+section.Gallary {
+  background-color: $color3;
+  padding: $em4 0;
+  > img {
+    width: 75%;
+    display: block;
+    margin: $em5 auto;
+    max-width: 300px;
+  }
+  > div {
+    text-align: center;
+    max-width: 550px;
+    margin: 0 auto;
+    > img {
+      width: 50px;
+      margin: $em3;
+      cursor: pointer;
+    }
+    >img.selected {
+      border: solid 5px $color6;
+    }
+  }
+}

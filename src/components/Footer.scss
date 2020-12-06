@@ -1,0 +1,25 @@
+@import '../config.scss';
+
+footer {
+  padding: $em4;
+  font-size: 0.75em;
+  > p > b {
+    font-weight: bold;
+  }
+  > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    > div {
+        > ul {
+            list-style: none;
+            >li > a {
+              color: $white;
+              text-decoration: none;
+            }
+        }
+      > p {
+        font-weight: bold;
+      }
+    }
+  }
+}
