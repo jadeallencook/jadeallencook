@@ -1,0 +1,11 @@
+div.Loading {
+  > img {
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    width: 50px;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+  }
+}

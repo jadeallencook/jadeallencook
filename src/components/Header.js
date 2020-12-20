@@ -1,35 +1,32 @@
 import './Header.scss';
 
-function Header() {
+function Header(props) {
+  const { header } = props;
   return (
-    <header>
+    <header
+      style={{
+        backgroundImage: `url(${header?.background?.url})`,
+      }}
+    >
       <div>
-        <h1>
-          Software Engineer &<br />
-          Digital Creator
-        </h1>
+        <h1>{header?.title[0].text}</h1>
         <br />
-        <span>
-          Since my first encounter with a computer, I’ve been passionate about
-          technology. Over the past decade of my career in the software
-          development industry I have helped dozens of businesses produce
-          digital content, as well as growing teams develop online solutions.
-        </span>
+        <span>{header?.subtext[0].text}</span>
         <br />
-        <a
-          href="https://forms.gle/sXCQ7TDAyeqDK76k9"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Start Project
-        </a>
-        <a
-          href="https://forms.gle/FEymi3X28EGWbMHV6"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Recruitment
-        </a>
+        {header?.buttons?.map(({ button }, index) => {
+          const { text, spans } = button[0];
+          const link = spans[0].data.url;
+          return (
+            <a
+              key={`header-button-${index}`}
+              href={link}
+              target="_blank"
+              rel="noreferrer"
+            >
+              {text}
+            </a>
+          );
+        })}
       </div>
     </header>
   );
