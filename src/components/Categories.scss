@@ -1,17 +1,17 @@
-@import '../config.scss';
+@import "../config.scss";
 
 section.Categories {
-    padding: $em4;
-    >h2 {
-        font-weight: 100;
+  padding: $em4;
+  > h2 {
+    font-weight: 100;
+  }
+  > a {
+    display: block;
+    text-decoration: none;
+    color: $white;
+    margin: $em3 0;
+    > i {
+      float: right;
     }
-    >a {
-        display: block;
-        text-decoration: none;
-        color: $white;
-        margin: $em3 0;
-        > i {
-            float: right;
-        }
-    }
+  }
 }

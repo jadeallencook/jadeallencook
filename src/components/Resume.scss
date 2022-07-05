@@ -1,24 +1,24 @@
-@import '../config.scss';
+@import "../config.scss";
 
 section.Resume {
-    padding: $em4;
-    > ul {
-        list-style: none;
-        >li {
-            padding: $em2 0;
-            > h3 {
-                background-color: $color3;
-                padding: $em3;
-                cursor: pointer;
-                > i {
-                    float: right;
-                }
-            }
-            > ul {
-                font-size: $em4;
-                padding: $em4;
-                display: none;
-            }
+  padding: $em4;
+  > ul {
+    list-style: none;
+    > li {
+      padding: $em2 0;
+      > h3 {
+        background-color: $color3;
+        padding: $em3;
+        cursor: pointer;
+        > i {
+          float: right;
         }
+      }
+      > ul {
+        font-size: $em4;
+        padding: $em4;
+        display: none;
+      }
     }
+  }
 }

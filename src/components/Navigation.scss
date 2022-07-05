@@ -1,12 +1,12 @@
-@import '../config.scss';
+@import "../config.scss";
 
 nav {
-    padding: $em4;
-    display: grid;
-    grid-template-columns: 100px 1fr 100px;
-    align-items: center center;
-    >div:nth-child(2) {
-        text-align: center;
-        text-transform: uppercase;
-    }
+  padding: $em4;
+  display: grid;
+  grid-template-columns: 100px 1fr 100px;
+  align-items: center center;
+  > div:nth-child(2) {
+    text-align: center;
+    text-transform: uppercase;
+  }
 }

@@ -1,4 +1,4 @@
-@import '../config.scss';
+@import "../config.scss";
 
 section.Gallery {
   background-color: $color3;
@@ -18,7 +18,7 @@ section.Gallery {
       margin: $em3;
       cursor: pointer;
     }
-    >img.selected {
+    > img.selected {
       border: solid 5px $color6;
     }
   }

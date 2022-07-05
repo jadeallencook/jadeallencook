@@ -1,30 +1,30 @@
-@import './config.scss';
+@import "./config.scss";
 
 html,
 body {
-    margin: 0;
-    padding: 0;
-    color: $white;
-    font-family: $font1;
+  margin: 0;
+  padding: 0;
+  color: $white;
+  font-family: $font1;
 }
 
 body {
-    background-color: $color1;
+  background-color: $color1;
 }
 
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    font-weight: 100;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-weight: 100;
 }
 
 button {
-    padding: $em1 $em3;
-    border-radius: 3px;
-    border: none;
+  padding: $em1 $em3;
+  border-radius: 3px;
+  border: none;
 }
 
 a:hover {
-    opacity: 0.75;
+  opacity: 0.75;
 }

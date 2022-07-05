@@ -1,4 +1,4 @@
-@import '../config.scss';
+@import "../config.scss";
 
 footer {
   padding: $em4;
@@ -10,13 +10,13 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     > div {
-        > ul {
-            list-style: none;
-            >li > a {
-              color: $white;
-              text-decoration: none;
-            }
+      > ul {
+        list-style: none;
+        > li > a {
+          color: $white;
+          text-decoration: none;
         }
+      }
       > p {
         font-weight: bold;
       }

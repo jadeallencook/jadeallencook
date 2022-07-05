@@ -13,14 +13,8 @@ import 'font-awesome/css/font-awesome.min.css';
 import useHomepage from './hooks/useHomepage';
 
 function App() {
-  const {
-    loaded,
-    header,
-    gallery,
-    playlists,
-    experience,
-    projects,
-  } = useHomepage();
+  const { loaded, header, gallery, playlists, experience, projects } =
+    useHomepage();
 
   return loaded ? (
     <div className="App">

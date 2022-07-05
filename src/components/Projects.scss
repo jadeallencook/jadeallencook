@@ -1,11 +1,11 @@
-@import '../config.scss';
+@import "../config.scss";
 
 section.Projects {
   background-color: $color3;
   padding: $em4;
   > ul::-webkit-scrollbar {
     display: none;
-}
+  }
   > ul {
     list-style: none;
     white-space: nowrap;

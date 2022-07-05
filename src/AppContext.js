@@ -4,7 +4,7 @@ const AppContext = createContext([{}, () => {}]);
 
 const AppProvider = (props) => {
   const [state, setState] = useState({
-    title: 'Welcome'
+    title: 'Welcome',
   });
   return (
     <AppContext.Provider value={[state, setState]}>
