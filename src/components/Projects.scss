@@ -6,15 +6,18 @@ section.Projects {
   > ul::-webkit-scrollbar {
     display: none;
   }
-  > ul {
+  > ul.projects {
     list-style: none;
-    white-space: nowrap;
-    overflow-x: scroll;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    text-align: center;
     > li {
       display: inline-block;
-      margin-right: $em4;
+      margin-bottom: 15px;
       > a > img {
-        width: 75px;
+        width: 60px;
+        height: 60px;
+        background: $color6;
         border-radius: 15px;
       }
       > span {
@@ -22,6 +25,28 @@ section.Projects {
         font-size: $em3;
         text-align: center;
       }
+    }
+    >li:hover {
+      opacity: 0.5;
+    }
+  }
+  > ul.pagination {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    margin-top: $em2;
+    > li {
+      display: inline-block;
+      margin: 0 5px;
+      padding: 3px;
+      cursor: pointer;
+    }
+    >li > i.fa {
+      font-size: 12px;
+    }
+    >li.active {
+      text-decoration: underline;
     }
   }
 }

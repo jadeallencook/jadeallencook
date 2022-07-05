@@ -1,12 +1,68 @@
 @import "../config.scss";
 
 nav {
-  padding: $em4;
-  display: grid;
-  grid-template-columns: 100px 1fr 100px;
-  align-items: center center;
-  > div:nth-child(2) {
-    text-align: center;
-    text-transform: uppercase;
+  position: fixed;
+  width: 100%;
+  max-width: 575px;
+  z-index: 9999;
+  background-color: $color3;
+  top: 0;
+
+  > div {
+    padding: $em3;
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    align-items: center center;
+    border-bottom: solid thin $color6;
+    > div:nth-child(2) {
+      text-align: center;
+      text-transform: uppercase;
+      > img {
+        height: 40px;
+      }
+    }
+    > div:nth-child(3) {
+      text-align: right;
+      display: grid;
+      align-items: center;
+    }
+    > div > i {
+      cursor: pointer;
+      margin-right: 5px;
+    }
+    > div > i:hover {
+      opacity: 0.5;
+    }
+  }
+  > ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    animation-name: OpenMenu;
+    animation-duration: 2s;
+    animation-direction: normal;
+    > a {
+      text-align: none;
+    }
+    > a > li {
+      background-color: $color3;
+      padding: $em4;
+      border-bottom: solid thin $color6;
+      color: $white;
+      text-decoration: none;
+      transition: 1s;
+    }
+    > a > li:hover {
+      background-color: $color1;
+    }
+  }
+}
+
+@keyframes OpenMenu {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

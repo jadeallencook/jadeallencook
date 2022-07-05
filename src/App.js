@@ -22,9 +22,9 @@ function App() {
         <Special />
         <Navigation />
         {header && <Header header={header} />}
-        {playlists && <Categories playlists={playlists} />}
-        {projects && <Projects projects={projects} />}
         {experience && <Resume experience={experience} />}
+        {projects && <Projects projects={projects} />}
+        {playlists && <Categories playlists={playlists} />}
         {gallery && <Gallery gallery={gallery} />}
         <Footer />
       </AppProvider>
