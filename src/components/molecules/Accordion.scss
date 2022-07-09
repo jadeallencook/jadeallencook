@@ -1,0 +1,35 @@
+@import "../../config.scss";
+
+li {
+  > h3 {
+    background-color: $color3;
+    padding: $em3;
+    cursor: pointer;
+    > i {
+      margin-right: 5px;
+      transition: 0.5s;
+      float: right;
+      transform: rotate(-90deg);
+    }
+    > i.close {
+      transition: 0.5s;
+      transform: rotate(0deg);
+    }
+  }
+
+  > ul {
+    font-size: $em4;
+    padding: 0px $em4;
+    opacity: 0;
+    overflow-y: hidden;
+    max-height: 0px;
+    transition: 0.25s;
+  }
+
+  > ul.expanded {
+    opacity: 1;
+    padding: $em4;
+    max-height: 300px;
+    transition: 0.5s;
+  }
+}

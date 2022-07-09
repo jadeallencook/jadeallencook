@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './Navigation.scss';
-import Logo from '../assets/logo.png';
+import Logo from '../../assets/logo.png';
 
 function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,7 +9,7 @@ function Navigation() {
       <div>
         <div></div>
         <div>
-          <img src={Logo} />
+          <img src={Logo} alt="signature logo" />
         </div>
         <div>
           {isOpen ? (
@@ -31,15 +31,21 @@ function Navigation() {
         <ul>
           <a
             target="_blank"
+            rel="noreferrer"
             href="https://docs.google.com/document/d/1u_Nt4nNpvNyrSYuzycSSUmB2mbTVSvcCB64o1D4Vkxg/edit?usp=sharing"
           >
             <li>Download Resume</li>
           </a>
-          <a target="_blank" href="https://forms.gle/FEymi3X28EGWbMHV6">
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://forms.gle/FEymi3X28EGWbMHV6"
+          >
             <li>Book Interview</li>
           </a>
           <a
             target="_blank"
+            rel="noreferrer"
             href="https://www.youtube.com/playlist?list=PLkj0Wb8QyEEQs3-92fO8Jq5FmkiqPwRi1"
           >
             <li>Programming Tutorials</li>

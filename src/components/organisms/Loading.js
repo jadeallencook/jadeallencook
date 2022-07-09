@@ -1,5 +1,5 @@
 import './Loading.scss';
-import Image from '../assets/loading.gif';
+import Image from '../../assets/loading.gif';
 
 function Loading() {
   return (
