@@ -10,7 +10,11 @@ function Header(props) {
       }}
     >
       <div>
-        <h1>{header?.title[0].text}</h1>
+        <h1>
+          {header?.title[0].text.split(' ').map((string, index) => (
+            <span key={`header-word-${index}`}>{string}</span>
+          ))}
+        </h1>
         <br />
         <span>{header?.subtext[0].text}</span>
         <br />

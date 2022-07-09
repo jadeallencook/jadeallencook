@@ -7,6 +7,12 @@ header {
   > div {
     padding: $em6 $em4;
     background-color: rgba($color: $black, $alpha: 0.75);
+    > h1 {
+      > span {
+        margin-right: 10px;
+        display: inline-block;
+      }
+    }
     > button {
       margin-right: 15px;
     }
