@@ -38,9 +38,9 @@ nav {
     list-style: none;
     padding: 0;
     margin: 0;
-    animation-name: OpenMenu;
-    animation-duration: 2s;
-    animation-direction: normal;
+    overflow-y: hidden;
+    max-height: 0px;
+    transition: 0.5s;
     > a {
       text-align: none;
     }
@@ -50,19 +50,15 @@ nav {
       border-bottom: solid thin $color6;
       color: $white;
       text-decoration: none;
-      transition: 1s;
+      transition: 0.5s;
     }
     > a > li:hover {
+      transition: 0.5s;
       background-color: $color1;
     }
   }
-}
-
-@keyframes OpenMenu {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
+  > ul.opened {
+    transition: 0.5s;
+    max-height: 500px;
   }
 }

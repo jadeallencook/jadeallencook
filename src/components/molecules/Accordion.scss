@@ -6,7 +6,7 @@ li {
     padding: $em3;
     cursor: pointer;
     > i {
-      margin-right: 5px;
+      margin-right: 10px;
       transition: 0.5s;
       float: right;
       transform: rotate(-90deg);
@@ -14,6 +14,12 @@ li {
     > i.close {
       transition: 0.5s;
       transform: rotate(0deg);
+    }
+  }
+
+  > h3:hover {
+    i {
+      margin-right: 5px;
     }
   }
 

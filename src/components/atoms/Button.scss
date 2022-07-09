@@ -1,0 +1,27 @@
+@import "../../config.scss";
+
+button {
+  margin-top: $em5;
+  padding: $em2 $em3;
+  float: left;
+  display: block;
+  background-color: $white;
+  color: $black;
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 15px;
+  cursor: pointer;
+  border: solid 1px $white;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+
+button.secondary {
+  background-color: transparent;
+  color: $white;
+}
+
+button:hover {
+  transition: 0.5s;
+  padding: $em2 $em5;
+}

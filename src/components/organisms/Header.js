@@ -1,4 +1,5 @@
 import './Header.scss';
+import Button from '../atoms/Button';
 
 function Header(props) {
   const { header } = props;
@@ -17,14 +18,12 @@ function Header(props) {
           const { text, spans } = button[0];
           const link = spans[0].data.url;
           return (
-            <a
-              key={`header-button-${index}`}
-              href={link}
-              target="_blank"
-              rel="noreferrer"
-            >
-              {text}
-            </a>
+            <Button
+              key={`cta-${index}`}
+              link={link}
+              text={text}
+              isSecondary={index}
+            />
           );
         })}
       </div>
