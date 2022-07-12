@@ -33,6 +33,7 @@ npm-debug.log
 testem.log
 /typings
 .eslintcache
+.package-lock.json
 
 # e2e
 /e2e/*.js
