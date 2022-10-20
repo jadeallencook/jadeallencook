@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+# Jade Allen Cook
+## Software Engineer & Digital Creator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Apple
+#### Mar 2022 - Present
+- Collaborated cross-functionally to solve problems and make improvements.
+- Worked closely with product and design to understand objectives before building.
+- Defined and communicated risks with appropriate teams about potential hazards.
+- Provided technical knowledge via code reviews and workflow improvements.
+- Organized and documented frontend code guidelines.
 
-## Available Scripts
+### Cellar Door
+#### Nov 2021 - Present
+- Worked with Cellar Door clients and coordinated project initiatives.
+- Led frontend software engineering team in Storybook development.
+- Standardized workflow/processes and supported engineers.
+- Collaborated with product, backend, and design to accomplish goals.
+- Developed features for mobile application deployed on proprietary hardware.
 
-In the project directory, you can run:
+### CLEAR
+#### Nov 2020 - Jun 2021
+- Led frontend development for the web portal used to enroll and renew clients.
+- Worked with an existing CI/CD pipeline created using GitHub actions and AWS.
+- Wrote unit and integration tests using Jest and Cypress for CI/CD workflow.
+- Collaborated with backend team to describe and consume OpenAPI web services.
+- Participated in making architectural decisions for new features and tech dept reduction.
 
-### `yarn start`
+### Wells Fargo
+#### Jul 2020 - Aug 2020
+- Developed new features using React and rebranded existing components.
+- Used Redux/Saga to manage application state and side effects.
+- Refactored class based components to functional components using hooks.
+- Managed the CI/CD pipeline using Github actions and jFrog artifactory.
+- Wrote unit tests for React components and Sagas using Jest.
+- Contributed to daily SCUM meetings and used JIRA to plan sprints.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Facebook
+#### Mar 2020 - May 2020
+- Led the development of the hierarchy management feature.
+- Wrote a design doc to detail component and application logic architecture.
+- Followed backend code to developed a React prototype that works with response.
+- Created custom hooks to consolidate application request and state management logic.
+- Expanded my PHP knowledge by beginning to learn HACK code.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Google
+#### Jul 2019 - Feb 2020
+- Conducted technical front-end developer interviews for junior software engineers.
+- Produced design docs and proposals for feature implementations.
+- Developed data labeling Angular components for the Google Cloud Platform.
+- Wrote unit/integration tests for all contributions using TDD best practices.
+- Utilized RESTful HTTP APIs, RxJS Observables, and protocol buffers.
+- Configured mods for feature toggling and completed front-end code reviews.
 
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### WaveOrtho
+#### Sep 2015 - May 2017
+- Formulated interactive JavaScript applications embedded into FileMaker web views.
+- Assisted the company in migrating communications to Slack and codebase to GitHub.
+- Redesigned consumer-facing website and sales funnel using the Angular framework.
+- Led the development of a payment portal using Stipe’s RESTful API.
