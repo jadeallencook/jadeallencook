@@ -44,6 +44,13 @@
 - Utilized RESTful HTTP APIs, RxJS Observables, and protocol buffers.
 - Configured mods for feature toggling and completed front-end code reviews.
 
+### Deseret News (Oct 2017 - Jan 2019)
+- Worked with the design team and converted UI/UX mocks into InVision prototypes.
+- Developed interactive React applications embedded into articles with OEmbed.
+- Built a platform to configure and deploy reusable embeds using Node.js.
+- Created Angular dashboards for data entry clerks to store internal information.
+- Automated employee workflow by developing Chrome Extensions.
+
 ### WaveOrtho (Sep 2015 - May 2017)
 - Formulated interactive JavaScript applications embedded into FileMaker web views.
 - Assisted the company in migrating communications to Slack and codebase to GitHub.
