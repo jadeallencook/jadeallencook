@@ -1,4 +1,4 @@
-# Jade Allen Cook | Software Engineer & Digital Creator
+# Jade Allen Cook | Frontend Software Engineer
 
 ### Apple (Mar 2022 - Present) [Contract]
 - Collaborated cross-functionally to solve technical challenges and drive improvements.
