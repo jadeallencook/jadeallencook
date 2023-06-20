@@ -1,0 +1,18 @@
+section.tutorials {
+  > video {
+    width: 110%;
+    margin-left: -25px;
+    outline: 0;
+  }
+  > div.comment {
+    text-align: left;
+    margin-top: 25px;
+    > p {
+      margin: 0;
+    }
+  }
+  > a {
+    display: block;
+    margin-top: 25px;
+  }
+}

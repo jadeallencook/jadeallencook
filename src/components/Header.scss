@@ -1,0 +1,21 @@
+header {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  padding: 40px 10px 10px 10px;
+  overflow: hidden;
+  height: 450px;
+  max-height: 50%;
+  border-radius: 15px;
+  > h1 {
+    margin: 0;
+  }
+  > video {
+    position: absolute;
+    top: 0;
+    left: -10px;
+    z-index: -1;
+    width: auto;
+    height: 110%;
+  }
+}
