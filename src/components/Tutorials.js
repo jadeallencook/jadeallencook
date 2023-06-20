@@ -9,7 +9,7 @@ function Tutorials() {
         With Thousands of Views
       </h2>
       <p className="eyebrow">Empowering Teams With Video</p>
-      <video src={TutorialsVideo} autoPlay loop muted></video>
+      <video src={TutorialsVideo} autoPlay loop muted playsinline></video>
       <div className="comment">
         <p>
           <b>@chicomigrania822</b>

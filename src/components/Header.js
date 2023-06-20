@@ -9,7 +9,7 @@ function Header() {
         <br />& Digital Creator
       </h1>
       <p className="eyebrow">San Francisco Bay Area</p>
-      <video src={HeaderVideo} autoPlay loop muted></video>
+      <video src={HeaderVideo} autoPlay loop muted playsinline></video>
     </header>
   );
 }

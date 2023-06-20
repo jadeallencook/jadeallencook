@@ -1,7 +1,6 @@
 import './Applications.scss';
 import Dental from '../assets/applications/dental.png';
 import Gdoc from '../assets/applications/gdoc.png';
-import Pxart from '../assets/applications/pxart.png';
 import PerfectLanding from '../assets/applications/perfect-landing.png';
 import Newsroom from '../assets/applications/newsroom.png';
 import Yogifm from '../assets/applications/yogifm.png';
@@ -21,7 +20,6 @@ function Applications() {
       <img src={Fedbook} alt="Dental" />
       <img src={Dental} alt="Dental" />
       <img src={Gdoc} alt="Dental" />
-      <img src={Pxart} alt="Dental" />
       <img src={PerfectLanding} alt="Dental" />
       <img src={Newsroom} alt="Dental" />
       <img src={Yogifm} alt="Dental" />
