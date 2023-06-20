@@ -1,4 +1,4 @@
-import TutorialsVideo from '../assets/tutorial.mp4';
+import TutorialsVideo from '../assets/tutorial.gif';
 import './Tutorials.scss';
 
 function Tutorials() {
@@ -9,7 +9,7 @@ function Tutorials() {
         With Thousands of Views
       </h2>
       <p className="eyebrow">Empowering Teams With Video</p>
-      <video src={TutorialsVideo} autoPlay loop muted playsinline></video>
+      <img src={TutorialsVideo} alt="Tutorials" />
       <div className="comment">
         <p>
           <b>@chicomigrania822</b>
