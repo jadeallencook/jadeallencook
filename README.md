@@ -1,6 +1,6 @@
 # Jade Allen Cook | Software Engineer
 
-Software engineer using technology to empower communities and promote sustainability.
+I am a software engineer using technology to empower communities and promote sustainability.
 
 [Website](https://www.jadeallencook) | 
 [Resume](https://docs.google.com/document/d/1u_Nt4nNpvNyrSYuzycSSUmB2mbTVSvcCB64o1D4Vkxg) |
