@@ -5,6 +5,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { createClient } from "@/prismicio";
 import { Metadata } from "next";
 import type { AllDocumentTypes } from "../../prismicio-types";
+import Navigation from "@/components/Navigation";
 
 type RouteDocumentType = Exclude<
   AllDocumentTypes["type"],
@@ -58,6 +59,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <Navigation />
         {children}
         <Analytics />
       </body>
