@@ -22,14 +22,14 @@ export async function generateMetadata({
   const client = createClient();
 
   const {
-    data: { default_meta_description, default_meta_title, brand },
+    data: { default_meta_description, default_meta_title, name },
   } = await client.getSingle("settings");
 
   const {
     data: { meta_description, meta_title },
   } = await client.getSingle(documentType);
 
-  const title = `${brand} | ${meta_title || default_meta_title}`;
+  const title = `${name} | ${meta_title || default_meta_title}`;
   const description = meta_description || default_meta_description;
 
   return { title, description };

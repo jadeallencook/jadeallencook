@@ -25,22 +25,6 @@
 					}
 				]
 			},
-			"link": {
-				"__TYPE__": "RepeatableContent",
-				"type": "Link",
-				"value": [
-					{
-						"__TYPE__": "LinkContent",
-						"key": "b787a9a7-5c6b-4156-959d-ff0f912b82e2",
-						"value": {
-							"__TYPE__": "ExternalLink",
-							"url": "http://twitter.com",
-							"text": "having",
-							"variant": "Secondary"
-						}
-					}
-				]
-			},
 			"image": {
 				"origin": {
 					"id": "main",
@@ -63,6 +47,31 @@
 				"credits": null,
 				"__TYPE__": "ImageContent",
 				"thumbnails": {}
+			},
+			"links": {
+				"__TYPE__": "RepeatableContent",
+				"type": "Link",
+				"value": [
+					{
+						"key": "23aa26e0-b800-4fcf-8ace-d1025c1e8479",
+						"__TYPE__": "LinkContent",
+						"value": {
+							"__TYPE__": "ExternalLink",
+							"url": "https://slicemachine.dev",
+							"text": "freedom",
+							"variant": "secondary"
+						}
+					}
+				]
+			},
+			"image_link": {
+				"__TYPE__": "LinkContent",
+				"key": "9fde7450-7166-4979-bbcd-55a6ba02f5fc",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://twitter.com",
+					"text": "dot"
+				}
 			}
 		},
 		"items": []

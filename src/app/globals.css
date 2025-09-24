@@ -1,26 +1,31 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+  color-scheme: light dark;
+  --background: light-dark(#ffffff, #242424);
+  --secondary-background: light-dark(#f4f4f4, #2f2f2f);
+  --foreground: light-dark(#171717, #ffffff);
+  --secondary-foreground: light-dark(#495057, #ced4da);
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+}
+
+p {
+  font-weight: 600;
+  line-height: 1.5rem;
 }
 
 * {
@@ -31,11 +36,4 @@ body {
 
 a {
   color: inherit;
-  text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
 }

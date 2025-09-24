@@ -30,18 +30,18 @@
             "multi": "paragraph"
           }
         },
-        "link": {
+        "links": {
           "type": "Link",
           "config": {
-            "label": "Link",
+            "label": "Links",
             "placeholder": "",
             "select": null,
             "allowTargetBlank": true,
             "allowText": true,
             "repeat": true,
             "variants": [
-              "Primary",
-              "Secondary"
+              "primary",
+              "secondary"
             ]
           }
         },
@@ -51,6 +51,17 @@
             "label": "Image",
             "constraint": {},
             "thumbnails": []
+          }
+        },
+        "image_link": {
+          "type": "Link",
+          "config": {
+            "label": "Image Link",
+            "placeholder": "",
+            "select": null,
+            "allowTargetBlank": true,
+            "allowText": true,
+            "repeat": false
           }
         }
       },

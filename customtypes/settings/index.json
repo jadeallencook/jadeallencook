@@ -6,10 +6,10 @@
   "format": "custom",
   "json": {
     "Main": {
-      "brand": {
+      "name": {
         "type": "Text",
         "config": {
-          "label": "Brand",
+          "label": "Name",
           "placeholder": ""
         }
       },
@@ -47,6 +47,17 @@
           "label": "Default Meta Image",
           "constraint": {},
           "thumbnails": []
+        }
+      },
+      "social_media": {
+        "type": "Link",
+        "config": {
+          "label": "Social Media",
+          "placeholder": "",
+          "select": null,
+          "allowTargetBlank": true,
+          "allowText": true,
+          "repeat": true
         }
       }
     }

@@ -182,15 +182,15 @@ export type NavigationDocument<Lang extends string = string> =
  */
 interface SettingsDocumentData {
   /**
-   * Brand field in *Settings*
+   * Name field in *Settings*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: settings.brand
+   * - **API ID Path**: settings.name
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/fields/text
    */
-  brand: prismic.KeyTextField;
+  name: prismic.KeyTextField;
 
   /**
    * Phone field in *Settings*
@@ -246,6 +246,19 @@ interface SettingsDocumentData {
    * - **Documentation**: https://prismic.io/docs/fields/image
    */
   default_meta_image: prismic.ImageField<never>;
+
+  /**
+   * Social Media field in *Settings*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.social_media
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/link
+   */
+  social_media: prismic.Repeatable<
+    prismic.LinkField<string, string, unknown, prismic.FieldState, never>
+  >;
 }
 
 /**
@@ -294,20 +307,20 @@ export interface HeroSliceDefaultPrimary {
   description: prismic.RichTextField;
 
   /**
-   * Link field in *Hero → Default → Primary*
+   * Links field in *Hero → Default → Primary*
    *
    * - **Field Type**: Link
    * - **Placeholder**: *None*
-   * - **API ID Path**: hero.default.primary.link
+   * - **API ID Path**: hero.default.primary.links
    * - **Documentation**: https://prismic.io/docs/fields/link
    */
-  link: prismic.Repeatable<
+  links: prismic.Repeatable<
     prismic.LinkField<
       string,
       string,
       unknown,
       prismic.FieldState,
-      "Primary" | "Secondary"
+      "primary" | "secondary"
     >
   >;
 
@@ -320,6 +333,22 @@ export interface HeroSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/fields/image
    */
   image: prismic.ImageField<never>;
+
+  /**
+   * Image Link field in *Hero → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.default.primary.image_link
+   * - **Documentation**: https://prismic.io/docs/fields/link
+   */
+  image_link: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
 }
 
 /**

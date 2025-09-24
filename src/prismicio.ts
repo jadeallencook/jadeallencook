@@ -17,7 +17,9 @@ export const repositoryName =
  *
  * {@link https://prismic.io/docs/route-resolver#route-resolver}
  */
-const routes: Route[] = [];
+const routes: Route[] = [
+  { type: "home", path: "/" },
+];
 
 /**
  * Creates a Prismic client for the project's repository. The client is used to
