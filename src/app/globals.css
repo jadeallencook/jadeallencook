@@ -33,6 +33,14 @@
   --medium-border-radius: 16px;
 
   --focus-outline: light-dark(rgb(30, 72, 123), rgb(88, 183, 255));
+
+  --logo-filter: brightness(0%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --logo-filter: invert(1);
+  }
 }
 
 :focus {

@@ -1,6 +1,10 @@
 import { FC } from "react";
 import { Content } from "@prismicio/client";
-import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
+import {
+  PrismicLink,
+  PrismicRichText,
+  SliceComponentProps,
+} from "@prismicio/react";
 import styles from "./style.module.css";
 import { PrismicNextImage } from "@prismicio/next";
 
@@ -10,7 +14,7 @@ const TextBlock: FC<TextBlockProps> = ({
   slice: {
     slice_type,
     variation,
-    primary: { title, description, image },
+    primary: { title, description, image, image_link },
   },
 }) =>
   image ? (
@@ -26,6 +30,7 @@ const TextBlock: FC<TextBlockProps> = ({
         </div>
         <div>
           <PrismicNextImage field={image} />
+          {image_link.text && <PrismicLink field={image_link} tabIndex={0} />}
         </div>
       </div>
     </section>

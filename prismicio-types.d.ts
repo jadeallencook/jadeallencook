@@ -69,7 +69,11 @@ type ContentRelationshipFieldWithData<
   >;
 }[Exclude<TCustomType[number], string>["id"]];
 
-type HomeDocumentDataSlicesSlice = ImageLinksSlice | TextBlockSlice | HeroSlice;
+type HomeDocumentDataSlicesSlice =
+  | LogosSlice
+  | ImageLinksSlice
+  | TextBlockSlice
+  | HeroSlice;
 
 /**
  * Content for Home documents
@@ -489,6 +493,93 @@ export type ImageLinksSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Item in *Logos → Default → Primary → Logos*
+ */
+export interface LogosSliceDefaultPrimaryLogosItem {
+  /**
+   * Logo field in *Logos → Default → Primary → Logos*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: logos.default.primary.logos[].logo
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  logo: prismic.ImageField<never>;
+
+  /**
+   * Name field in *Logos → Default → Primary → Logos*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: logos.default.primary.logos[].name
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  name: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *Logos → Default → Primary*
+ */
+export interface LogosSliceDefaultPrimary {
+  /**
+   * Title field in *Logos → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: logos.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  title: prismic.RichTextField;
+
+  /**
+   * Description field in *Logos → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: logos.default.primary.description
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  description: prismic.RichTextField;
+
+  /**
+   * Logos field in *Logos → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: logos.default.primary.logos[]
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  logos: prismic.GroupField<Simplify<LogosSliceDefaultPrimaryLogosItem>>;
+}
+
+/**
+ * Default variation for Logos Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type LogosSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<LogosSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Logos*
+ */
+type LogosSliceVariation = LogosSliceDefault;
+
+/**
+ * Logos Shared Slice
+ *
+ * - **API ID**: `logos`
+ * - **Description**: Logos
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type LogosSlice = prismic.SharedSlice<"logos", LogosSliceVariation>;
+
+/**
  * Primary content in *TextBlock → Default → Primary*
  */
 export interface TextBlockSliceDefaultPrimary {
@@ -608,6 +699,11 @@ declare module "@prismicio/client" {
       ImageLinksSliceDefaultPrimary,
       ImageLinksSliceVariation,
       ImageLinksSliceDefault,
+      LogosSlice,
+      LogosSliceDefaultPrimaryLogosItem,
+      LogosSliceDefaultPrimary,
+      LogosSliceVariation,
+      LogosSliceDefault,
       TextBlockSlice,
       TextBlockSliceDefaultPrimary,
       TextBlockSliceVariation,

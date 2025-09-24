@@ -11,6 +11,9 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "logos": {
+              "type": "SharedSlice"
+            },
             "image_links": {
               "type": "SharedSlice"
             },
