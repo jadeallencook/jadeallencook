@@ -27,17 +27,27 @@ export async function generateMetadata({
   const client = createClient();
 
   const {
-    data: { default_meta_description, default_meta_title, name },
+    data: {
+      default_meta_description,
+      default_meta_title,
+      name,
+      default_meta_image,
+    },
   } = await client.getSingle("settings");
 
   const {
-    data: { meta_description, meta_title },
+    data: { meta_description, meta_title, meta_image },
   } = await client.getSingle(documentType);
 
   const title = `${name} | ${meta_title || default_meta_title}`;
   const description = meta_description || default_meta_description;
+  const image = meta_image?.url || default_meta_image?.url || "";
 
-  return { title, description };
+  return {
+    title,
+    description,
+    openGraph: { images: [image] },
+  };
 }
 
 export default function RootLayout({
