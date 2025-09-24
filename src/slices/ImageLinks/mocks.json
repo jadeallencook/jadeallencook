@@ -1,0 +1,95 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading2",
+						"content": {
+							"text": "Function"
+						}
+					}
+				]
+			},
+			"description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Velit excepteur dolor do laborum veniam laborum in duis pariatur aliquip amet. Dolore amet anim nostrud ex ullamco aliqua et incididunt ad. Adipisicing et reprehenderit irure esse tempor reprehenderit consectetur pariatur dolore irure culpa est eiusmod nulla."
+						}
+					}
+				]
+			},
+			"links": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"image",
+								{
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1593642633279-1796119d5482",
+										"width": 4016,
+										"height": 6016
+									},
+									"url": "https://images.unsplash.com/photo-1593642633279-1796119d5482",
+									"width": 4016,
+									"height": 6016,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"alt": "care",
+									"credits": null,
+									"__TYPE__": "ImageContent",
+									"thumbnails": {}
+								}
+							],
+							[
+								"link",
+								{
+									"key": "8dfd6535-9566-49f6-b342-84175b9972ce",
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "https://prismic.io",
+										"text": "forest"
+									}
+								}
+							],
+							[
+								"views",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "spent",
+									"type": "Text"
+								}
+							],
+							[
+								"year",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "writer",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

@@ -1,0 +1,65 @@
+{
+  "id": "settings",
+  "label": "Settings",
+  "repeatable": false,
+  "status": true,
+  "format": "custom",
+  "json": {
+    "Main": {
+      "name": {
+        "type": "Text",
+        "config": {
+          "label": "Name",
+          "placeholder": ""
+        }
+      },
+      "phone": {
+        "type": "Text",
+        "config": {
+          "label": "Phone",
+          "placeholder": ""
+        }
+      },
+      "email": {
+        "type": "Text",
+        "config": {
+          "label": "Email",
+          "placeholder": ""
+        }
+      },
+      "default_meta_title": {
+        "type": "Text",
+        "config": {
+          "label": "Default Meta Title",
+          "placeholder": ""
+        }
+      },
+      "default_meta_description": {
+        "type": "Text",
+        "config": {
+          "label": "Default Meta Description",
+          "placeholder": ""
+        }
+      },
+      "default_meta_image": {
+        "type": "Image",
+        "config": {
+          "label": "Default Meta Image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "social_media": {
+        "type": "Link",
+        "config": {
+          "label": "Social Media",
+          "placeholder": "",
+          "select": null,
+          "allowTargetBlank": true,
+          "allowText": true,
+          "repeat": true
+        }
+      }
+    }
+  }
+}

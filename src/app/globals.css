@@ -1,0 +1,86 @@
+@keyframes animatedFocusOutline {
+  0% {
+    outline-offset: 3px;
+  }
+  50% {
+    outline-offset: 6px;
+  }
+  100% {
+    outline-offset: 3px;
+  }
+}
+
+@keyframes animatedLinkHover {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+:root {
+  color-scheme: light dark;
+  --background: light-dark(#ffffff, #242424);
+  --secondary-background: light-dark(#f4f4f4, #2f2f2f);
+  --foreground: light-dark(#171717, #ffffff);
+  --secondary-foreground: light-dark(#495057, #ced4da);
+
+  --small-border-radius: 8px;
+  --medium-border-radius: 16px;
+
+  --focus-outline: light-dark(rgb(30, 72, 123), rgb(88, 183, 255));
+
+  --logo-filter: brightness(0%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --logo-filter: invert(1);
+  }
+}
+
+:focus {
+  outline-color: var(--focus-outline);
+  animation: animatedFocusOutline 1s ease infinite;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+}
+
+p {
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  opacity: 0.8;
+  animation: animatedLinkHover 1s ease infinite;
+}
