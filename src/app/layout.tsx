@@ -12,11 +12,12 @@ type RouteDocumentType = Exclude<
 export async function generateMetadata({
   params,
 }: {
-  params: { slug?: string[] };
+  params: Promise<{ slug?: string[] }>;
 }): Promise<Metadata> {
   const routes = new Map<string, RouteDocumentType>([["/", "home"]]);
 
-  const currentPath = params.slug ? `/${params.slug.join("/")}` : "/";
+  const resolvedParams = await params;
+  const currentPath = resolvedParams.slug ? `/${resolvedParams.slug.join("/")}` : "/";
   const documentType = routes.get(currentPath) || "home";
 
   const client = createClient();
