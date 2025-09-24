@@ -3,6 +3,7 @@
 import dynamic from "next/dynamic";
 
 export const components = {
+  accordions: dynamic(() => import("./Accordions")),
   hero: dynamic(() => import("./Hero")),
   image_links: dynamic(() => import("./ImageLinks")),
   logos: dynamic(() => import("./Logos")),

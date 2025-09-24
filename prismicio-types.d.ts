@@ -70,6 +70,7 @@ type ContentRelationshipFieldWithData<
 }[Exclude<TCustomType[number], string>["id"]];
 
 type HomeDocumentDataSlicesSlice =
+  | AccordionsSlice
   | LogosSlice
   | ImageLinksSlice
   | TextBlockSlice
@@ -285,6 +286,98 @@ export type AllDocumentTypes =
   | HomeDocument
   | NavigationDocument
   | SettingsDocument;
+
+/**
+ * Item in *Accordions → Default → Primary → Accordions*
+ */
+export interface AccordionsSliceDefaultPrimaryAccordionsItem {
+  /**
+   * Summary field in *Accordions → Default → Primary → Accordions*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: accordions.default.primary.accordions[].summary
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  summary: prismic.KeyTextField;
+
+  /**
+   * Details field in *Accordions → Default → Primary → Accordions*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: accordions.default.primary.accordions[].details
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  details: prismic.RichTextField;
+}
+
+/**
+ * Primary content in *Accordions → Default → Primary*
+ */
+export interface AccordionsSliceDefaultPrimary {
+  /**
+   * Title field in *Accordions → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: accordions.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  title: prismic.RichTextField;
+
+  /**
+   * Description field in *Accordions → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: accordions.default.primary.description
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  description: prismic.RichTextField;
+
+  /**
+   * Accordions field in *Accordions → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: accordions.default.primary.accordions[]
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  accordions: prismic.GroupField<
+    Simplify<AccordionsSliceDefaultPrimaryAccordionsItem>
+  >;
+}
+
+/**
+ * Default variation for Accordions Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type AccordionsSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<AccordionsSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Accordions*
+ */
+type AccordionsSliceVariation = AccordionsSliceDefault;
+
+/**
+ * Accordions Shared Slice
+ *
+ * - **API ID**: `accordions`
+ * - **Description**: Accordions
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type AccordionsSlice = prismic.SharedSlice<
+  "accordions",
+  AccordionsSliceVariation
+>;
 
 /**
  * Primary content in *Hero → Default → Primary*
@@ -690,6 +783,11 @@ declare module "@prismicio/client" {
       SettingsDocument,
       SettingsDocumentData,
       AllDocumentTypes,
+      AccordionsSlice,
+      AccordionsSliceDefaultPrimaryAccordionsItem,
+      AccordionsSliceDefaultPrimary,
+      AccordionsSliceVariation,
+      AccordionsSliceDefault,
       HeroSlice,
       HeroSliceDefaultPrimary,
       HeroSliceVariation,

@@ -1,0 +1,55 @@
+.root {
+  background-color: var(--secondary-background);
+  padding: 2rem;
+  margin: 1rem;
+  border-radius: var(--medium-border-radius);
+  > h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  > p {
+    margin-bottom: 1rem;
+  }
+
+  > details {
+    background-color: var(--background);
+    border-radius: var(--small-border-radius);
+
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+
+    > p {
+      margin-top: 1rem;
+      padding: 0 1rem;
+      &:last-child {
+        padding-bottom: 2rem;
+      }
+    }
+
+    > summary {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      list-style: none;
+      padding: 1rem;
+
+      > h3 {
+        margin: 0;
+        padding: 0;
+      }
+
+      &::before {
+        content: "▶";
+        margin-right: 0.5rem;
+        transition: transform 0.2s ease;
+        color: var(--foreground);
+      }
+    }
+
+    &[open] > summary::before {
+      transform: rotate(90deg);
+    }
+  }
+}
