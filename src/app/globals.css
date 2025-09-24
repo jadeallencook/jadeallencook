@@ -70,6 +70,20 @@ p {
   line-height: 1.5rem;
 }
 
+h1,
+h2 {
+  margin-bottom: 1rem;
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;

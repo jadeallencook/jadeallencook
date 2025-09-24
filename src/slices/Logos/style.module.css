@@ -4,11 +4,6 @@
   margin: 1rem;
   border-radius: var(--medium-border-radius);
 
-  > h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-
   > ul {
     margin-top: 2rem;
     list-style: none;

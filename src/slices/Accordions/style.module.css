@@ -4,7 +4,6 @@
   margin: 1rem;
   border-radius: var(--medium-border-radius);
   > h2 {
-    font-size: 2rem;
     margin-bottom: 1rem;
   }
 
@@ -30,6 +29,7 @@
 
     > summary {
       display: flex;
+      justify-content: space-between;
       align-items: center;
       cursor: pointer;
       list-style: none;
@@ -40,15 +40,15 @@
         padding: 0;
       }
 
-      &::before {
+      &::after {
         content: "▶";
-        margin-right: 0.5rem;
+        margin-left: 0.5rem;
         transition: transform 0.2s ease;
         color: var(--foreground);
       }
     }
 
-    &[open] > summary::before {
+    &[open] > summary::after {
       transform: rotate(90deg);
     }
   }
