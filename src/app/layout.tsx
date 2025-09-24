@@ -1,5 +1,7 @@
 import "./globals.css";
 
+import { Analytics } from "@vercel/analytics/next";
+
 import { createClient } from "@/prismicio";
 import { Metadata } from "next";
 import type { AllDocumentTypes } from "../../prismicio-types";
@@ -17,7 +19,9 @@ export async function generateMetadata({
   const routes = new Map<string, RouteDocumentType>([["/", "home"]]);
 
   const resolvedParams = await params;
-  const currentPath = resolvedParams.slug ? `/${resolvedParams.slug.join("/")}` : "/";
+  const currentPath = resolvedParams.slug
+    ? `/${resolvedParams.slug.join("/")}`
+    : "/";
   const documentType = routes.get(currentPath) || "home";
 
   const client = createClient();
@@ -43,7 +47,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
