@@ -1,12 +1,12 @@
 import { FC } from "react";
 import { Content } from "@prismicio/client";
 import {
-  PrismicImage,
   PrismicLink,
   PrismicRichText,
   SliceComponentProps,
 } from "@prismicio/react";
 import styles from "./style.module.css";
+import { PrismicNextImage } from "@prismicio/next";
 
 export type HeroProps = SliceComponentProps<Content.HeroSlice>;
 
@@ -38,7 +38,7 @@ const Hero: FC<HeroProps> = ({
         </div>
       </div>
       <div>
-        <PrismicImage field={image} />
+        <PrismicNextImage field={image} />
         <PrismicLink field={image_link} tabIndex={0} />
       </div>
     </section>
