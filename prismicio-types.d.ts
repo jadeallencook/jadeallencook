@@ -69,7 +69,7 @@ type ContentRelationshipFieldWithData<
   >;
 }[Exclude<TCustomType[number], string>["id"]];
 
-type HomeDocumentDataSlicesSlice = HeroSlice;
+type HomeDocumentDataSlicesSlice = ImageLinksSlice | TextBlockSlice | HeroSlice;
 
 /**
  * Content for Home documents
@@ -378,6 +378,197 @@ type HeroSliceVariation = HeroSliceDefault;
  */
 export type HeroSlice = prismic.SharedSlice<"hero", HeroSliceVariation>;
 
+/**
+ * Item in *ImageLinks → Default → Primary → Links*
+ */
+export interface ImageLinksSliceDefaultPrimaryLinksItem {
+  /**
+   * Image field in *ImageLinks → Default → Primary → Links*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: image_links.default.primary.links[].image
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Link field in *ImageLinks → Default → Primary → Links*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: image_links.default.primary.links[].link
+   * - **Documentation**: https://prismic.io/docs/fields/link
+   */
+  link: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+
+  /**
+   * Views field in *ImageLinks → Default → Primary → Links*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: image_links.default.primary.links[].views
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  views: prismic.KeyTextField;
+
+  /**
+   * Year field in *ImageLinks → Default → Primary → Links*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: image_links.default.primary.links[].year
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  year: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *ImageLinks → Default → Primary*
+ */
+export interface ImageLinksSliceDefaultPrimary {
+  /**
+   * Title field in *ImageLinks → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: image_links.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  title: prismic.RichTextField;
+
+  /**
+   * Description field in *ImageLinks → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: image_links.default.primary.description
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  description: prismic.RichTextField;
+
+  /**
+   * Links field in *ImageLinks → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: image_links.default.primary.links[]
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  links: prismic.GroupField<Simplify<ImageLinksSliceDefaultPrimaryLinksItem>>;
+}
+
+/**
+ * Default variation for ImageLinks Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type ImageLinksSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ImageLinksSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *ImageLinks*
+ */
+type ImageLinksSliceVariation = ImageLinksSliceDefault;
+
+/**
+ * ImageLinks Shared Slice
+ *
+ * - **API ID**: `image_links`
+ * - **Description**: ImageLinks
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type ImageLinksSlice = prismic.SharedSlice<
+  "image_links",
+  ImageLinksSliceVariation
+>;
+
+/**
+ * Primary content in *TextBlock → Default → Primary*
+ */
+export interface TextBlockSliceDefaultPrimary {
+  /**
+   * Title field in *TextBlock → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_block.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  title: prismic.RichTextField;
+
+  /**
+   * Description field in *TextBlock → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_block.default.primary.description
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  description: prismic.RichTextField;
+
+  /**
+   * Image field in *TextBlock → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_block.default.primary.image
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Image Link field in *TextBlock → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_block.default.primary.image_link
+   * - **Documentation**: https://prismic.io/docs/fields/link
+   */
+  image_link: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
+}
+
+/**
+ * Default variation for TextBlock Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type TextBlockSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<TextBlockSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *TextBlock*
+ */
+type TextBlockSliceVariation = TextBlockSliceDefault;
+
+/**
+ * TextBlock Shared Slice
+ *
+ * - **API ID**: `text_block`
+ * - **Description**: TextBlock
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type TextBlockSlice = prismic.SharedSlice<
+  "text_block",
+  TextBlockSliceVariation
+>;
+
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -412,6 +603,15 @@ declare module "@prismicio/client" {
       HeroSliceDefaultPrimary,
       HeroSliceVariation,
       HeroSliceDefault,
+      ImageLinksSlice,
+      ImageLinksSliceDefaultPrimaryLinksItem,
+      ImageLinksSliceDefaultPrimary,
+      ImageLinksSliceVariation,
+      ImageLinksSliceDefault,
+      TextBlockSlice,
+      TextBlockSliceDefaultPrimary,
+      TextBlockSliceVariation,
+      TextBlockSliceDefault,
     };
   }
 }

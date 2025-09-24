@@ -39,7 +39,7 @@ const Hero: FC<HeroProps> = ({
       </div>
       <div>
         <PrismicImage field={image} />
-        <PrismicLink field={image_link} />
+        <PrismicLink field={image_link} tabIndex={0} />
       </div>
     </section>
   );
