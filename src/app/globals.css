@@ -43,12 +43,21 @@
   }
 }
 
+section {
+  padding: 16px;
+  max-width: 1500px;
+  margin: 0 auto 16px auto;
+  border-radius: var(--medium-border-radius);
+  background-color: var(--secondary-background);
+}
+
 :focus {
   outline-color: var(--focus-outline);
   animation: animatedFocusOutline 1s ease infinite;
 }
 
 body {
+  padding: 16px 16px 0 16px;
   color: var(--foreground);
   background: var(--background);
   font-family:

@@ -1,9 +1,4 @@
 .root {
-  background-color: var(--secondary-background);
-  padding: 2rem;
-  margin: 1rem;
-  border-radius: var(--medium-border-radius);
-
   > ul {
     margin-top: 2rem;
     list-style: none;

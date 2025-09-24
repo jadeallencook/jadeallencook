@@ -1,8 +1,4 @@
 .root {
-  background-color: var(--secondary-background);
-  padding: 2rem;
-  margin: 1rem;
-  border-radius: var(--medium-border-radius);
   > h2 {
     margin-bottom: 1rem;
   }

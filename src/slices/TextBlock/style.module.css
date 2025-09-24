@@ -1,9 +1,4 @@
 .root {
-  background-color: var(--secondary-background);
-  padding: 2rem;
-  margin: 1rem;
-  border-radius: 16px;
-
   p:not(:last-child) {
     margin-bottom: 1rem;
   }
