@@ -24,19 +24,39 @@
 
 :root {
   color-scheme: light dark;
+
+  /* colors */
   --background: light-dark(#ffffff, #242424);
   --secondary-background: light-dark(#f4f4f4, #2f2f2f);
   --foreground: light-dark(#171717, #ffffff);
   --secondary-foreground: light-dark(#495057, #ced4da);
 
+  /* spacing */
+  --small-spacing: 8px;
+  --medium-spacing: 16px;
+  --large-spacing: 32px;
+
+  /* border radius */
   --small-border-radius: 8px;
   --medium-border-radius: 16px;
 
+  /* focus outline */
   --focus-outline: light-dark(rgb(30, 72, 123), rgb(88, 183, 255));
 
+  /* image filters */
   --logo-filter: brightness(0%);
 }
 
+/* desktop variables */
+@media (min-width: 1200px) {
+  :root {
+    --small-spacing: 16px;
+    --medium-spacing: 32px;
+    --large-spacing: 48px;
+  }
+}
+
+/* dark mode variables */
 @media (prefers-color-scheme: dark) {
   :root {
     --logo-filter: invert(1);
@@ -44,9 +64,9 @@
 }
 
 section {
-  padding: 16px;
+  padding: var(--medium-spacing);
   max-width: 1500px;
-  margin: 0 auto 16px auto;
+  margin: 0 auto var(--medium-spacing) auto;
   border-radius: var(--medium-border-radius);
   background-color: var(--secondary-background);
 }
@@ -57,7 +77,7 @@ section {
 }
 
 body {
-  padding: 16px 16px 0 16px;
+  padding: var(--medium-spacing) var(--medium-spacing) 0 var(--medium-spacing);
   color: var(--foreground);
   background: var(--background);
   font-family:

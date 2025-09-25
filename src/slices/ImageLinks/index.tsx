@@ -31,7 +31,7 @@ const ImageLinks: FC<ImageLinksProps> = ({
           const listItemId = `${id}-${index}`;
           return (
             <li key={index} aria-describedby={listItemId}>
-              <PrismicNextImage field={image} alt="" />
+              <PrismicNextImage field={image} alt="" aria-hidden={true} />
               <PrismicLink field={link} tabIndex={0} id={listItemId} />
               <div>
                 <span>

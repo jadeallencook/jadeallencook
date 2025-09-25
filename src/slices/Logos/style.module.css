@@ -1,9 +1,9 @@
 .root {
   > ul {
-    margin-top: 2rem;
+    margin-top: var(--medium-spacing);
     list-style: none;
     display: grid;
-    gap: 2rem;
+    gap: var(--medium-spacing);
     grid-template-columns: repeat(6, 1fr);
     align-items: end;
     justify-items: center;
@@ -45,7 +45,7 @@
 
 .logoName {
   display: block;
-  margin-top: 1rem;
+  margin-top: var(--small-spacing);
   width: 100%;
   text-align: center;
   color: var(--text-color);

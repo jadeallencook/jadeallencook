@@ -27,8 +27,8 @@ const Logos: FC<LogosProps> = ({
       <ul>
         {logos?.map(({ logo, name }, index) => (
           <li key={index}>
-            <div className={style.logoContainer}>
-              <PrismicImage field={logo} alt="" />
+            <div className={style.logoContainer} aria-hidden={true}>
+              <PrismicImage field={logo} alt="" aria-hidden={true} />
             </div>
             <span className={style.logoName}>{name}</span>
           </li>

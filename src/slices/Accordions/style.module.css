@@ -1,10 +1,10 @@
 .root {
   > h2 {
-    margin-bottom: 1rem;
+    margin-bottom: var(--small-spacing);
   }
 
   > p {
-    margin-bottom: 1rem;
+    margin-bottom: var(--medium-spacing);
   }
 
   > details {
@@ -12,14 +12,14 @@
     border-radius: var(--small-border-radius);
 
     &:not(:last-child) {
-      margin-bottom: 1rem;
+      margin-bottom: var(--small-spacing);
     }
 
     > p {
-      margin-top: 1rem;
-      padding: 0 1rem;
+      margin-top: var(--small-spacing);
+      padding: 0 var(--small-spacing);
       &:last-child {
-        padding-bottom: 2rem;
+        padding-bottom: var(--medium-spacing);
       }
     }
 
@@ -29,7 +29,7 @@
       align-items: center;
       cursor: pointer;
       list-style: none;
-      padding: 1rem;
+      padding: var(--small-spacing);
 
       > h3 {
         margin: 0;
@@ -38,7 +38,7 @@
 
       &::after {
         content: "▶";
-        margin-left: 0.5rem;
+        margin-left: var(--small-spacing);
         transition: transform 0.2s ease;
         color: var(--foreground);
       }

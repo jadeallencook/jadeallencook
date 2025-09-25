@@ -1,8 +1,8 @@
 .menu {
   width: 100%;
-  padding: 16px;
+  padding: var(--medium-spacing);
   max-width: 1500px;
-  margin: 0 auto 16px auto;
+  margin: 0 auto var(--medium-spacing) auto;
   border-radius: var(--medium-border-radius);
   background-color: var(--secondary-background);
 }
@@ -42,7 +42,7 @@
 }
 
 .menu[open] {
-  padding: 16px 16px 0 16px;
+  padding: var(--medium-spacing) var(--medium-spacing) 0 var(--medium-spacing);
 }
 
 .menu[open] .hamburger {
@@ -61,14 +61,14 @@
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  padding: 16px 0;
+  padding: var(--medium-spacing) 0 var(--small-spacing) 0;
   gap: 8px;
 }
 
 .menuItems a {
   width: 100%;
   text-align: center;
-  padding: 16px 0;
+  padding: var(--small-spacing) 0;
   text-decoration: none;
   border-radius: var(--small-border-radius);
   background-color: var(--background);
@@ -78,7 +78,7 @@
   .menuItems {
     flex-direction: column;
     > a {
-      padding-left: 16px;
+      padding-left: var(--medium-spacing);
       text-align: left;
     }
   }

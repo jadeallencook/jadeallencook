@@ -1,7 +1,7 @@
 .root {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 2rem;
+  column-gap: var(--medium-spacing);
 
   > div {
     display: flex;
@@ -9,16 +9,16 @@
     justify-content: center;
     > h1,
     > p {
-      margin-bottom: 1rem;
+      margin-bottom: var(--medium-spacing);
       text-wrap: balance;
     }
     > div > a {
       display: inline-block;
-      padding: 0.75rem 1.5rem;
+      padding: var(--small-spacing);
       border-radius: var(--small-border-radius);
       text-decoration: none;
       font-weight: 600;
-      margin-right: 1rem;
+      margin-right: var(--small-spacing);
       &:hover {
         opacity: 0.8;
       }
@@ -26,8 +26,8 @@
 
     > a {
       text-align: center;
-      padding: 0.5rem 0;
-      margin: 0.5rem 0;
+      padding: var(--small-spacing) 0;
+      margin: 0;
       border-radius: var(--small-border-radius);
       color: var(--secondary-foreground);
     }
@@ -45,10 +45,10 @@
 @media (max-width: 1000px) {
   .root {
     grid-template-columns: 1fr;
-    row-gap: 1rem;
+    row-gap: var(--small-spacing);
     > div {
       > div > a {
-        margin-bottom: 1rem;
+        margin-bottom: var(--small-spacing);
       }
       > img {
         width: 100%;

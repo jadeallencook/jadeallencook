@@ -3,7 +3,7 @@
     margin-top: 2rem;
     list-style: none;
     display: grid;
-    gap: 2rem;
+    gap: var(--medium-spacing);
     grid-template-columns: repeat(4, 1fr);
 
     @media (max-width: 1200px) {
@@ -16,13 +16,13 @@
       text-align: center;
       > a {
         border: solid 2px var(--foreground);
-        padding: 0.5rem 1rem;
+        padding: var(--small-spacing);
         display: block;
         text-decoration: none;
         border-radius: var(--small-border-radius);
       }
       > div {
-        margin-top: 1rem;
+        margin-top: var(--small-spacing);
         color: var(--secondary-foreground);
         > span {
           display: block;
@@ -32,7 +32,7 @@
         }
       }
       > img {
-        margin-bottom: 1rem;
+        margin-bottom: var(--small-spacing);
         width: 100%;
         height: auto;
         display: block;

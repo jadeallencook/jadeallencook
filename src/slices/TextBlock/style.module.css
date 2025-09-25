@@ -6,7 +6,7 @@
   > div {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 2rem;
+    column-gap: var(--medium-spacing);
 
     > div {
       display: flex;
@@ -21,9 +21,9 @@
       }
       > a {
         text-align: center;
-        padding: 0.5rem 0;
-        margin: 0.5rem 0 0 0;
-        border-radius: 8px;
+        padding: var(--small-spacing) 0;
+        margin: var(--small-spacing) 0 0 0;
+        border-radius: var(--small-border-radius);
         color: var(--secondary-foreground);
       }
     }
@@ -34,10 +34,10 @@
   .root {
     > div {
       grid-template-columns: 1fr;
-      row-gap: 1rem;
+      row-gap: var(--medium-spacing);
       > div {
         > div > a {
-          margin-bottom: 1rem;
+          margin-bottom: var(--small-spacing);
         }
         > img {
           width: 100%;

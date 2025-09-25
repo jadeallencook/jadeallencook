@@ -10,7 +10,9 @@ const Navigation = async () => {
   return (
     <details className={styles.menu}>
       <summary className={styles.navHeader} aria-label="Social media links">
-        <div className={styles.name}>Jade Allen Cook</div>
+        <div className={styles.name} aria-hidden={true}>
+          Jade Allen Cook
+        </div>
         <div className={styles.hamburger}>
           <span></span>
           <span></span>
