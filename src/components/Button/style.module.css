@@ -1,0 +1,39 @@
+.root {
+  display: inline-block;
+  padding: var(--small-spacing);
+  border-radius: var(--small-border-radius);
+  text-decoration: none;
+  font-weight: 600;
+  margin-right: var(--small-spacing);
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.primary,
+.secondary {
+  border: solid 2px var(--foreground);
+}
+
+.primary {
+  background-color: var(--foreground);
+  color: var(--background);
+}
+
+.secondary {
+  background-color: transparent;
+  box-sizing: border-box;
+  color: var(--foreground);
+}
+
+.small {
+  padding: var(--xxsmall-spacing) var(--xsmall-spacing);
+}
+
+.medium {
+  padding: var(--xsmall-spacing) var(--small-spacing);
+}
+
+.large {
+  padding: var(--small-spacing) var(--medium-spacing);
+}

@@ -65,15 +65,6 @@
   gap: 8px;
 }
 
-.menuItems a {
-  width: 100%;
-  text-align: center;
-  padding: var(--small-spacing) 0;
-  text-decoration: none;
-  border-radius: var(--small-border-radius);
-  background-color: var(--background);
-}
-
 @media (max-width: 1000px) {
   .menuItems {
     flex-direction: column;

@@ -1,12 +1,14 @@
 import { PrismicLink } from "@prismicio/react";
 import styles from "./style.module.css";
 import { createClient } from "@/prismicio";
+import Button from "@/components/Button";
 
 const Navigation = async () => {
   const client = createClient();
   const {
     data: { links },
   } = await client.getSingle("navigation");
+
   return (
     <details className={styles.menu}>
       <summary className={styles.navHeader} aria-label="Social media links">
@@ -21,12 +23,7 @@ const Navigation = async () => {
       </summary>
       <nav className={styles.menuItems}>
         {links.map(({ link }, index) => (
-          <PrismicLink
-            key={index}
-            field={link}
-            className={styles.navLink}
-            tabIndex={0}
-          />
+          <Button link={link} key={index} variant="secondary" />
         ))}
       </nav>
     </details>

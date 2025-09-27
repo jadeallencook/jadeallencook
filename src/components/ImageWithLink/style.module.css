@@ -1,0 +1,26 @@
+.root {
+  display: block;
+  flex-direction: column;
+  height: fit-content;
+  border: solid 3px var(--foreground);
+  background-color: var(--foreground);
+  border-radius: var(--medium-border-radius);
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
+.linkContainer {
+  background-color: var(--foreground);
+  display: block;
+  text-align: center;
+  color: var(--background);
+  font-weight: bold;
+  padding: var(--small-spacing);
+  text-transform: capitalize;
+}

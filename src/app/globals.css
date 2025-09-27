@@ -32,6 +32,8 @@
   --secondary-foreground: light-dark(#495057, #ced4da);
 
   /* spacing */
+  --xxsmall-spacing: 2px;
+  --xsmall-spacing: 4px;
   --small-spacing: 8px;
   --medium-spacing: 16px;
   --large-spacing: 32px;
@@ -50,6 +52,8 @@
 /* desktop variables */
 @media (min-width: 1200px) {
   :root {
+    --xxsmall-spacing: 4px;
+    --xsmall-spacing: 8px;
     --small-spacing: 16px;
     --medium-spacing: 32px;
     --large-spacing: 48px;

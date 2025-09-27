@@ -7,6 +7,7 @@ import {
 } from "@prismicio/react";
 import styles from "./style.module.css";
 import { PrismicNextImage } from "@prismicio/next";
+import ImageWithLink from "@/components/ImageWithLink";
 
 export type TextBlockProps = SliceComponentProps<Content.TextBlockSlice>;
 
@@ -23,15 +24,12 @@ const TextBlock: FC<TextBlockProps> = ({
       data-slice-variation={variation}
       className={styles.root}
     >
-      <div>
-        <div>
-          <PrismicRichText field={title} />
-          <PrismicRichText field={description} />
-        </div>
-        <div>
-          <PrismicNextImage field={image} />
-          {image_link.text && <PrismicLink field={image_link} tabIndex={0} />}
-        </div>
+      <div className={styles.textContainer}>
+        <PrismicRichText field={title} />
+        <PrismicRichText field={description} />
+      </div>
+      <div className={styles.imageContainer}>
+        <ImageWithLink image={image} link={image_link} />
       </div>
     </section>
   ) : (

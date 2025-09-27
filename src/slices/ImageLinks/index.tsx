@@ -1,12 +1,9 @@
 import { FC, useId } from "react";
 import { Content } from "@prismicio/client";
-import {
-  PrismicLink,
-  PrismicRichText,
-  SliceComponentProps,
-} from "@prismicio/react";
+import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 import { PrismicNextImage } from "@prismicio/next";
 import styles from "./style.module.css";
+import Button from "@/components/Button";
 
 export type ImageLinksProps = SliceComponentProps<Content.ImageLinksSlice>;
 
@@ -32,7 +29,7 @@ const ImageLinks: FC<ImageLinksProps> = ({
           return (
             <li key={index} aria-describedby={listItemId}>
               <PrismicNextImage field={image} alt="" aria-hidden={true} />
-              <PrismicLink field={link} tabIndex={0} id={listItemId} />
+              <Button link={link} id={id} variant="secondary" />
               <div>
                 <span>
                   <span aria-hidden="true">~</span>
