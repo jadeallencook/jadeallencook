@@ -1,7 +1,6 @@
 .root {
   display: block;
   flex-direction: column;
-  height: fit-content;
   border: solid 3px var(--foreground);
   background-color: var(--foreground);
   border-radius: var(--medium-border-radius);

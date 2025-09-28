@@ -1,0 +1,41 @@
+.root {
+  background-color: var(--background);
+  border-radius: var(--small-border-radius);
+
+  &:not(:last-child) {
+    margin-bottom: var(--small-spacing);
+  }
+
+  > p {
+    margin-top: var(--small-spacing);
+    padding: 0 var(--small-spacing);
+    &:last-child {
+      padding-bottom: var(--medium-spacing);
+    }
+  }
+
+  > summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    list-style: none;
+    padding: var(--small-spacing);
+
+    > h3 {
+      margin: 0;
+      padding: 0;
+    }
+
+    &::after {
+      content: "▶";
+      margin-left: var(--small-spacing);
+      transition: transform 0.2s ease;
+      color: var(--foreground);
+    }
+  }
+
+  &[open] > summary::after {
+    transform: rotate(90deg);
+  }
+}

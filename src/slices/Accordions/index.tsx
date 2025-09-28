@@ -2,15 +2,10 @@ import { FC } from "react";
 import { Content } from "@prismicio/client";
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 import styles from "./style.module.css";
+import Accordion from "@/components/Accordion";
 
-/**
- * Props for `Accordions`.
- */
 export type AccordionsProps = SliceComponentProps<Content.AccordionsSlice>;
 
-/**
- * Component for "Accordions" Slices.
- */
 const Accordions: FC<AccordionsProps> = ({
   slice: {
     slice_type,
@@ -27,12 +22,7 @@ const Accordions: FC<AccordionsProps> = ({
       <PrismicRichText field={title} />
       <PrismicRichText field={description} />
       {accordions.map(({ summary, details }, index) => (
-        <details key={index}>
-          <summary>
-            <h3>{summary}</h3>
-          </summary>
-          <PrismicRichText field={details} />
-        </details>
+        <Accordion key={index} summary={summary} details={details} />
       ))}
     </section>
   );
