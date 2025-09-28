@@ -1,29 +1,18 @@
 import { FC } from "react";
 import { Content } from "@prismicio/client";
-import {
-  PrismicImage,
-  PrismicRichText,
-  SliceComponentProps,
-} from "@prismicio/react";
+import { PrismicImage, SliceComponentProps } from "@prismicio/react";
 import style from "./style.module.css";
+import Section from "@/components/Section";
 
 export type LogosProps = SliceComponentProps<Content.LogosSlice>;
 
 const Logos: FC<LogosProps> = ({
   slice: {
     primary: { logos, title, description },
-    slice_type,
-    variation,
   },
 }) => {
   return (
-    <section
-      data-slice-type={slice_type}
-      data-slice-variation={variation}
-      className={style.root}
-    >
-      <PrismicRichText field={title} />
-      <PrismicRichText field={description} />
+    <Section className={style.root} title={title} description={description}>
       <ul>
         {logos?.map(({ logo, name }, index) => (
           <li key={index}>
@@ -34,7 +23,7 @@ const Logos: FC<LogosProps> = ({
           </li>
         ))}
       </ul>
-    </section>
+    </Section>
   );
 };
 

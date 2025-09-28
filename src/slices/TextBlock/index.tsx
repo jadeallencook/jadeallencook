@@ -1,46 +1,28 @@
 import { FC } from "react";
 import { Content } from "@prismicio/client";
-import {
-  PrismicLink,
-  PrismicRichText,
-  SliceComponentProps,
-} from "@prismicio/react";
+import { SliceComponentProps } from "@prismicio/react";
 import styles from "./style.module.css";
-import { PrismicNextImage } from "@prismicio/next";
 import ImageWithLink from "@/components/ImageWithLink";
+import Section from "@/components/Section";
 
 export type TextBlockProps = SliceComponentProps<Content.TextBlockSlice>;
 
 const TextBlock: FC<TextBlockProps> = ({
   slice: {
-    slice_type,
-    variation,
     primary: { title, description, image, image_link },
   },
-}) =>
-  image ? (
-    <section
-      data-slice-type={slice_type}
-      data-slice-variation={variation}
-      className={styles.root}
-    >
-      <div className={styles.textContainer}>
-        <PrismicRichText field={title} />
-        <PrismicRichText field={description} />
-      </div>
+}) => (
+  <Section className={styles.root} title={title} description={description}>
+    {image && (
       <div className={styles.imageContainer}>
-        <ImageWithLink image={image} link={image_link} />
+        <ImageWithLink
+          image={image}
+          link={image_link}
+          className={styles.image}
+        />
       </div>
-    </section>
-  ) : (
-    <section
-      data-slice-type={slice_type}
-      data-slice-variation={variation}
-      className={styles.root}
-    >
-      <PrismicRichText field={title} />
-      <PrismicRichText field={description} />
-    </section>
-  );
+    )}
+  </Section>
+);
 
 export default TextBlock;

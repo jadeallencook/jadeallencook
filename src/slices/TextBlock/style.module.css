@@ -1,28 +1,18 @@
 .root {
   display: flex;
-  grid-template-columns: 1fr 1fr;
   column-gap: var(--medium-spacing);
-  p:not(:last-child) {
-    margin-bottom: 1rem;
-  }
-}
-
-.textContainer {
-  display: flex;
+  row-gap: var(--medium-spacing);
   flex-direction: column;
+  align-items: center;
   justify-content: center;
 }
 
-@media (max-width: 1000px) {
+@media (min-width: 1000px) {
   .root {
-    row-gap: var(--medium-spacing);
-    flex-direction: column;
+    flex-direction: row;
   }
 }
 
 .imageContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: var(--medium-spacing);
+  flex: 0 0 50%;
 }

@@ -1,9 +1,3 @@
-.root {
-  > h2 {
-    margin-bottom: var(--small-spacing);
-  }
-
-  > p {
-    margin-bottom: var(--medium-spacing);
-  }
+.accordionsContainer {
+  margin-top: var(--medium-spacing);
 }

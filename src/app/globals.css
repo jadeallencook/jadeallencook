@@ -67,14 +67,6 @@
   }
 }
 
-section {
-  padding: var(--medium-spacing);
-  max-width: 1500px;
-  margin: 0 auto var(--medium-spacing) auto;
-  border-radius: var(--medium-border-radius);
-  background-color: var(--secondary-background);
-}
-
 :focus {
   outline-color: var(--focus-outline);
   animation: animatedFocusOutline 1s ease infinite;

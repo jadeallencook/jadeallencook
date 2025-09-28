@@ -1,4 +1,9 @@
 .root {
+  padding: var(--medium-spacing);
+  max-width: 1500px;
+  margin: 0 auto var(--medium-spacing) auto;
+  border-radius: var(--medium-border-radius);
+  background-color: var(--secondary-background);
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: var(--medium-spacing);
