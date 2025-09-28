@@ -11,7 +11,6 @@ interface ImageWithLinkProps {
 }
 
 const ImageWithLink: FC<ImageWithLinkProps> = ({ image, link, className }) => {
-  console.log("ImageWithLink link:", link);
   return (
     <div className={classNames(styles.root, className)}>
       <PrismicNextImage
