@@ -10,6 +10,7 @@
 .image {
   width: 100%;
   height: auto;
+  margin-bottom: -5px;
   object-fit: cover;
   object-position: center;
 }
@@ -22,4 +23,5 @@
   font-weight: bold;
   padding: var(--small-spacing);
   text-transform: capitalize;
+  margin-top: 5px;
 }
