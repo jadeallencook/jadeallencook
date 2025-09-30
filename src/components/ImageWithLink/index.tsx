@@ -16,6 +16,8 @@ const ImageWithLink: FC<ImageWithLinkProps> = ({ image, link, className }) => {
       <PrismicNextImage
         className={classNames(styles.image, !link && styles.bottomBorderRadius)}
         field={image}
+        aria-hidden={!!image.alt}
+        alt={(image.alt as "") || ""}
       />
       {link?.text && (
         <div className={styles.linkContainer}>

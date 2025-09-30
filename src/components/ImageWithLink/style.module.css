@@ -24,4 +24,12 @@
   padding: var(--small-spacing);
   text-transform: capitalize;
   margin-top: 5px;
+
+  > a {
+    display: block;
+  }
+
+  &:hover {
+    animation: var(--interactive-hover-animation);
+  }
 }

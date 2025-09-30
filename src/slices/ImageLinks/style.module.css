@@ -16,9 +16,7 @@
     > div {
       margin-top: var(--small-spacing);
       color: var(--secondary-foreground);
-      > span {
-        display: block;
-      }
+      line-height: 1.5rem;
       > span:nth-child(2) {
         font-weight: bold;
       }

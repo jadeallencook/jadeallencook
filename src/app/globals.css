@@ -47,6 +47,10 @@
 
   /* image filters */
   --logo-filter: brightness(0%);
+
+  /* interactive hover animation */
+  --interactive-hover-animation: animatedLinkHover 1s ease infinite;
+  --focus-outline-animation: animatedFocusOutline 1s ease infinite;
 }
 
 /* desktop variables */
@@ -69,7 +73,7 @@
 
 :focus {
   outline-color: var(--focus-outline);
-  animation: animatedFocusOutline 1s ease infinite;
+  animation: var(--focus-outline-animation);
 }
 
 body {
@@ -117,9 +121,4 @@ h2 {
 
 a {
   color: inherit;
-}
-
-a:hover {
-  opacity: 0.8;
-  animation: animatedLinkHover 1s ease infinite;
 }
