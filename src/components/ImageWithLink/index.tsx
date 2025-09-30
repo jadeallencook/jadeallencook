@@ -8,16 +8,23 @@ interface ImageWithLinkProps {
   link?: LinkField;
   image: ImageField;
   className?: string;
+  isPriorityImage?: boolean;
 }
 
-const ImageWithLink: FC<ImageWithLinkProps> = ({ image, link, className }) => {
+const ImageWithLink: FC<ImageWithLinkProps> = ({
+  image,
+  link,
+  className,
+  isPriorityImage,
+}) => {
   return (
     <div className={classNames(styles.root, className)}>
       <PrismicNextImage
         className={classNames(styles.image, !link && styles.bottomBorderRadius)}
         field={image}
         aria-hidden={!!image.alt}
-        alt={(image.alt as "") || ""}
+        fallbackAlt=""
+        priority={isPriorityImage}
       />
       {link?.text && (
         <div className={styles.linkContainer}>

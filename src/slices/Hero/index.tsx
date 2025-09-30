@@ -24,7 +24,7 @@ const Hero: FC<HeroProps> = ({
         </div>
       </div>
       <div className={styles.imageContainer}>
-        <ImageWithLink image={image} link={image_link} />
+        <ImageWithLink image={image} link={image_link} isPriorityImage={true} />
       </div>
     </section>
   );
