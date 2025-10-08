@@ -15,12 +15,13 @@
   z-index: 2;
   background-color: var(--foreground);
   color: var(--background);
-  padding: var(--xsmall-spacing) var(--small-spacing);
+  padding: var(--xsmall-spacing) var(--medium-spacing);
   font-size: 1rem;
   border-bottom-left-radius: var(--medium-border-radius);
   cursor: pointer;
   font-weight: bold;
-  width: 75px;
+  width: 125px;
+  text-decoration: underline;
 }
 
 .image {

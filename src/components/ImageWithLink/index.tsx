@@ -78,7 +78,7 @@ const ImageWithLink: FC<ImageWithLinkProps> = ({
             aria-label={isPlaying ? "Pause video" : "Play video"}
             type="button"
           >
-            {isPlaying ? "❚❚" : "►"}
+            {isPlaying ? "Pause" : "Play"}
           </button>
         </>
       )}
