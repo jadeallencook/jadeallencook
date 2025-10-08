@@ -69,6 +69,7 @@ const ImageWithLink: FC<ImageWithLinkProps> = ({
             playsInline
           >
             <source src={video} type="video/mp4" />
+            <p>{videoAlt || image.alt}</p>
           </video>
           <button
             className={styles.playbackControl}
