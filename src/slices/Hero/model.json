@@ -63,6 +63,22 @@
             "allowText": true,
             "repeat": false
           }
+        },
+        "video": {
+          "type": "Link",
+          "config": {
+            "label": "Video",
+            "placeholder": "",
+            "select": "media",
+            "allowText": false
+          }
+        },
+        "video_alt": {
+          "type": "Text",
+          "config": {
+            "label": "Video Alt",
+            "placeholder": ""
+          }
         }
       },
       "items": {}

@@ -65,13 +65,30 @@
 				]
 			},
 			"image_link": {
-				"__TYPE__": "LinkContent",
 				"key": "9fde7450-7166-4979-bbcd-55a6ba02f5fc",
+				"__TYPE__": "LinkContent",
 				"value": {
 					"__TYPE__": "ExternalLink",
 					"url": "http://twitter.com",
 					"text": "dot"
 				}
+			},
+			"video": {
+				"key": "80435d7e-ea55-46ed-b811-0ec776907fb1",
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "FileLink",
+					"id": "mock_Media_link",
+					"kind": "file",
+					"name": "mock_name",
+					"url": "https://source.unsplash.com/daily",
+					"size": "0"
+				}
+			},
+			"video_alt": {
+				"__TYPE__": "FieldContent",
+				"value": "two",
+				"type": "Text"
 			}
 		},
 		"items": []

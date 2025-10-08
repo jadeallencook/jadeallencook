@@ -446,6 +446,26 @@ export interface HeroSliceDefaultPrimary {
     prismic.FieldState,
     never
   >;
+
+  /**
+   * Video field in *Hero → Default → Primary*
+   *
+   * - **Field Type**: Link to Media
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.default.primary.video
+   * - **Documentation**: https://prismic.io/docs/fields/link-to-media
+   */
+  video: prismic.LinkToMediaField<prismic.FieldState, never>;
+
+  /**
+   * Video Alt field in *Hero → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.default.primary.video_alt
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  video_alt: prismic.KeyTextField;
 }
 
 /**

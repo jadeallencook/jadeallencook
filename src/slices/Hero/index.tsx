@@ -9,7 +9,7 @@ export type HeroProps = SliceComponentProps<Content.HeroSlice>;
 
 const Hero: FC<HeroProps> = ({
   slice: {
-    primary: { title, description, links, image, image_link },
+    primary: { title, description, links, image, image_link, video, video_alt },
   },
 }) => {
   return (
@@ -24,7 +24,13 @@ const Hero: FC<HeroProps> = ({
         </div>
       </div>
       <div className={styles.imageContainer}>
-        <ImageWithLink image={image} link={image_link} isPriorityImage={true} />
+        <ImageWithLink
+          video={(video as { url?: string })?.url || ""}
+          videoAlt={video_alt || ""}
+          image={image}
+          link={image_link}
+          isPriorityImage={true}
+        />
       </div>
     </section>
   );
