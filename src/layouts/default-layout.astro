@@ -10,7 +10,7 @@ interface Props {
 
 const {
   title = 'Software Engineer & Content Creator',
-  description,
+  description = 'Software engineer with 15+ years building accessible web experiences and educational content for clients including Apple, Google, and PlayStation.',
   image,
 } = Astro.props;
 ---
@@ -27,7 +27,7 @@ const {
       {title} | Jade Allen Cook
     </title>
     {description && <meta name="description" content={description} />}
-    <meta property="og:title" content={title} />
+    <meta property="og:title" content={`${title} | Jade Allen Cook`} />
     {description && <meta property="og:description" content={description} />}
     {image && <meta property="og:image" content={image.src} />}
     <meta property="og:url" content={Astro.url} />
