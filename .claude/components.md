@@ -66,14 +66,14 @@ An `<a>` styled as a button. Use for CTAs, not navigation.
 ---
 
 ### `YouTubeVideo.astro`
-Responsive YouTube embed. Maintains 16:9 aspect ratio and applies the shared `--border-radius` token.
+Click-to-load YouTube facade. Renders the video's thumbnail (`i.ytimg.com`, via `astro:assets` `Image` — domain allowlisted in `astro.config.mjs`) with a play button overlay; the real YouTube iframe is only created client-side on click. This avoids loading YouTube's iframe JS/CSS (a major Lighthouse performance cost) until the user actually wants to watch. Maintains 16:9 aspect ratio and applies the shared `--border-radius` token.
 
 | Prop | Type | Description |
 |---|---|---|
-| `src` | `string` | YouTube embed URL |
-| `title` | `string` | Accessible title for the iframe |
+| `id` | `string` | YouTube video ID (not a full URL) |
+| `title` | `string` | Accessible label — used as the button's `aria-label` and the iframe's `title` once loaded |
 
-No slot — content is the iframe itself.
+No slot — content is the facade/iframe itself.
 
 ---
 
