@@ -1,34 +1,17 @@
 {
   "name": "jadeallencook",
-  "version": "0.1.0",
-  "private": true,
+  "type": "module",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=22.12.0"
+  },
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint",
-    "slicemachine": "start-slicemachine"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "dependencies": {
-    "@prismicio/client": "^7.20.1",
-    "@prismicio/next": "^2.0.1",
-    "@prismicio/react": "^3.2.1",
-    "@vercel/analytics": "^1.5.0",
-    "@vercel/speed-insights": "^1.2.0",
-    "classnames": "^2.5.1",
-    "next": "15.5.4",
-    "react": "19.1.0",
-    "react-dom": "19.1.0"
-  },
-  "devDependencies": {
-    "@eslint/eslintrc": "^3",
-    "@slicemachine/adapter-next": "^0.3.84",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "15.5.4",
-    "slice-machine-ui": "^2.18.2",
-    "typescript": "^5"
+    "astro": "^7.1.3"
   }
 }

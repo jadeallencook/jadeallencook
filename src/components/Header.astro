@@ -1,0 +1,45 @@
+---
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
+import Eyebrow from './Eyebrow.astro';
+
+interface Props {
+  heading: string;
+  eyebrow: string;
+  image?: ImageMetadata;
+  imageAlt?: string;
+  imageWidth?: number;
+}
+
+const {
+  heading,
+  eyebrow,
+  image,
+  imageAlt = '',
+  imageWidth = 1200,
+} = Astro.props;
+---
+
+<header>
+  <h1>{heading}</h1>
+  <Eyebrow>{eyebrow}</Eyebrow>
+  {
+    image && (
+      <Image src={image} alt={imageAlt} width={imageWidth} class="hero-image" />
+    )
+  }
+  <slot />
+</header>
+
+<style>
+  header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-image {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+  }
+</style>

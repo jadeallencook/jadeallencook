@@ -1,0 +1,52 @@
+---
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
+import Eyebrow from './Eyebrow.astro';
+
+interface Props {
+  id: string;
+  heading: string;
+  eyebrow: string;
+  image?: ImageMetadata;
+  imageAlt?: string;
+  imageWidth?: number;
+}
+
+const {
+  id,
+  heading,
+  eyebrow,
+  image,
+  imageAlt = '',
+  imageWidth = 1000,
+} = Astro.props;
+---
+
+<section aria-labelledby={id}>
+  <h2 id={id}>{heading}</h2>
+  <Eyebrow>{eyebrow}</Eyebrow>
+  {
+    image && (
+      <Image
+        src={image}
+        alt={imageAlt}
+        width={imageWidth}
+        class="section-image"
+      />
+    )
+  }
+  <slot />
+</section>
+
+<style>
+  section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .section-image {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+  }
+</style>

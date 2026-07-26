@@ -1,0 +1,47 @@
+---
+import YouTubeVideo from './YouTubeVideo.astro';
+
+interface Video {
+  id: string;
+  title: string;
+}
+
+interface Props {
+  videos: Video[];
+}
+
+const { videos } = Astro.props;
+---
+
+<ul>
+  {
+    videos.map(({ id, title }) => (
+      <li>
+        <YouTubeVideo id={id} title={title} />
+      </li>
+    ))
+  }
+</ul>
+
+<style>
+  ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-block);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  @media (max-width: 600px) {
+    ul {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  li {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+</style>

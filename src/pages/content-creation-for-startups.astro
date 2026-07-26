@@ -1,0 +1,84 @@
+---
+import randyLeeShoot from '../assets/randy-lee-shoot.jpeg';
+import ButtonLink from '../components/ButtonLink.astro';
+import Header from '../components/Header.astro';
+import Section from '../components/Section.astro';
+import SectionSpacer from '../components/SectionSpacer.astro';
+import YouTubeVideo from '../components/YouTubeVideo.astro';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Content Creation For Startups"
+  description="Software engineer and content creator making developer-led product videos, onboarding tutorials, and founder stories for fast-moving startups."
+  image={randyLeeShoot}
+>
+  <Header
+    heading="Developer-Led Product Videos for Fast-Moving Startups"
+    eyebrow="Your product is brilliant. Your users aren't sure yet."
+    image={randyLeeShoot}
+  >
+    <p>
+      Most product videos are made by people who've never shipped code. They
+      film the UI and call it a walkthrough. Your users — engineers, technical
+      buyers, builders — can tell immediately. I'm a software engineer and
+      content creator. When I explain your product, I explain it in a language
+      your users actually trust.
+    </p>
+    <ButtonLink
+      href="https://calendly.com/jadeallencook/educational-media-consultation"
+      external>Book a 15-minute call</ButtonLink
+    >
+  </Header>
+  <SectionSpacer />
+  <Section
+    id="onboarding"
+    heading="Product Onboarding & Feature Walkthroughs"
+    eyebrow="A confused user doesn't email support. They cancel."
+  >
+    <p>
+      I create onboarding tutorials, feature walkthroughs, and technical
+      explainers that turn "I don't get it" into "I need to show this to my
+      team." These aren't documentation videos — they're retention assets. Embed
+      them in your product, publish them to search, and let them work while you
+      sleep.
+    </p>
+    <YouTubeVideo
+      id="gFkrGLILj5Y"
+      title="JavaScript ES6 tutorial to show off technical features"
+    />
+  </Section>
+  <SectionSpacer />
+  <Section
+    id="reviews"
+    heading="Unbiased Tech Reviews for Built-In Social Proof"
+    eyebrow="The most trusted sales call your product will ever have."
+  >
+    <p>
+      Third-party credibility is the hardest thing to manufacture — so I don't
+      manufacture it. I test your product as a developer, then publish an
+      honest, hands-on review to my channel, where your future customers are
+      already watching. They find you through search. They arrive already sold.
+    </p>
+    <YouTubeVideo
+      id="l98_k1Djtsg"
+      title="Review of the In Motion V11 electric unicycle"
+    />
+  </Section>
+  <SectionSpacer />
+  <Section
+    id="founder-stories"
+    heading="Founder Stories & On-Site Team Spotlights"
+    eyebrow="Investors fund people. Show them yours."
+  >
+    <p>
+      I bring professional camera, audio, and lighting equipment on-site to film
+      your founders and team — in the space where your product actually gets
+      built. Not a polished brand video. Something rarer: proof that the right
+      people are behind this idea, captured in a way that sticks with the people
+      you're trying to convince.
+    </p>
+    <YouTubeVideo id="I6ak21kV46U" title="Real estate agent spotlight" />
+  </Section>
+  <SectionSpacer />
+</Layout>

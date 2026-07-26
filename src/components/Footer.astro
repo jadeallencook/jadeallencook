@@ -1,0 +1,206 @@
+<footer>
+  <p class="message">
+    Good work starts with the right conversation. If any of this connects with
+    what you're working on, I'd like to hear about it. Whether you're hiring,
+    building, or just thinking something through, I'm happy to chat.
+  </p>
+
+  <div class="columns">
+    <div class="column">
+      <h2>Social</h2>
+      <ul>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/jadeallencook/"
+            target="_blank"
+            rel="noopener noreferrer">LinkedIn</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://github.com/jadeallencook"
+            target="_blank"
+            rel="noopener noreferrer">GitHub</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.youtube.com/jadeallencook"
+            target="_blank"
+            rel="noopener noreferrer">YouTube</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://bsky.app/profile/jadeallencook.bsky.social"
+            target="_blank"
+            rel="noopener noreferrer">Bluesky</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.instagram.com/jadeallencook/"
+            target="_blank"
+            rel="noopener noreferrer">Instagram</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://x.com/jadeallencook"
+            target="_blank"
+            rel="noopener noreferrer">Twitter</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://jadeallencook.tumblr.com"
+            target="_blank"
+            rel="noopener noreferrer">Tumblr</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.facebook.com/jadeallencook"
+            target="_blank"
+            rel="noopener noreferrer">Facebook</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.threads.com/@jadeallencook"
+            target="_blank"
+            rel="noopener noreferrer">Threads</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <div class="column">
+      <h2>Links</h2>
+      <ul>
+        <li>
+          <a
+            href="https://calendly.com/jadeallencook/recruit"
+            target="_blank"
+            rel="noopener noreferrer">Book a Call</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://docs.google.com/document/d/1u_Nt4nNpvNyrSYuzycSSUmB2mbTVSvcCB64o1D4Vkxg"
+            target="_blank"
+            rel="noopener noreferrer">Download My Resume</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <div class="column">
+      <h2>Pages</h2>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li>
+          <a href="/content-creation-for-startups"
+            >Content Creation for Startups</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <div class="column">
+      <h2>Contact</h2>
+      <p>
+        <a href="tel:+1-510-255-5233">(510) 255-5233</a>
+      </p>
+      <p>
+        <a href="mailto:jadeallencook@icloud.com"
+          >jadeallencook@protonmail.com</a
+        >
+      </p>
+      <address>
+        <p>Oakland, California</p>
+      </address>
+    </div>
+  </div>
+
+  <p class="copyright">
+    &copy; {new Date().getFullYear()} Jade Allen Cook | Software Engineer & Content
+    Creator
+  </p>
+</footer>
+
+<style>
+  footer {
+    max-width: var(--content-width);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--space-block) * 2);
+    padding-top: calc(var(--space-block) * 2);
+  }
+
+  .message {
+    margin: 0;
+    color: var(--color-muted);
+  }
+
+  .columns {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: calc(var(--space-block) * 2);
+  }
+
+  @media (max-width: 800px) {
+    .columns {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .columns {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .column h2 {
+    margin: 0 0 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: var(--color-muted);
+  }
+
+  .column ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .column a {
+    color: inherit;
+  }
+
+  .column a:hover,
+  .column a:focus-visible {
+    text-decoration: underline;
+  }
+
+  address {
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  address p {
+    margin: 0;
+  }
+
+  .copyright {
+    margin: 0;
+    color: var(--color-muted);
+  }
+</style>

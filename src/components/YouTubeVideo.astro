@@ -1,0 +1,24 @@
+---
+interface Props {
+  id: string;
+  title: string;
+}
+
+const { id, title } = Astro.props;
+---
+
+<iframe
+  width="100%"
+  src={`https://www.youtube.com/embed/${id}`}
+  title={title}
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  referrerpolicy="strict-origin-when-cross-origin"
+  allowfullscreen></iframe>
+
+<style>
+  iframe {
+    aspect-ratio: 16 / 9;
+    border-radius: var(--border-radius);
+  }
+</style>

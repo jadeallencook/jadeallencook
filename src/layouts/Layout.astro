@@ -1,0 +1,111 @@
+---
+import Footer from '../components/footer.astro';
+import Navigation from '../components/navigation.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: ImageMetadata;
+}
+
+const {
+  title = 'Software Engineer & Content Creator',
+  description,
+  image,
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <title>
+      {title} | Jade Allen Cook
+    </title>
+    {description && <meta name="description" content={description} />}
+    <meta property="og:title" content={title} />
+    {description && <meta property="og:description" content={description} />}
+    {image && <meta property="og:image" content={image.src} />}
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:type" content="website" />
+    <meta
+      name="twitter:card"
+      content={image ? 'summary_large_image' : 'summary'}
+    />
+    {image && <meta name="twitter:image" content={image.src} />}
+  </head>
+  <body>
+    <Navigation />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style>
+  :root {
+    --content-width: 85ch;
+    --space-block: 16px;
+    --space-inline: 8px;
+    --color-muted: #595959;
+    --border-radius: 8px;
+    --foreground-color: #eee;
+    --background-color: #111;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-muted: #aaa;
+    }
+  }
+
+  html,
+  body {
+    font-family:
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      'Segoe UI',
+      Roboto,
+      Oxygen,
+      Ubuntu,
+      Cantarell,
+      'Open Sans',
+      'Helvetica Neue',
+      sans-serif;
+    padding-block: var(--space-block);
+    padding-inline: var(--space-inline);
+    h1 {
+      text-wrap: balance;
+    }
+  }
+
+  :global(main) {
+    display: flex;
+    flex-direction: column;
+    max-width: var(--content-width);
+    margin: 0 auto;
+  }
+
+  /* dark mode */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background-color: #111;
+      --foreground-color: #eee;
+    }
+    html,
+    body {
+      background-color: var(--background-color);
+      color: var(--foreground-color);
+
+      a {
+        color: #0af;
+      }
+    }
+  }
+</style>
