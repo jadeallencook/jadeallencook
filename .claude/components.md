@@ -95,13 +95,15 @@ No slot — content is the facade/iframe itself.
 ---
 
 ### `video-player.tsx` (`VideoPlayer`)
-React island — YouTube-style playlist player used by the homepage's "YouTube Web Development Series" section. A large main player on the left (`lg:col-span-2`) plus a scrollable list of thumbnail + title buttons on the right; clicking an item swaps the main player to that video and resets it back to a click-to-play facade (does not autoplay on swap). The active item gets a `border-primary` left accent plus `bg-muted`.
+React island — YouTube-style playlist player used by the homepage's "YouTube Web Development Series" section. A large main player on the left (`lg:col-span-2`) plus a "Video Tutorials" list of thumbnail + title buttons on the right (not scrollable — the list always renders at full height); clicking an item swaps the main player to that video and resets it back to a click-to-play facade (does not autoplay on swap). The active item gets a `border-primary` left accent plus `bg-muted`. Video titles are kept short in the `videos` prop (no "tutorial" suffix) since the section heading already establishes that context.
 
 | Prop | Type | Description |
 |---|---|---|
-| `videos` | `Array<{ id: string; title: string }>` | First item is selected by default |
+| `videos` | `Array<{ id: string; title: string; views: string; releaseYear: number }>` | First item is selected by default. `views` is a pre-formatted string (e.g. `'9.8K'`) — no live YouTube API call, the numbers were supplied by hand and need manual updates if they go stale |
 
 Used as `<VideoPlayer client:visible videos={[...]} />` — needs real component state (which video is active, whether it's playing), so unlike `YouTubeVideo.astro`'s facade this can't be done with a vanilla `<script>`.
+
+Each sidebar item shows `{views} views · {N years ago}` under the title. The "years ago" text is computed at render time from `releaseYear` (`new Date().getFullYear() - releaseYear`), not stored as a static string — so it stays accurate on its own as time passes instead of needing a yearly copy update.
 
 **Trade-off:** thumbnails render as plain `<img>` tags, not `astro:assets` `Image` — React components can't use Astro's build-time image pipeline. This loses the local optimization/format-conversion `YouTubeVideo.astro` gets from `astro:assets`, but YouTube's `hqdefault.jpg` thumbnails are already reasonably sized and served from a fast CDN, so the trade-off was judged worth it for the interactivity. The click-to-load deferral for the actual iframe (the bigger Lighthouse win — avoids YouTube's iframe JS until the user clicks play) is preserved.
 

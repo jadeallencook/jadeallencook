@@ -4,6 +4,8 @@ import { cn } from '../lib/utils';
 interface VideoItem {
   id: string;
   title: string;
+  views: string;
+  releaseYear: number;
 }
 
 interface Props {
@@ -12,6 +14,12 @@ interface Props {
 
 function thumbnailUrl(id: string) {
   return `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
+}
+
+function yearsAgoLabel(releaseYear: number) {
+  const years = new Date().getFullYear() - releaseYear;
+  if (years <= 0) return 'this year';
+  return years === 1 ? '1 year ago' : `${years} years ago`;
 }
 
 export function VideoPlayer({ videos }: Props) {
@@ -70,39 +78,49 @@ export function VideoPlayer({ videos }: Props) {
         </div>
       </div>
 
-      <ul className="m-0 flex list-none flex-col gap-2 p-0 lg:max-h-[26rem] lg:overflow-y-auto">
-        {videos.map((video, index) => {
-          const isActive = index === activeIndex;
-          return (
-            <li key={video.id}>
-              <button
-                type="button"
-                aria-current={isActive}
-                onClick={() => selectVideo(index)}
-                className={cn(
-                  'flex w-full items-center gap-3 rounded-lg border-l-4 border-transparent p-2 text-left transition-colors hover:bg-muted',
-                  isActive && 'border-primary bg-muted'
-                )}
-              >
-                <img
-                  src={thumbnailUrl(video.id)}
-                  alt=""
-                  loading="lazy"
-                  className="h-16 w-28 shrink-0 rounded-md object-cover"
-                />
-                <span
+      <div className="flex flex-col gap-2">
+        <h3 className="m-0 text-base font-semibold text-foreground">
+          Video Tutorials
+        </h3>
+        <ul className="m-0 flex list-none flex-col gap-2 p-0">
+          {videos.map((video, index) => {
+            const isActive = index === activeIndex;
+            return (
+              <li key={video.id}>
+                <button
+                  type="button"
+                  aria-current={isActive}
+                  onClick={() => selectVideo(index)}
                   className={cn(
-                    'text-sm font-medium text-foreground',
-                    isActive && 'font-semibold'
+                    'flex w-full items-center gap-3 rounded-lg border-l-4 border-transparent p-2 text-left transition-colors hover:bg-muted',
+                    isActive && 'border-primary bg-muted'
                   )}
                 >
-                  {video.title}
-                </span>
-              </button>
-            </li>
-          );
-        })}
-      </ul>
+                  <img
+                    src={thumbnailUrl(video.id)}
+                    alt=""
+                    loading="lazy"
+                    className="h-16 w-28 shrink-0 rounded-md object-cover"
+                  />
+                  <span className="flex flex-col gap-0.5">
+                    <span
+                      className={cn(
+                        'text-sm font-medium text-foreground',
+                        isActive && 'font-semibold'
+                      )}
+                    >
+                      {video.title}
+                    </span>
+                    <span className="text-xs text-muted-foreground">
+                      {video.views} views · {yearsAgoLabel(video.releaseYear)}
+                    </span>
+                  </span>
+                </button>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
     </div>
   );
 }
