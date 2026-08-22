@@ -23,18 +23,27 @@ npx astro dev stop | status | logs
 
 ```
 src/
-  components/    → see .claude/components.md
+  components/
+    ui/                  → shadcn/ui primitives (generated, don't hand-edit)
+    ...                  → site components, see .claude/components.md
   layouts/
-    Layout.astro → shell + design tokens
+    default-layout.astro → shell + shadcn theme classes
+  lib/
+    utils.ts             → cn() helper (clsx + tailwind-merge)
+  styles/
+    global.css           → Tailwind + shadcn theme tokens, dark mode
   pages/
     index.astro
-    startups.astro
+    content-creation-for-startups.astro
+components.json          → shadcn CLI config
 .claude/
   components.md       → component props and usage
-  conventions.md      → a11y, CSS, inline link rules
+  conventions.md      → a11y, CSS, styling, dark mode
   verbal-branding.md  → voice, tone, copy principles
 .prettierrc           → htmlWhitespaceInsensitivity: "strict"
 ```
+
+Stack: Astro + React (`@astrojs/react`, for shadcn's interactive components only) + Tailwind CSS v4 + shadcn/ui. Most components stay plain `.astro`; only components needing real interactivity (e.g. `ExperienceAccordion.tsx`) are React islands.
 
 ---
 

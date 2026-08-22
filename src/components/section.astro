@@ -22,8 +22,10 @@ const {
 } = Astro.props;
 ---
 
-<section aria-labelledby={id}>
-  <h2 id={id}>{heading}</h2>
+<section aria-labelledby={id} class="flex flex-col gap-4">
+  <h2 id={id} class="text-balance text-3xl font-semibold tracking-tight">
+    {heading}
+  </h2>
   <Eyebrow>{eyebrow}</Eyebrow>
   {
     image && (
@@ -31,22 +33,9 @@ const {
         src={image}
         alt={imageAlt}
         width={imageWidth}
-        class="section-image"
+        class="h-auto w-full rounded-lg"
       />
     )
   }
   <slot />
 </section>
-
-<style>
-  section {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .section-image {
-    width: 100%;
-    height: auto;
-    border-radius: var(--border-radius);
-  }
-</style>

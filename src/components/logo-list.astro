@@ -18,14 +18,19 @@ const colsSm = Math.ceil(count / 3);
 ---
 
 <ul
-  class="logo-list"
+  class="logo-list mt-4 grid w-full list-none gap-6 p-0"
   style={`--cols: repeat(${count}, 1fr); --cols-md: repeat(${colsMd}, 1fr); --cols-sm: repeat(${colsSm}, 1fr)`}
 >
   {
     logos.map(({ name, src }) => (
-      <li>
-        <Image src={src} alt="" width={80} />
-        <span>{name}</span>
+      <li class="flex flex-col items-center gap-2">
+        <Image
+          src={src}
+          alt=""
+          width={80}
+          class="h-10 w-full max-w-20 object-contain dark:invert"
+        />
+        <span class="text-center text-xs text-muted-foreground">{name}</span>
       </li>
     ))
   }
@@ -33,14 +38,7 @@ const colsSm = Math.ceil(count / 3);
 
 <style>
   .logo-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: grid;
     grid-template-columns: var(--cols);
-    gap: 24px;
-    width: 100%;
-    margin-block-start: var(--space-block);
   }
 
   @media (max-width: 600px) {
@@ -52,32 +50,6 @@ const colsSm = Math.ceil(count / 3);
   @media (max-width: 380px) {
     .logo-list {
       grid-template-columns: var(--cols-sm);
-    }
-  }
-
-  li {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-  }
-
-  img {
-    width: 100%;
-    max-width: 80px;
-    height: 40px;
-    object-fit: contain;
-  }
-
-  span {
-    font-size: 0.75rem;
-    text-align: center;
-    color: var(--color-muted);
-  }
-
-  @media (prefers-color-scheme: dark) {
-    img {
-      filter: invert(1);
     }
   }
 </style>

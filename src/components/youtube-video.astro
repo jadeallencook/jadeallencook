@@ -9,10 +9,28 @@ interface Props {
 const { id, title } = Astro.props;
 ---
 
-<div class="youtube-facade" data-video-id={id}>
-  <Image src={`https://i.ytimg.com/vi/${id}/hqdefault.jpg`} alt="" width={480} height={360} loading="lazy" />
-  <button type="button" aria-label={`Play video: ${title}`}>
-    <svg class="play-icon" viewBox="0 0 68 48" aria-hidden="true">
+<div
+  class="youtube-facade relative aspect-video overflow-hidden rounded-lg bg-black"
+  data-video-id={id}
+>
+  <Image
+    src={`https://i.ytimg.com/vi/${id}/hqdefault.jpg`}
+    alt=""
+    width={480}
+    height={360}
+    loading="lazy"
+    class="absolute inset-0 h-full w-full object-cover"
+  />
+  <button
+    type="button"
+    aria-label={`Play video: ${title}`}
+    class="absolute top-1/2 left-1/2 h-12 w-[68px] -translate-x-1/2 -translate-y-1/2 border-0 bg-transparent p-0 transition-transform duration-150 ease-out hover:scale-110 focus-visible:scale-110"
+  >
+    <svg
+      class="h-full w-full drop-shadow-[0_0_6px_rgba(0,0,0,0.4)]"
+      viewBox="0 0 68 48"
+      aria-hidden="true"
+    >
       <path
         d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55c-2.93.78-4.63 3.26-5.42 6.19C.06 13.05 0 24 0 24s.06 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C67.94 34.95 68 24 68 24s-.06-10.95-1.48-16.26z"
         fill="red"
@@ -23,53 +41,12 @@ const { id, title } = Astro.props;
 </div>
 
 <style>
-  .youtube-facade {
-    position: relative;
-    aspect-ratio: 16 / 9;
-    border-radius: var(--border-radius);
-    overflow: hidden;
-    background: #000;
-  }
-
-  .youtube-facade :global(img) {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
   .youtube-facade :global(iframe) {
     position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;
     border: 0;
-  }
-
-  .youtube-facade button {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 68px;
-    height: 48px;
-    padding: 0;
-    border: 0;
-    background: transparent;
-    cursor: pointer;
-    transition: transform 0.15s ease;
-  }
-
-  .youtube-facade button:hover,
-  .youtube-facade button:focus-visible {
-    transform: translate(-50%, -50%) scale(1.1);
-  }
-
-  .play-icon {
-    width: 100%;
-    height: 100%;
-    filter: drop-shadow(0 0 6px rgb(0 0 0 / 0.4));
   }
 </style>
 

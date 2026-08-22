@@ -1,50 +1,33 @@
 ---
+import { buttonVariants } from './ui/button';
+import { cn } from '../lib/utils';
+
 interface Props {
   href: string;
   external?: boolean;
   isSecondary?: boolean;
+  class?: string;
 }
 
-const { href, external = false, isSecondary = false } = Astro.props;
+const {
+  href,
+  external = false,
+  isSecondary = false,
+  class: className,
+} = Astro.props;
 const externalProps = external
   ? { target: '_blank', rel: 'noopener noreferrer' }
   : {};
 ---
 
-<a href={href} {...externalProps} class={`${isSecondary ? 'secondary' : ''}`}
-  ><slot /></a
+<a
+  href={href}
+  {...externalProps}
+  class={cn(
+    buttonVariants({ variant: isSecondary ? 'outline' : 'default' }),
+    'me-2 w-fit max-sm:mt-4 max-sm:block max-sm:w-full max-sm:text-center',
+    className
+  )}
 >
-
-<style>
-  a {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    text-decoration: none;
-    border: 2px solid var(--foreground-color);
-    border-radius: var(--border-radius);
-    width: fit-content;
-    margin-inline-end: var(--space-inline);
-  }
-
-  a.secondary {
-    background-color: var(--background-color);
-    color: var(--foreground-color);
-  }
-
-  a:not(.secondary) {
-    background-color: var(--foreground-color);
-    color: var(--background-color);
-  }
-
-  a:hover {
-    opacity: 0.75;
-  }
-
-  @media (max-width: 600px) {
-    a {
-      display: block;
-      text-align: center;
-      margin-block-start: var(--space-block);
-    }
-  }
-</style>
+  <slot />
+</a>

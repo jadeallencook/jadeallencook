@@ -13,35 +13,12 @@ interface Props {
 const { videos } = Astro.props;
 ---
 
-<ul>
+<ul class="grid list-none grid-cols-2 gap-4 p-0 max-sm:grid-cols-1">
   {
     videos.map(({ id, title }) => (
-      <li>
+      <li class="flex flex-col gap-2">
         <YouTubeVideo id={id} title={title} />
       </li>
     ))
   }
 </ul>
-
-<style>
-  ul {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-block);
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  @media (max-width: 600px) {
-    ul {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  li {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-</style>

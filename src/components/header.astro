@@ -8,6 +8,7 @@ interface Props {
   eyebrow: string;
   image?: ImageMetadata;
   imageAlt?: string;
+  imageCaption?: string;
   imageWidth?: number;
 }
 
@@ -16,30 +17,34 @@ const {
   eyebrow,
   image,
   imageAlt = '',
+  imageCaption,
   imageWidth = 1200,
 } = Astro.props;
 ---
 
-<header>
-  <h1>{heading}</h1>
-  <Eyebrow>{eyebrow}</Eyebrow>
+<header class="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
+  <div class="flex flex-col gap-4">
+    <h1 class="text-balance text-4xl font-extrabold tracking-tight lg:text-5xl">
+      {heading}
+    </h1>
+    <Eyebrow>{eyebrow}</Eyebrow>
+    <slot />
+  </div>
   {
     image && (
-      <Image src={image} alt={imageAlt} width={imageWidth} class="hero-image" />
+      <div class="rounded-xl border border-border bg-card p-2 shadow-sm">
+        <Image
+          src={image}
+          alt={imageAlt}
+          width={imageWidth}
+          class="h-auto w-full rounded-lg"
+        />
+        {imageCaption && (
+          <p class="mt-2 px-1 pb-1 text-center text-sm text-muted-foreground">
+            {imageCaption}
+          </p>
+        )}
+      </div>
     )
   }
-  <slot />
 </header>
-
-<style>
-  header {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .hero-image {
-    width: 100%;
-    height: auto;
-    border-radius: var(--border-radius);
-  }
-</style>

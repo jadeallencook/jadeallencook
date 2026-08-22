@@ -1,14 +1,19 @@
-<footer>
-  <p class="message">
+---
+---
+
+<footer class="mx-auto flex max-w-7xl flex-col gap-8 px-4 pt-8 pb-12 sm:px-6 lg:px-8">
+  <p class="m-0 text-muted-foreground">
     Good work starts with the right conversation. If any of this connects with
     what you're working on, I'd like to hear about it. Whether you're hiring,
     building, or just thinking something through, I'm happy to chat.
   </p>
 
-  <div class="columns">
-    <div class="column">
-      <h2>Social</h2>
-      <ul>
+  <div class="grid grid-cols-1 gap-8 sm:grid-cols-3 lg:grid-cols-4">
+    <div>
+      <h2 class="m-0 mb-2.5 text-base font-semibold tracking-wide text-muted-foreground">
+        Social
+      </h2>
+      <ul class="m-0 flex list-none flex-col gap-1.5 p-0 [&_a]:text-foreground [&_a:hover]:underline [&_a:focus-visible]:underline">
         <li>
           <a
             href="https://www.linkedin.com/in/jadeallencook/"
@@ -75,9 +80,11 @@
       </ul>
     </div>
 
-    <div class="column">
-      <h2>Links</h2>
-      <ul>
+    <div>
+      <h2 class="m-0 mb-2.5 text-base font-semibold tracking-wide text-muted-foreground">
+        Links
+      </h2>
+      <ul class="m-0 flex list-none flex-col gap-1.5 p-0 [&_a]:text-foreground [&_a:hover]:underline [&_a:focus-visible]:underline">
         <li>
           <a
             href="https://calendly.com/jadeallencook/recruit"
@@ -95,9 +102,11 @@
       </ul>
     </div>
 
-    <div class="column">
-      <h2>Pages</h2>
-      <ul>
+    <div>
+      <h2 class="m-0 mb-2.5 text-base font-semibold tracking-wide text-muted-foreground">
+        Pages
+      </h2>
+      <ul class="m-0 flex list-none flex-col gap-1.5 p-0 [&_a]:text-foreground [&_a:hover]:underline [&_a:focus-visible]:underline">
         <li><a href="/">Home</a></li>
         <li>
           <a href="/content-creation-for-startups"
@@ -107,100 +116,28 @@
       </ul>
     </div>
 
-    <div class="column">
-      <h2>Contact</h2>
-      <p>
-        <a href="tel:+1-510-255-5233">(510) 255-5233</a>
+    <div>
+      <h2 class="m-0 mb-2.5 text-base font-semibold tracking-wide text-muted-foreground">
+        Contact
+      </h2>
+      <p class="m-0">
+        <a class="text-foreground hover:underline focus-visible:underline" href="tel:+1-510-255-5233">(510) 255-5233</a>
       </p>
-      <p>
-        <a href="mailto:jadeallencook@icloud.com"
+      <p class="m-0">
+        <a
+          class="text-foreground hover:underline focus-visible:underline"
+          href="mailto:jadeallencook@icloud.com"
           >jadeallencook@protonmail.com</a
         >
       </p>
-      <address>
-        <p>Oakland, California</p>
+      <address class="flex flex-col gap-1.5 not-italic">
+        <p class="m-0">Oakland, California</p>
       </address>
     </div>
   </div>
 
-  <p class="copyright">
+  <p class="m-0 text-muted-foreground">
     &copy; {new Date().getFullYear()} Jade Allen Cook | Software Engineer & Content
     Creator
   </p>
 </footer>
-
-<style>
-  footer {
-    max-width: var(--content-width);
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: calc(var(--space-block) * 2);
-    padding-top: calc(var(--space-block) * 2);
-  }
-
-  .message {
-    margin: 0;
-    color: var(--color-muted);
-  }
-
-  .columns {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: calc(var(--space-block) * 2);
-  }
-
-  @media (max-width: 800px) {
-    .columns {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-
-  @media (max-width: 600px) {
-    .columns {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  .column h2 {
-    margin: 0 0 10px;
-    font-size: 1rem;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    color: var(--color-muted);
-  }
-
-  .column ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-  }
-
-  .column a {
-    color: inherit;
-  }
-
-  .column a:hover,
-  .column a:focus-visible {
-    text-decoration: underline;
-  }
-
-  address {
-    font-style: normal;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-  }
-
-  address p {
-    margin: 0;
-  }
-
-  .copyright {
-    margin: 0;
-    color: var(--color-muted);
-  }
-</style>
