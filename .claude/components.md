@@ -94,14 +94,18 @@ No slot — content is the facade/iframe itself.
 
 ---
 
-### `VideoGrid.astro`
-Two-column responsive grid of YouTube embeds. Uses `YouTubeVideo` internally. Collapses to one column below 600px (`max-sm:grid-cols-1`).
+### `video-player.tsx` (`VideoPlayer`)
+React island — YouTube-style playlist player used by the homepage's "YouTube Web Development Series" section. A large main player on the left (`lg:col-span-2`) plus a scrollable list of thumbnail + title buttons on the right; clicking an item swaps the main player to that video and resets it back to a click-to-play facade (does not autoplay on swap). The active item gets a `border-primary` left accent plus `bg-muted`.
 
 | Prop | Type | Description |
 |---|---|---|
-| `videos` | `Array<{ id: string; title: string }>` | Passed straight through to `YouTubeVideo` |
+| `videos` | `Array<{ id: string; title: string }>` | First item is selected by default |
 
-No slot.
+Used as `<VideoPlayer client:visible videos={[...]} />` — needs real component state (which video is active, whether it's playing), so unlike `YouTubeVideo.astro`'s facade this can't be done with a vanilla `<script>`.
+
+**Trade-off:** thumbnails render as plain `<img>` tags, not `astro:assets` `Image` — React components can't use Astro's build-time image pipeline. This loses the local optimization/format-conversion `YouTubeVideo.astro` gets from `astro:assets`, but YouTube's `hqdefault.jpg` thumbnails are already reasonably sized and served from a fast CDN, so the trade-off was judged worth it for the interactivity. The click-to-load deferral for the actual iframe (the bigger Lighthouse win — avoids YouTube's iframe JS until the user clicks play) is preserved.
+
+Replaced `VideoGrid.astro` (deleted, was only used here) and the homepage's standalone hero `YouTubeVideo.astro` usage. `YouTubeVideo.astro` itself is still used directly for the three single, non-playlist embeds on the startups page.
 
 ---
 
@@ -129,11 +133,10 @@ Full-bleed nav bar (`border-b`, spans the viewport) with an inner `max-w-7xl` co
 - **Gotcha:** the hamburger↔close icon swap toggles Tailwind's `hidden` *class*, not the native `hidden` *attribute*. Tailwind's Preflight sets `svg { display: block }` in its `base` layer, and CSS cascade layers make that beat the browser's native `[hidden] { display: none }` UA rule regardless of selector specificity — so `svg.hidden = true` silently does nothing visually. The `hidden` attribute is fine on plain `<div>`s (no Preflight override there), just not on `<svg>`/`<img>`/other elements Preflight resets.
 
 ### `footer.astro`
-Full-bleed section with an inner `max-w-7xl` container matching nav/main. Four-column footer (`grid-cols-1 sm:grid-cols-3 lg:grid-cols-4`). Top message (muted intro line), four columns (Social, Links, Pages, Contact), and copyright line.
+Full-bleed section with an inner `max-w-7xl` container matching nav/main, in three stacked parts separated by shadcn `Separator`s:
 
-- **Social column:** `<ul>` of external links to LinkedIn, GitHub, YouTube, Bluesky, Instagram, Twitter, Tumblr, Facebook, Threads.
-- **Links column:** `<ul>` of external links (Book a Call, Download My Resume).
-- **Pages column:** `<ul>` of internal page links (Home, Content Creation for Startups).
-- **Contact column:** phone and mailto links, plus an `<address>` with the city.
-- Column headings are `<h2>` styled as small muted eyebrow labels (not structural headings).
-- Grid collapses to a single column below the `sm` breakpoint. Shares `max-w-[85ch]` with `<main>`.
+1. **CTA block** — headline ("Good work starts with a conversation."), a subtext paragraph, and the same `Book a Call` / `Download My Resume` `ButtonLink`s used in `Header.astro`. Mirrors a typical marketing-site footer CTA (see the shadcnblocks.com reference this was modeled on).
+2. **Link columns** (`grid-cols-1 sm:grid-cols-3`) — **Pages** (Home, Content Creation for Startups, hardcoded), **Contact** (phone, email), and **Follow** (the 9 social links) — the latter two pulled from `nav-links.ts`'s `Contact` and `Connect` groups, not duplicated here.
+3. **Bottom bar** — just the copyright line.
+
+`nav-links.ts` (see `navigation.astro` above) is the shared source for Contact and Connect — editing that file updates both the nav dropdowns and the footer automatically. Only `Pages` is footer-specific, since the nav's equivalent ("Services") intentionally excludes "Home."

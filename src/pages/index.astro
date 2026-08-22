@@ -15,8 +15,7 @@ import Header from '../components/header.astro';
 import LogoList from '../components/logo-list.astro';
 import SectionSpacer from '../components/section-spacer.astro';
 import Section from '../components/section.astro';
-import VideoGrid from '../components/video-grid.astro';
-import YouTubeVideo from '../components/youtube-video.astro';
+import { VideoPlayer } from '../components/video-player';
 import Layout from '../layouts/default-layout.astro';
 ---
 
@@ -58,7 +57,6 @@ import Layout from '../layouts/default-layout.astro';
     heading="YouTube Web Development Series"
     eyebrow="I started making videos at eight years old. Some of those tutorials are still finding new people."
   >
-    <YouTubeVideo id="13WwoeHiGwY" title="How I Got Started Making Videos" />
     <p>
       Content creation has been a passion of mine since childhood — I began
       making videos at eight years old and never stopped. Over the years that
@@ -70,8 +68,13 @@ import Layout from '../layouts/default-layout.astro';
       allowing me to create custom video documentation, explain complex
       concepts, and make development more approachable for others.
     </p>
-    <VideoGrid
+    <VideoPlayer
+      client:visible
       videos={[
+        {
+          id: 'gFkrGLILj5Y',
+          title: 'Advanced ES6 JavaScript tutorial',
+        },
         {
           id: 'NhYMlbKgQzU',
           title: 'Advanced JavaScript tutorial',
@@ -83,10 +86,6 @@ import Layout from '../layouts/default-layout.astro';
         {
           id: 'Opu7kA4N8es',
           title: 'Practice HTML & CSS tutorial',
-        },
-        {
-          id: 'gFkrGLILj5Y',
-          title: 'Advanced ES6 JavaScript tutorial',
         },
       ]}
     />

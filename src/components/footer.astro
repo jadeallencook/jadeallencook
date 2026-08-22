@@ -1,140 +1,90 @@
 ---
+import ButtonLink from './button-link.astro';
+import { navGroups } from './nav-links';
+import { Separator } from './ui/separator';
+
+const contactLinks = navGroups.find((group) => group.label === 'Contact')!.items;
+const socialLinks = navGroups.find((group) => group.label === 'Connect')!.items;
+
+const pageLinks = [
+  { label: 'Home', href: '/' },
+  {
+    label: 'Content Creation for Startups',
+    href: '/content-creation-for-startups',
+  },
+];
 ---
 
-<footer class="mx-auto flex max-w-7xl flex-col gap-8 px-4 pt-8 pb-12 sm:px-6 lg:px-8">
-  <p class="m-0 text-muted-foreground">
-    Good work starts with the right conversation. If any of this connects with
-    what you're working on, I'd like to hear about it. Whether you're hiring,
-    building, or just thinking something through, I'm happy to chat.
-  </p>
-
-  <div class="grid grid-cols-1 gap-8 sm:grid-cols-3 lg:grid-cols-4">
+<footer class="mx-auto flex max-w-7xl flex-col gap-8 px-4 pt-12 pb-8 sm:px-6 lg:px-8">
+  <div class="flex flex-col gap-4">
+    <h2 class="text-balance text-3xl font-semibold tracking-tight">
+      Good work starts with a conversation.
+    </h2>
+    <p class="max-w-prose text-lg text-muted-foreground">
+      If any of this connects with what you're working on, I'd like to hear
+      about it. Whether you're hiring, building, or just thinking something
+      through, I'm happy to chat.
+    </p>
     <div>
-      <h2 class="m-0 mb-2.5 text-base font-semibold tracking-wide text-muted-foreground">
-        Social
-      </h2>
-      <ul class="m-0 flex list-none flex-col gap-1.5 p-0 [&_a]:text-foreground [&_a:hover]:underline [&_a:focus-visible]:underline">
-        <li>
-          <a
-            href="https://www.linkedin.com/in/jadeallencook/"
-            target="_blank"
-            rel="noopener noreferrer">LinkedIn</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://github.com/jadeallencook"
-            target="_blank"
-            rel="noopener noreferrer">GitHub</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://www.youtube.com/jadeallencook"
-            target="_blank"
-            rel="noopener noreferrer">YouTube</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://bsky.app/profile/jadeallencook.bsky.social"
-            target="_blank"
-            rel="noopener noreferrer">Bluesky</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://www.instagram.com/jadeallencook/"
-            target="_blank"
-            rel="noopener noreferrer">Instagram</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://x.com/jadeallencook"
-            target="_blank"
-            rel="noopener noreferrer">Twitter</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://jadeallencook.tumblr.com"
-            target="_blank"
-            rel="noopener noreferrer">Tumblr</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://www.facebook.com/jadeallencook"
-            target="_blank"
-            rel="noopener noreferrer">Facebook</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://www.threads.com/@jadeallencook"
-            target="_blank"
-            rel="noopener noreferrer">Threads</a
-          >
-        </li>
-      </ul>
-    </div>
-
-    <div>
-      <h2 class="m-0 mb-2.5 text-base font-semibold tracking-wide text-muted-foreground">
-        Links
-      </h2>
-      <ul class="m-0 flex list-none flex-col gap-1.5 p-0 [&_a]:text-foreground [&_a:hover]:underline [&_a:focus-visible]:underline">
-        <li>
-          <a
-            href="https://calendly.com/jadeallencook/recruit"
-            target="_blank"
-            rel="noopener noreferrer">Book a Call</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://docs.google.com/document/d/1u_Nt4nNpvNyrSYuzycSSUmB2mbTVSvcCB64o1D4Vkxg"
-            target="_blank"
-            rel="noopener noreferrer">Download My Resume</a
-          >
-        </li>
-      </ul>
-    </div>
-
-    <div>
-      <h2 class="m-0 mb-2.5 text-base font-semibold tracking-wide text-muted-foreground">
-        Pages
-      </h2>
-      <ul class="m-0 flex list-none flex-col gap-1.5 p-0 [&_a]:text-foreground [&_a:hover]:underline [&_a:focus-visible]:underline">
-        <li><a href="/">Home</a></li>
-        <li>
-          <a href="/content-creation-for-startups"
-            >Content Creation for Startups</a
-          >
-        </li>
-      </ul>
-    </div>
-
-    <div>
-      <h2 class="m-0 mb-2.5 text-base font-semibold tracking-wide text-muted-foreground">
-        Contact
-      </h2>
-      <p class="m-0">
-        <a class="text-foreground hover:underline focus-visible:underline" href="tel:+1-510-255-5233">(510) 255-5233</a>
-      </p>
-      <p class="m-0">
-        <a
-          class="text-foreground hover:underline focus-visible:underline"
-          href="mailto:jadeallencook@icloud.com"
-          >jadeallencook@protonmail.com</a
-        >
-      </p>
-      <address class="flex flex-col gap-1.5 not-italic">
-        <p class="m-0">Oakland, California</p>
-      </address>
+      <ButtonLink href="https://calendly.com/jadeallencook/recruit" external>
+        Book a Call
+      </ButtonLink>
+      <ButtonLink
+        href="https://docs.google.com/document/d/1u_Nt4nNpvNyrSYuzycSSUmB2mbTVSvcCB64o1D4Vkxg"
+        external
+        isSecondary
+      >
+        Download My Resume
+      </ButtonLink>
     </div>
   </div>
+
+  <Separator />
+
+  <div class="grid grid-cols-1 gap-8 sm:grid-cols-3">
+    <div>
+      <h3 class="m-0 mb-2.5 text-base font-bold text-foreground">Pages</h3>
+      <ul class="m-0 flex list-none flex-col gap-1.5 p-0 [&_a]:text-muted-foreground [&_a:hover]:text-foreground [&_a:hover]:underline [&_a:focus-visible]:text-foreground [&_a:focus-visible]:underline">
+        {
+          pageLinks.map((link) => (
+            <li>
+              <a href={link.href}>{link.label}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="m-0 mb-2.5 text-base font-bold text-foreground">Contact</h3>
+      <ul class="m-0 flex list-none flex-col gap-1.5 p-0 [&_a]:text-muted-foreground [&_a:hover]:text-foreground [&_a:hover]:underline [&_a:focus-visible]:text-foreground [&_a:focus-visible]:underline">
+        {
+          contactLinks.map((link) => (
+            <li>
+              <a href={link.href}>{link.label}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="m-0 mb-2.5 text-base font-bold text-foreground">Follow</h3>
+      <ul class="m-0 flex list-none flex-col gap-1.5 p-0 [&_a]:text-muted-foreground [&_a:hover]:text-foreground [&_a:hover]:underline [&_a:focus-visible]:text-foreground [&_a:focus-visible]:underline">
+        {
+          socialLinks.map((link) => (
+            <li>
+              <a href={link.href} target="_blank" rel="noopener noreferrer">
+                {link.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+
+  <Separator />
 
   <p class="m-0 text-muted-foreground">
     &copy; {new Date().getFullYear()} Jade Allen Cook | Software Engineer & Content
