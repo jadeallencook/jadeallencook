@@ -1,6 +1,6 @@
 ---
 import ButtonLink from './button-link.astro';
-import { navGroups } from './nav-links';
+import { navGroups, primaryCtas, resumeLink } from './nav-links';
 import { Separator } from './ui/separator';
 
 const contactLinks = navGroups.find((group) => group.label === 'Contact')!.items;
@@ -12,6 +12,12 @@ const pageLinks = [
     label: 'Content Creation for Startups',
     href: '/content-creation-for-startups',
   },
+];
+
+const resourceLinks = [
+  resumeLink,
+  primaryCtas.contentShoot,
+  primaryCtas.recruiterCall,
 ];
 ---
 
@@ -26,22 +32,18 @@ const pageLinks = [
       through, I'm happy to chat.
     </p>
     <div>
-      <ButtonLink href="https://calendly.com/jadeallencook/recruit" external>
-        Book a Call
+      <ButtonLink href={primaryCtas.contentShoot.href} external>
+        {primaryCtas.contentShoot.label}
       </ButtonLink>
-      <ButtonLink
-        href="https://docs.google.com/document/d/1u_Nt4nNpvNyrSYuzycSSUmB2mbTVSvcCB64o1D4Vkxg"
-        external
-        isSecondary
-      >
-        Download My Resume
+      <ButtonLink href={primaryCtas.recruiterCall.href} external isSecondary>
+        {primaryCtas.recruiterCall.label}
       </ButtonLink>
     </div>
   </div>
 
   <Separator />
 
-  <div class="grid grid-cols-1 gap-8 sm:grid-cols-3">
+  <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
     <div>
       <h3 class="m-0 mb-2.5 text-base font-bold text-foreground">Pages</h3>
       <ul class="m-0 flex list-none flex-col gap-1.5 p-0 [&_a]:text-muted-foreground [&_a:hover]:text-foreground [&_a:hover]:underline [&_a:focus-visible]:text-foreground [&_a:focus-visible]:underline">
@@ -49,6 +51,21 @@ const pageLinks = [
           pageLinks.map((link) => (
             <li>
               <a href={link.href}>{link.label}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="m-0 mb-2.5 text-base font-bold text-foreground">Resources</h3>
+      <ul class="m-0 flex list-none flex-col gap-1.5 p-0 [&_a]:text-muted-foreground [&_a:hover]:text-foreground [&_a:hover]:underline [&_a:focus-visible]:text-foreground [&_a:focus-visible]:underline">
+        {
+          resourceLinks.map((link) => (
+            <li>
+              <a href={link.href} target="_blank" rel="noopener noreferrer">
+                {link.label}
+              </a>
             </li>
           ))
         }

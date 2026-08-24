@@ -2,6 +2,7 @@
 import ButtonLink from './button-link.astro';
 import { DesktopNavMenu } from './desktop-nav-menu';
 import { MobileNavAccordion } from './mobile-nav-accordion';
+import { primaryCtas } from './nav-links';
 ---
 
 <nav aria-label="Site" class="border-b border-border">
@@ -13,16 +14,16 @@ import { MobileNavAccordion } from './mobile-nav-accordion';
     </div>
 
     <div class="hidden items-center lg:flex">
-      <ButtonLink href="https://calendly.com/jadeallencook/recruit" external>
-        Book a Call
+      <ButtonLink href={primaryCtas.contentShoot.href} external>
+        {primaryCtas.contentShoot.label}
       </ButtonLink>
       <ButtonLink
-        href="https://docs.google.com/document/d/1u_Nt4nNpvNyrSYuzycSSUmB2mbTVSvcCB64o1D4Vkxg"
+        href={primaryCtas.recruiterCall.href}
         external
         isSecondary
         class="me-0"
       >
-        Download My Resume
+        {primaryCtas.recruiterCall.label}
       </ButtonLink>
     </div>
 
@@ -69,19 +70,19 @@ import { MobileNavAccordion } from './mobile-nav-accordion';
     <MobileNavAccordion client:load />
     <div class="flex flex-col gap-2">
       <ButtonLink
-        href="https://calendly.com/jadeallencook/recruit"
+        href={primaryCtas.contentShoot.href}
         external
-        class="me-0 w-full text-center"
+        class="me-0 w-full"
       >
-        Book a Call
+        {primaryCtas.contentShoot.label}
       </ButtonLink>
       <ButtonLink
-        href="https://docs.google.com/document/d/1u_Nt4nNpvNyrSYuzycSSUmB2mbTVSvcCB64o1D4Vkxg"
+        href={primaryCtas.recruiterCall.href}
         external
         isSecondary
-        class="me-0 w-full text-center"
+        class="me-0 w-full"
       >
-        Download My Resume
+        {primaryCtas.recruiterCall.label}
       </ButtonLink>
     </div>
   </div>

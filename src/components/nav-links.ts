@@ -8,6 +8,22 @@ export interface NavGroup {
   items: NavLink[];
 }
 
+export const primaryCtas = {
+  contentShoot: {
+    label: 'Book a Content Shoot',
+    href: 'https://calendly.com/jadeallencook/educational-content-consultation',
+  },
+  recruiterCall: {
+    label: 'Book a Recruiter Call',
+    href: 'https://calendly.com/jadeallencook/recruit',
+  },
+};
+
+export const resumeLink: NavLink = {
+  label: 'Download My Resume',
+  href: 'https://docs.google.com/document/d/1u_Nt4nNpvNyrSYuzycSSUmB2mbTVSvcCB64o1D4Vkxg',
+};
+
 export const navGroups: NavGroup[] = [
   {
     label: 'Services',

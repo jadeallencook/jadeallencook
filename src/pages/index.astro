@@ -9,10 +9,11 @@ import waveorthoLogo from '../assets/logos/waveortho.png';
 import mlikeArticle from '../assets/mlike-article.jpg';
 import playstation from '../assets/playstation.png';
 import rooftopPool from '../assets/rooftop-pool.jpeg';
-import { ExperienceAccordion } from '../components/experience-accordion';
 import ButtonLink from '../components/button-link.astro';
+import { ExperienceAccordion } from '../components/experience-accordion';
 import Header from '../components/header.astro';
 import LogoList from '../components/logo-list.astro';
+import { primaryCtas } from '../components/nav-links';
 import SectionSpacer from '../components/section-spacer.astro';
 import Section from '../components/section.astro';
 import { VideoPlayer } from '../components/video-player';
@@ -21,7 +22,7 @@ import Layout from '../layouts/default-layout.astro';
 
 <Layout image={rooftopPool}>
   <Header
-    heading="Software Engineer Focused on Web Accessibility and Educational Content Creation"
+    heading="Software Engineer & Content Creator"
     eyebrow="I've built for millions of users. The ones I think about most are the ones I almost missed."
     image={googleCloud}
     imageAlt="Two other engineers and myself smiling and standing in front of the Google Cloud office."
@@ -37,15 +38,15 @@ import Layout from '../layouts/default-layout.astro';
       that technology should meet people where they are.
     </p>
     <div>
-      <ButtonLink href="https://calendly.com/jadeallencook/recruit" external>
-        Book a Call
+      <ButtonLink href={primaryCtas.contentShoot.href} external>
+        {primaryCtas.contentShoot.label}
       </ButtonLink>
       <ButtonLink
-        href="https://docs.google.com/document/d/1u_Nt4nNpvNyrSYuzycSSUmB2mbTVSvcCB64o1D4Vkxg"
+        href={primaryCtas.recruiterCall.href}
         external
         isSecondary={true}
       >
-        Download My Resume
+        {primaryCtas.recruiterCall.label}
       </ButtonLink>
     </div>
   </Header>
