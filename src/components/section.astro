@@ -18,7 +18,7 @@ const {
   eyebrow,
   image,
   imageAlt = '',
-  imageWidth = 1000,
+  imageWidth = 900,
 } = Astro.props;
 ---
 
@@ -27,15 +27,19 @@ const {
     {heading}
   </h2>
   <Eyebrow>{eyebrow}</Eyebrow>
-  {
-    image && (
-      <Image
-        src={image}
-        alt={imageAlt}
-        width={imageWidth}
-        class="h-auto w-full rounded-lg"
-      />
-    )
-  }
-  <slot />
+  <div class="space-y-4">
+    {
+      image && (
+        <div class="mb-4 w-full rounded-xl border border-border bg-card p-2 shadow-sm sm:float-right sm:mb-4 sm:ml-6 sm:w-[45%]">
+          <Image
+            src={image}
+            alt={imageAlt}
+            width={imageWidth}
+            class="h-auto w-full rounded-lg"
+          />
+        </div>
+      )
+    }
+    <slot />
+  </div>
 </section>

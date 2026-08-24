@@ -24,7 +24,7 @@ Eyebrow text is a muted label that sits visually above a heading but comes after
 
 The site was migrated from a hand-rolled CSS-variable design-token system to [shadcn/ui](https://ui.shadcn.com) on Tailwind CSS v4. See `.claude/components.md` for the full component inventory.
 
-- Style with Tailwind utility classes, not scoped `<style>` blocks — reserve `<style>` for cases with genuinely dynamic/computed values (e.g. `logo-list.astro`'s per-render grid-template-columns)
+- Style with Tailwind utility classes, not scoped `<style>` blocks — reserve `<style>` for cases Tailwind genuinely can't express (e.g. `youtube-video.astro`'s `:global(iframe)` rule for content injected by its own `<script>`)
 - Use shadcn's theme tokens instead of hardcoded colors: `bg-background`, `text-foreground`, `text-muted-foreground`, `border-border`, `bg-primary`, `text-primary`, etc. — defined in `src/styles/global.css`
 - Use `rounded-lg` (maps to `--radius`, 0.875rem) instead of a hardcoded border-radius
 - The site is full width: `nav`, `main`, and `footer` are edge-to-edge (`nav` also has a `border-b`), each wrapping an inner `max-w-7xl mx-auto px-4 sm:px-6 lg:px-8` container — no longer a shared CSS variable or the old 85ch measure

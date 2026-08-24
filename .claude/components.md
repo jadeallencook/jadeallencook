@@ -41,10 +41,17 @@ Content section. Auto-wires `aria-labelledby` so it can never be forgotten on ne
 | `id` | `string` | Used for both `id` on the `<h2>` and `aria-labelledby` on `<section>` |
 | `heading` | `string` | h2 text |
 | `eyebrow` | `string` | Label that appears visually above the h2 |
-| `image` | `ImageMetadata` (optional) | Image, rendered between eyebrow and heading |
+| `image` | `ImageMetadata` (optional) | Image, floated right alongside the body copy |
 | `imageAlt` | `string` (optional) | Alt text for the image; defaults to `""` (decorative) |
+| `imageWidth` | `number` (optional) | Passed to `astro:assets` `Image`; default `900` |
 
 `<slot />` accepts body copy.
+
+The image renders in a bordered/shadowed card (`rounded-xl border border-border bg-card p-2 shadow-sm`, same visual language as `Header.astro`'s photo card) that **floats right at `sm:` and up** (`sm:float-right sm:ml-6 sm:w-[45%]`), with the slot's paragraphs wrapping around it — roughly matching `Header.astro`'s image proportions. Below `sm` it's a plain full-width block above the text (a float with wrapped text doesn't have room to breathe on narrow screens).
+
+This required moving `image` + `<slot />` into their own wrapping `<div class="space-y-4">`, separate from the outer `<section>`'s `flex flex-col gap-4`: CSS `float` has no effect on a flex item's *children* if that child is itself a flex container, but works fine on a plain block-level div. `space-y-4` reproduces the vertical rhythm `gap-4` gave the paragraphs before, since flex gap isn't available here.
+
+This site's source photos are all landscape ~4:3; letting one span the full section width (up to ~1200px on this full-width site) made it enormous, which is why it's floated and width-capped instead. `imageWidth` (the `astro:assets` optimization width, not the display width) was set to `900` to give decent quality at the ~45%-of-container display size on retina screens without over-fetching.
 
 ---
 
@@ -112,7 +119,7 @@ Replaced `VideoGrid.astro` (deleted, was only used here) and the homepage's stan
 ---
 
 ### `LogoList.astro`
-Responsive logo grid. Renders a company logo above its name in a grid that stretches the full content width. Logos use `dark:invert` (intended for black logos on white/transparent backgrounds).
+Each logo renders inside its own bordered/shadowed card (`rounded-xl border border-border bg-card p-6 shadow-sm`) in a plain responsive grid (`grid-cols-2 sm:grid-cols-3 lg:grid-cols-6`). Logos use `dark:invert` (intended for black logos on white/transparent backgrounds).
 
 | Prop | Type | Description |
 |---|---|---|
@@ -120,7 +127,9 @@ Responsive logo grid. Renders a company logo above its name in a grid that stret
 
 Logo `alt` is empty (`""`) because the company name is conveyed by the visible text below each image.
 
-Column counts are computed from `logos.length` and passed as CSS custom properties (`--cols`, `--cols-md`, `--cols-sm`) to a small scoped `<style>` block — this is one of the few components that keeps a `<style>` block instead of pure Tailwind utilities, since the grid math is dynamic per render and can't be expressed as static utility classes.
+**No hover animation on the cards.** An earlier version added a hover lift + shadow + scale — visually nice on its own, but wrong here: these cards aren't links or buttons, so a lift/shadow affordance falsely implies they're clickable. Don't add hover motion back to purely-informational cards like this one; save interactive-looking hover states for things that are actually interactive.
+
+Previously used a dynamic per-render column count (`--cols`, `--cols-md`, `--cols-sm` custom properties in a scoped `<style>` block) to keep N logos evenly spread across one row. Simplified to a plain static grid when the section was redesigned — a card grid doesn't need perfectly-justified columns the way a bare logo row did, so the extra math wasn't worth keeping.
 
 No slot.
 
