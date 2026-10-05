@@ -1,22 +1,11 @@
 ---
-import googleCloud from '../assets/google-cloud.png';
-import appleLogo from '../assets/logos/apple.png';
-import clearLogo from '../assets/logos/clear.png';
-import deseretNewsLogo from '../assets/logos/deseret-news.png';
-import googleLogo from '../assets/logos/google.png';
-import playstationLogo from '../assets/logos/playstation.png';
-import waveorthoLogo from '../assets/logos/waveortho.png';
-import mlikeArticle from '../assets/mlike-article.jpg';
-import playstation from '../assets/playstation.png';
-import rooftopPool from '../assets/rooftop-pool.jpeg';
+import rooftopPool from '../assets/jade-allen-cook-mai-abe-utah-snow-rooftop-pool.png';
+import jadeSelfie from '../assets/jade-allen-cook-selfie-san-jose-fountain.png';
 import ButtonLink from '../components/button-link.astro';
-import { ExperienceAccordion } from '../components/experience-accordion';
 import Header from '../components/header.astro';
-import LogoList from '../components/logo-list.astro';
 import { primaryCtas } from '../components/nav-links';
 import SectionSpacer from '../components/section-spacer.astro';
 import Section from '../components/section.astro';
-import { VideoPlayer } from '../components/video-player';
 import Layout from '../layouts/default-layout.astro';
 ---
 
@@ -24,9 +13,8 @@ import Layout from '../layouts/default-layout.astro';
   <Header
     heading="Software Engineer & Content Creator"
     eyebrow="I've built for millions of users. The ones I think about most are the ones I almost missed."
-    image={googleCloud}
-    imageAlt="Two other engineers and myself smiling and standing in front of the Google Cloud office."
-    imageCaption="Google Cloud 2019"
+    image={jadeSelfie}
+    imageAlt="Jade Allen Cook selfie in front of the San Jose fountain."
   >
     <p>
       The web and I have grown up together, and more than fifteen years of
@@ -54,211 +42,21 @@ import Layout from '../layouts/default-layout.astro';
   <SectionSpacer />
 
   <Section
-    id="youtube-series"
-    heading="YouTube Web Development Series"
-    eyebrow="I started making videos at eight years old. Some of those tutorials are still finding new people."
+    id="software-engineering-cta"
+    heading="Looking to Hire a Software Engineer?"
+    eyebrow="Fifteen years of building for the web, from Apple to Google to PlayStation."
   >
     <p>
-      Content creation has been a passion of mine since childhood — I began
-      making videos at eight years old and never stopped. Over the years that
-      early interest evolved into a way to teach, document, and share what I
-      learn. Some of the videos in this series are nearly a decade old and have
-      drawn close to 100k views, including lessons where I was teaching advanced
-      JavaScript early into my professional career. This blend of engineering
-      expertise and video storytelling is a unique skill I bring to every team,
-      allowing me to create custom video documentation, explain complex
-      concepts, and make development more approachable for others.
+      Software engineering is the career that's funded all of this, building
+      accessible, scalable products for companies large and small. If you're
+      hiring, or just curious about that side of the work, I put together a page
+      that covers all of it: the companies, the projects, and the experience
+      behind them.
     </p>
-    <VideoPlayer
-      client:visible
-      videos={[
-        {
-          id: 'gFkrGLILj5Y',
-          title: 'Advanced ES6 JavaScript',
-          views: '9.8K',
-          releaseYear: 2020,
-        },
-        {
-          id: 'NhYMlbKgQzU',
-          title: 'Advanced JavaScript',
-          views: '89K',
-          releaseYear: 2018,
-        },
-        {
-          id: 'iWfz2RnTTaU',
-          title: 'Instagram Automation',
-          views: '43K',
-          releaseYear: 2019,
-        },
-        {
-          id: 'Opu7kA4N8es',
-          title: 'Practice HTML & CSS',
-          views: '24K',
-          releaseYear: 2020,
-        },
-      ]}
-    />
-  </Section>
-
-  <SectionSpacer />
-
-  <Section
-    id="companies"
-    heading="Companies I've Worked With"
-    eyebrow="From local restaurants in Michigan to Apple, Google, and PlayStation."
-  >
-    <p>
-      Over the years I've collaborated with a wide range of companies — from
-      global tech leaders to innovative startups — building products, design
-      systems, and accessible experiences at scale. These partnerships reflect
-      both the depth of my engineering background and the trust placed in my
-      ability to deliver thoughtful, high-quality work across different teams
-      and industries.
-    </p>
-    <LogoList
-      logos={[
-        { name: 'Apple', src: appleLogo },
-        { name: 'Google', src: googleLogo },
-        { name: 'PlayStation', src: playstationLogo },
-        { name: 'CLEAR', src: clearLogo },
-        { name: 'Deseret News', src: deseretNewsLogo },
-        { name: 'WaveOrtho', src: waveorthoLogo },
-      ]}
-    />
-  </Section>
-
-  <SectionSpacer />
-
-  <Section
-    id="about"
-    heading="About Me"
-    eyebrow="The technical side came naturally. Nature, community, and the spiritual taught me the rest."
-    image={playstation}
-    imageAlt="Jade at the PlayStation office."
-  >
-    <p>
-      Everything is connected. The way I write code is shaped by how I move
-      through the world. Years of building for the web have sharpened my skills
-      as an engineer, but it's my relationship with <a
-        href="https://www.youtube.com/watch?v=cKsPuNUkVzI"
-        target="_blank"
-        rel="noopener noreferrer">nature</a
-      >, <a
-        href="https://www.communalists.org/"
-        target="_blank"
-        rel="noopener noreferrer">community</a
-      >, and the <a
-        href="https://www.youtube.com/watch?v=zMqSCpWyHaw"
-        target="_blank"
-        rel="noopener noreferrer">spiritual</a
-      > that has taught me patience, perspective, and empathy. Crafting accessible
-      digital experiences is one extension of that. These values influence how I approach
-      code, collaboration, and design. My aim is to create spaces that are welcoming,
-      clear, and grounded in respect for others. The work is technical, but it is
-      also deeply human.
-    </p>
-  </Section>
-
-  <SectionSpacer />
-
-  <Section
-    id="origin"
-    heading="How I Got Started"
-    eyebrow="I was running batch scripts to message friends in class before most developers touched their first IDE."
-    image={mlikeArticle}
-    imageAlt="The MLive newspaper article featuring Jade as a young developer."
-  >
-    <p>
-      Growing up through the rise of the internet meant always having something
-      new to explore. One afternoon my mother was on the phone with technical
-      support and they asked her to open the command prompt. Watching the black
-      window appear with its blinking cursor was strangely fascinating.
-    </p>
-    <p>
-      Questions turned into instructions, and before long I had found resources
-      to learn basic commands. Those commands became little BATCH programs,
-      small games, and tools to automate tasks. One of them used the net
-      commands in Windows to list computers on the network, prompt for a
-      message, and send it to whoever you chose. I copied it to my friends'
-      thumb drives at school and we would pass messages during class. It was fun
-      until it got me in trouble, but by then I was hooked.
-    </p>
-    <p>
-      MySpace and Tumblr brought new possibilities. Customizing profiles led to
-      learning HTML and CSS, which led to making my own web pages. Soon I was
-      approaching local businesses and offering to build their sites. While
-      friends worked after school jobs, I was running a small freelance
-      business, creating and maintaining websites for local restaurants and
-      shops, even helping them with marketing. By the time high school ended, I
-      had a portfolio strong enough to land my first professional role. From
-      there, one project led to another and the path carried me to the work I do
-      today.
-    </p>
-    <ButtonLink
-      href="https://www.mlive.com/living/bay-city/2010/12/meet_your_neighbor_jade_cook_b.html"
-      external
-      isSecondary={true}
-    >
-      Read the MLive article
+    <ButtonLink href="/software-engineering">
+      See My Software Engineering Work
     </ButtonLink>
   </Section>
 
-  <SectionSpacer />
-
-  <Section
-    id="experience"
-    heading="Work Experience"
-    eyebrow="From freelancing at sixteen to building AI infrastructure at Google."
-  >
-    <p>
-      Each role has shaped the engineer I am today, from early freelance
-      projects to leading accessibility efforts on large-scale platforms. Along
-      the way I've worked across every stage of development — planning, design,
-      implementation, and launch — gaining a deep understanding of how products
-      are built and how teams succeed. This section highlights the projects,
-      skills, and lessons that continue to guide my approach to software and
-      collaboration.
-    </p>
-    <ExperienceAccordion client:visible />
-  </Section>
-
-  <SectionSpacer />
-
-  <Section
-    id="accessibility"
-    heading="Why Accessibility Matters To Me"
-    eyebrow="Watching my partner connect with people through music taught me something code couldn't."
-    image={rooftopPool}
-    imageAlt="A rooftop pool overlooking the city."
-  >
-    <p>
-      My partner began running a <a
-        href="https://www.creativevibesmt.com/"
-        target="_blank"
-        rel="noopener noreferrer">music therapy business</a
-      > and working with disabled people in 2018. Watching her connect through music
-      and help people find their own voice opened my heart and shifted the way I saw
-      the world. It revealed how often spaces are created without considering everyone
-      who might step into them.
-    </p>
-    <p>
-      In 2020 I began learning about <a
-        href="https://www.youtube.com/watch?v=9Yhz_k5dt5w"
-        target="_blank"
-        rel="noopener noreferrer">critical race theory</a
-      > and the systemic hurdles marginalized communities face. The more I learned,
-      the more I saw privileges in my own life that I had once taken for granted.
-      It made me question the systems I had assumed were neutral and showed me how
-      uneven the ground can be for people from different backgrounds.
-    </p>
-    <p>
-      These experiences changed the way I see my work. Accessibility is not a
-      checklist or a box to be ticked. It is a way of meeting people where they
-      are, building spaces that respect their presence, and removing obstacles
-      that never should have been there in the first place. It is a commitment
-      to creating something that allows more people to participate fully, with
-      dignity and without compromise.
-    </p>
-  </Section>
   <SectionSpacer />
 </Layout>

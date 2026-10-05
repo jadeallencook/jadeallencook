@@ -135,11 +135,19 @@ No slot.
 
 ---
 
+### Pages overview
+
+- `index.astro` — homepage, content-creation-forward: hero (dual SWE/content-creator identity), YouTube Web Development Series, then a short teaser `Section` (`id="software-engineering-cta"`) pointing to `/software-engineering`.
+- `content-creation-for-startups.astro` — service page for startups hiring Jade for product video work.
+- `software-engineering.astro` — the recruiter-facing page: Skills & Tech Stack, Companies I've Worked With, Work Experience, How I Got Started, Why Accessibility Matters To Me, Testimonials, About Me. Meant to be linked directly to recruiters/hiring managers, so its `Header` leads with `primaryCtas.recruiterCall` + `resumeLink` CTAs rather than the content-shoot CTA. The "Skills & Tech Stack" and "Testimonials" sections are hardcoded page content (no new shared component), same pattern as `ExperienceAccordion`'s inline prose — skills are derived only from facts already present in `ExperienceAccordion`'s role write-ups, and testimonial quotes must be real, user-supplied quotes (never fabricated).
+
+---
+
 ### `navigation.astro` + `nav-links.ts` + `desktop-nav-menu.tsx` + `mobile-nav-accordion.tsx`
 Full-bleed nav bar (`border-b`, spans the viewport) with an inner `max-w-7xl` container shared with `<main>` and `<footer>`. Contains the name (links to `/`), three dropdown groups, and the two primary CTA `ButtonLink`s.
 
 - **`nav-links.ts`** — the single source of truth for:
-  - `navGroups` — the dropdown groups, shared by both the desktop and mobile nav components so the link list is never duplicated. Currently: **Services** (Content Creation for Startups — mirrors the footer's Pages column, minus "Home" since the name link already covers that), **Contact** (phone, email — mirrors the footer's Contact column), **Connect** (the 9 social links — mirrors the footer's Follow column). Add a new nav item by editing this file; both nav components pick it up automatically.
+  - `navGroups` — the dropdown groups, shared by both the desktop and mobile nav components so the link list is never duplicated. Currently: **Services** (Content Creation for Startups, Software Engineering — mirrors the footer's Pages column, minus "Home" since the name link already covers that), **Contact** (phone, email — mirrors the footer's Contact column), **Connect** (the 9 social links — mirrors the footer's Follow column). Add a new nav item by editing this file; both nav components pick it up automatically.
   - `primaryCtas` — the two audience-specific booking CTAs: `primaryCtas.contentShoot` ("Book a Content Shoot," for small businesses booking a content-creation shoot) and `primaryCtas.recruiterCall` ("Book a Recruiter Call," for tech recruiters/companies hiring). Both are Calendly links, both external. `contentShoot` renders as the default (solid) button variant, `recruiterCall` as `isSecondary` (outline) — used together everywhere a CTA pair appears: nav (desktop + mobile), `Header.astro`'s hero, and the footer's top CTA block.
   - `resumeLink` — the "Download My Resume" Google Doc link, no longer part of the primary CTA pair; it now only appears in the footer's Resources column (see below).
   

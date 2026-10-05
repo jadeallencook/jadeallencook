@@ -32,6 +32,10 @@ export const navGroups: NavGroup[] = [
         label: 'Content Creation for Startups',
         href: '/content-creation-for-startups',
       },
+      {
+        label: 'Software Engineering',
+        href: '/software-engineering',
+      },
     ],
   },
   {

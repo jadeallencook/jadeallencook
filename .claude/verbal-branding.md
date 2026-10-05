@@ -18,6 +18,14 @@ Every service Jade offers — writing code, auditing a site, making a tutorial v
 
 ---
 
+## Accessibility Voice: Disability-Driven Mindset
+
+When copy describes Jade's accessibility practice, don't reduce it to a single tool or technique ("I test with a screen reader"). Jade's actual approach, influenced by Ashley Firth's *Practical Web Accessibility*, is a "disability-driven" mindset: imagining a specific person with a specific access need and barrier, then designing around that from the outset, not adding accessibility on after the build is done. The toolset changes with the barrier (screen readers, keyboard-only navigation, caption tracks, contrast checks, and others) — the constant is starting from someone else's barrier instead of your own.
+
+A detail worth reaching for in copy: designing for one specific disability often ends up helping a much wider audience than intended (captions help d/Deaf and hard-of-hearing users, but also anyone watching without sound in a quiet room). That kind of concrete "solves it for everyone" example is more persuasive, and more Jade, than naming a compliance standard or a single tool.
+
+---
+
 ## Core Tone Attributes
 
 | Trait            | What it sounds like                                                        | What it doesn't sound like                           |

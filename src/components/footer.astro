@@ -3,7 +3,9 @@ import ButtonLink from './button-link.astro';
 import { navGroups, primaryCtas, resumeLink } from './nav-links';
 import { Separator } from './ui/separator';
 
-const contactLinks = navGroups.find((group) => group.label === 'Contact')!.items;
+const contactLinks = navGroups.find(
+  (group) => group.label === 'Contact'
+)!.items;
 const socialLinks = navGroups.find((group) => group.label === 'Connect')!.items;
 
 const pageLinks = [
@@ -12,6 +14,7 @@ const pageLinks = [
     label: 'Content Creation for Startups',
     href: '/content-creation-for-startups',
   },
+  { label: 'Software Engineering', href: '/software-engineering' },
 ];
 
 const resourceLinks = [
@@ -21,7 +24,7 @@ const resourceLinks = [
 ];
 ---
 
-<footer class="mx-auto flex max-w-7xl flex-col gap-8 px-4 pt-12 pb-8 sm:px-6 lg:px-8">
+<footer class="mx-auto flex max-w-7xl flex-col gap-8 px-4 pb-8 sm:px-6 lg:px-8">
   <div class="flex flex-col gap-4">
     <h2 class="text-balance text-3xl font-semibold tracking-tight">
       Good work starts with a conversation.
@@ -46,7 +49,9 @@ const resourceLinks = [
   <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
     <div>
       <h3 class="m-0 mb-2.5 text-base font-bold text-foreground">Pages</h3>
-      <ul class="m-0 flex list-none flex-col gap-1.5 p-0 [&_a]:text-muted-foreground [&_a:hover]:text-foreground [&_a:hover]:underline [&_a:focus-visible]:text-foreground [&_a:focus-visible]:underline">
+      <ul
+        class="m-0 flex list-none flex-col gap-1.5 p-0 [&_a]:text-muted-foreground [&_a:hover]:text-foreground [&_a:hover]:underline [&_a:focus-visible]:text-foreground [&_a:focus-visible]:underline"
+      >
         {
           pageLinks.map((link) => (
             <li>
@@ -59,7 +64,9 @@ const resourceLinks = [
 
     <div>
       <h3 class="m-0 mb-2.5 text-base font-bold text-foreground">Resources</h3>
-      <ul class="m-0 flex list-none flex-col gap-1.5 p-0 [&_a]:text-muted-foreground [&_a:hover]:text-foreground [&_a:hover]:underline [&_a:focus-visible]:text-foreground [&_a:focus-visible]:underline">
+      <ul
+        class="m-0 flex list-none flex-col gap-1.5 p-0 [&_a]:text-muted-foreground [&_a:hover]:text-foreground [&_a:hover]:underline [&_a:focus-visible]:text-foreground [&_a:focus-visible]:underline"
+      >
         {
           resourceLinks.map((link) => (
             <li>
@@ -74,7 +81,9 @@ const resourceLinks = [
 
     <div>
       <h3 class="m-0 mb-2.5 text-base font-bold text-foreground">Contact</h3>
-      <ul class="m-0 flex list-none flex-col gap-1.5 p-0 [&_a]:text-muted-foreground [&_a:hover]:text-foreground [&_a:hover]:underline [&_a:focus-visible]:text-foreground [&_a:focus-visible]:underline">
+      <ul
+        class="m-0 flex list-none flex-col gap-1.5 p-0 [&_a]:text-muted-foreground [&_a:hover]:text-foreground [&_a:hover]:underline [&_a:focus-visible]:text-foreground [&_a:focus-visible]:underline"
+      >
         {
           contactLinks.map((link) => (
             <li>
@@ -87,7 +96,9 @@ const resourceLinks = [
 
     <div>
       <h3 class="m-0 mb-2.5 text-base font-bold text-foreground">Follow</h3>
-      <ul class="m-0 flex list-none flex-col gap-1.5 p-0 [&_a]:text-muted-foreground [&_a:hover]:text-foreground [&_a:hover]:underline [&_a:focus-visible]:text-foreground [&_a:focus-visible]:underline">
+      <ul
+        class="m-0 flex list-none flex-col gap-1.5 p-0 [&_a]:text-muted-foreground [&_a:hover]:text-foreground [&_a:hover]:underline [&_a:focus-visible]:text-foreground [&_a:focus-visible]:underline"
+      >
         {
           socialLinks.map((link) => (
             <li>
